@@ -27,7 +27,7 @@ architecture Behavioral of RegisterN is
 begin
 process( clk, reset )
 begin
-	if reset = '1' then
+	if reset = '0' then
 		output <= ( others => '0' );
 	elsif clk'event and clk = '1' then
 		if enable = '1' then
