@@ -41,20 +41,19 @@ Info: setting encoding to auto
 -- Loading package NUMERIC_STD into library IEEE
 -- Loading entity MAC into library work
 -- Loading architecture structural of MAC into library work
+"/home/mjs5127/DigIC/project_VHDL/MAC.vhd",line 51: Warning, signal MISR_EN is never used.
 "/home/mjs5127/DigIC/project_VHDL/MAC.vhd",line 53: Warning, signal Unused_COUT is never used.
 -- Compiling root entity MAC(structural)
 "/home/mjs5127/DigIC/project_VHDL/MAC.vhd",line 50: Warning, initial value for clk_cnt is ignored for synthesis.
 -- Compiling entity Multiplier_32(structural)
 -- Compiling entity FullAdder(Behavioral)
+-- Compiling entity RCFA_32(structural)
 -- Compiling entity RegisterN_32(Behavioral)
 -- Compiling entity LFSR(Behavioral)
-"/home/mjs5127/DigIC/project_VHDL/LFSR.vhd",line 41: Warning, initial value for zeroth_in is ignored for synthesis.
+"/home/mjs5127/DigIC/project_VHDL/LFSR.vhd",line 40: Warning, initial value for LFSR_REG is ignored for synthesis.
 -- Compiling entity MISR(Behavioral)
 "/home/mjs5127/DigIC/project_VHDL/MISR.vhd",line 41: Warning, initial value for MISR_REG is ignored for synthesis.
-"/home/mjs5127/DigIC/project_VHDL/MISR.vhd",line 42: Warning, initial value for zeroth_in is ignored for synthesis.
--- Compiling entity RCFA_32(structural)
 Info: The target technology was not selected, gdk was automatically selected for you.
-"/home/mjs5127/DigIC/project_VHDL/MAC.vhd", line 105:Info, Inferred counter instance 'clk_cnt' of type 'counter_up_cnt_en_sclear_clock_32'
 Info, Instances dissolved by autodissolve in View .work.Multiplier_32.structural
 Info, Many instances (>16) were flattened in this view. Not printing all the instance names....
 Info, Instances dissolved by autodissolve in View .work.RCFA_32.structural
@@ -65,6 +64,11 @@ Info, Many instances (>16) were flattened in this view. Not printing all the ins
 -- Covering..
 -- CPU Time used :   00:00 Mapping
 Re-checking DRC after adjustments
+-- Optimizing netlist .work.RCFA_32.structural
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
 -- Optimizing netlist .work.RegisterN_32.Behavioral
 -- Matching combinational logic..
 -- Matching non-combinational logic..
@@ -83,11 +87,6 @@ Re-checking DRC after adjustments
 -- Covering..
 -- CPU Time used :   00:00 Mapping
 Re-checking DRC after adjustments
--- Optimizing netlist .work.RCFA_32.structural
--- Matching combinational logic..
--- Matching non-combinational logic..
--- Covering..
--- CPU Time used :   00:00 Mapping
 -- Optimizing netlist .work.MAC.structural
 -- Automatic IO buffer insertion...
 WARNING: cannot do IO mapping. Library has no plain input IO buffer
@@ -97,7 +96,6 @@ WARNING: cannot do IO mapping. Library has no plain input IO buffer
 -- CPU Time used :   00:00 Mapping
 Re-checking DRC after adjustments
 -- Final Design Rule Check..
-Re-checking DRC after adjustments
 Re-checking DRC after adjustments
 -- Writing file MAC_proj.v
 -- Writing file MAC_proj.vhdl

@@ -20,8 +20,8 @@ L32
 VYZdoTz[=gGV=d^[XmO]jb1
 Z6 OL;C;10.2c_6;57
 32
-Z7 !s110 1575851431
-Z8 !s108 1575851431.479342
+Z7 !s110 1575868596
+Z8 !s108 1575868596.290275
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/FullAdder.vhd|
 Z10 !s107 /home/mjs5127/DigIC/project_VHDL/FullAdder.vhd|
 Z11 o-work work -2002 -explicit
@@ -47,145 +47,223 @@ R12
 !s100 DS[k8O=@_27<[]McHN14;0
 !i10b 1
 !i111 1
-Elfsr
-Z14 w1575851922
+Elab5tb
+Z14 w1575868924
 R1
 R2
-Z15 DPx3 gdk 9 gdk_comps 0 22 `TjPZiKnoa5mZS13KAN]:1
 R3
-Z16 8/home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl
-Z17 F/home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl
+Z15 8/home/mjs5127/DigIC/project_VHDL/MACtb.vhd
+Z16 F/home/mjs5127/DigIC/project_VHDL/MACtb.vhd
+l0
+L35
+VmNm;fRUAPaWgVm@QPMB:T1
+!s100 ?J]nogBh>Yem?kG=B<aT]0
+R6
+32
+Z17 !s110 1575869144
+!i10b 1
+Z18 !s108 1575869144.933244
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/MACtb.vhd|
+Z20 !s107 /home/mjs5127/DigIC/project_VHDL/MACtb.vhd|
+!i111 1
+R11
+R12
+Abehavior
+R1
+R2
+Z21 DEx4 work 6 lab5tb 0 22 mNm;fRUAPaWgVm@QPMB:T1
+l66
+L38
+Z22 V;`:FD[FVf?Yf[no^2k[J?1
+Z23 !s100 >OQh4?`aM>ICEN<52T;:U1
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i111 1
+R11
+R12
+Elfsr
+Z24 w1575869103
+R1
+R2
+Z25 DPx3 gdk 9 gdk_comps 0 22 `TjPZiKnoa5mZS13KAN]:1
+R3
+Z26 8/home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl
+Z27 F/home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl
 l0
 L1997
 VTYX5oZQnEI:Kjc7BX9NTl0
-!s100 GEW9S:`UB9maG1<bNH2N`3
 R6
 32
-Z18 !s110 1575851936
-!i10b 1
-Z19 !s108 1575851936.628940
-Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl|
-Z21 !s107 /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl|
-!i111 1
+Z28 !s110 1575869110
+Z29 !s108 1575869110.041997
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl|
+Z31 !s107 /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl|
 R11
 R12
+!s100 GEW9S:`UB9maG1<bNH2N`3
+!i10b 1
+!i111 1
 Abehavioral
 R1
 R2
-R15
+R25
 DEx4 work 4 lfsr 0 22 TYX5oZQnEI:Kjc7BX9NTl0
 l2023
 L2005
-VneAOD[4azA20M<63_dz_00
-!s100 RAke2E_1NcFicCYMd=@In0
+VC<H:Q8m]Yoi9=TBAE>Vf20
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
+!s100 X?BZQME8?^^Go6Ycmfedj2
+!i10b 1
+!i111 1
 Emac
-R14
+R24
 R1
 R2
-R15
+R25
 R3
-R16
-R17
+R26
+R27
 l0
-L2484
-V8B`55ZAQ_2XmNL8n8JZ3z3
-!s100 XRYD`2Bl]ikKAeR5UKIgN2
+L2473
+VoO0JX:]c46FEd@YG;OCod2
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
+!s100 SD]2fNXV[H1KPae`l20052
+!i10b 1
+!i111 1
 Astructural
 R1
 R2
-R15
-DEx4 work 3 mac 0 22 8B`55ZAQ_2XmNL8n8JZ3z3
-l2597
-L2494
-VVn>lRRZ7EE^9lQN3VV91[0
-!s100 dO6a8Kd<VX`mBCF]`7>Tz0
+R25
+DEx4 work 3 mac 0 22 oO0JX:]c46FEd@YG;OCod2
+l2561
+L2483
+V69:T]58HM6<UJGKk=cY;L2
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
-Emisr
-R14
+!s100 [4@MeacM3c^572<`VPV;30
+!i10b 1
+!i111 1
+Emactb
+Z32 w1575860957
 R1
 R2
-R15
 R3
+R15
 R16
-R17
 l0
-L2207
-Vk?2e7@9N8[TEb_3eOV@J82
-!s100 6<Q^zmT[?3A>g5Vm5g92A0
+L35
+V?fDCBgOcj7e=]FLnCe[8c3
 R6
 32
-R18
-!i10b 1
+Z33 !s110 1575860970
+Z34 !s108 1575860970.283509
 R19
-R20
-R21
-!i111 1
+Z35 !s107 /home/mjs5127/DigIC/project_VHDL/MACtb.vhd|
 R11
 R12
+!s100 cWVld<Soe_:aDb0gn=ag`0
+!i10b 1
+!i111 1
+Abehavior
+R1
+R2
+DEx4 work 5 mactb 0 22 ?fDCBgOcj7e=]FLnCe[8c3
+l66
+L38
+V7c@aVA18R>_U6bi8F<[ZL1
+R6
+32
+R33
+R34
+R19
+R35
+R11
+R12
+!s100 6C6kMPo:OaC<?iUDTaOJ]1
+!i10b 1
+!i111 1
+Emisr
+R24
+R1
+R2
+R25
+R3
+R26
+R27
+l0
+L2200
+VXX0E3S3_^8W2Zj6?8hGZJ2
+R6
+32
+R28
+R29
+R30
+R31
+R11
+R12
+!s100 j]JlHz=j5T3LWLnLPJk6=3
+!i10b 1
+!i111 1
 Abehavioral
 R1
 R2
-R15
-DEx4 work 4 misr 0 22 k?2e7@9N8[TEb_3eOV@J82
-l2237
-L2216
-V__lhE7`Bf>AgRN64nIEic0
-!s100 NUK]1lDXgekEMb8=XQE`m2
+R25
+DEx4 work 4 misr 0 22 XX0E3S3_^8W2Zj6?8hGZJ2
+l2230
+L2209
+VYDh?f9`UVkVTnf^W`9^632
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
+!s100 _C<=YKdOV2j;o3No734_<3
+!i10b 1
+!i111 1
 Emultiplier
-Z22 w1575849548
+Z36 w1575849548
 R1
 R2
 R3
-Z23 8/home/mjs5127/DigIC/project_VHDL/Multiplier.vhd
-Z24 F/home/mjs5127/DigIC/project_VHDL/Multiplier.vhd
+Z37 8/home/mjs5127/DigIC/project_VHDL/Multiplier.vhd
+Z38 F/home/mjs5127/DigIC/project_VHDL/Multiplier.vhd
 l0
 L32
 VfE6z5Cg9ii0FPoUDmmCbK2
 R6
 32
 R7
-Z25 !s108 1575851431.812719
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/Multiplier.vhd|
-Z27 !s107 /home/mjs5127/DigIC/project_VHDL/Multiplier.vhd|
+Z39 !s108 1575868596.543331
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/Multiplier.vhd|
+Z41 !s107 /home/mjs5127/DigIC/project_VHDL/Multiplier.vhd|
 R11
 R12
 !s100 Wo8c:9iILl]UABBZWL;W00
@@ -195,78 +273,78 @@ Astructural
 R13
 R1
 R2
-Z28 DEx4 work 10 multiplier 0 22 fE6z5Cg9ii0FPoUDmmCbK2
+DEx4 work 10 multiplier 0 22 fE6z5Cg9ii0FPoUDmmCbK2
 l48
 L40
 VA56L5ok3]c9VojY^da2C]2
 R6
 32
 R7
-R25
-R26
-R27
+R39
+R40
+R41
 R11
 R12
 !s100 Sa>H?l6ZVOCQYEPfRj2H72
 !i10b 1
 !i111 1
 Emultiplier_32
-R14
+R24
 R1
 R2
-R15
+R25
 R3
-R16
-R17
+R26
+R27
 l0
 L15
 V]Qf9ccm2iKI34fX;>QjAC0
-!s100 KYT[d?KI5];7=T=c:44Rn1
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
+!s100 KYT[d?KI5];7=T=c:44Rn1
+!i10b 1
+!i111 1
 Astructural
 R1
 R2
-R15
-Z29 DEx4 work 13 multiplier_32 0 22 ]Qf9ccm2iKI34fX;>QjAC0
+R25
+DEx4 work 13 multiplier_32 0 22 ]Qf9ccm2iKI34fX;>QjAC0
 l151
 L22
-Z30 V[jkWm=SgbW2QNi^n`Y>]L0
-Z31 !s100 cLoeRC^aOW0RA<;aUA[RU1
+V[jkWm=SgbW2QNi^n`Y>]L0
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
+!s100 cLoeRC^aOW0RA<;aUA[RU1
+!i10b 1
+!i111 1
 Ercfa
-Z32 w1575849547
+Z42 w1575849547
 R1
 R2
 R3
-Z33 8/home/mjs5127/DigIC/project_VHDL/RCFA.vhd
-Z34 F/home/mjs5127/DigIC/project_VHDL/RCFA.vhd
+Z43 8/home/mjs5127/DigIC/project_VHDL/RCFA.vhd
+Z44 F/home/mjs5127/DigIC/project_VHDL/RCFA.vhd
 l0
 L32
 V?:RCe?[mcSN;m4iUFfm_:1
 R6
 32
 R7
-Z35 !s108 1575851431.916772
-Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/RCFA.vhd|
-Z37 !s107 /home/mjs5127/DigIC/project_VHDL/RCFA.vhd|
+Z45 !s108 1575868596.666192
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/RCFA.vhd|
+Z47 !s107 /home/mjs5127/DigIC/project_VHDL/RCFA.vhd|
 R11
 R12
 !s100 a4L?1cYSU?@5GSPb=a;^z3
@@ -276,78 +354,78 @@ Astructural
 R13
 R1
 R2
-Z38 DEx4 work 4 rcfa 0 22 ?:RCe?[mcSN;m4iUFfm_:1
+DEx4 work 4 rcfa 0 22 ?:RCe?[mcSN;m4iUFfm_:1
 l44
 L41
 Vj2lF_il@S3lHXd=;MPQV32
 R6
 32
 R7
-R35
-R36
-R37
+R45
+R46
+R47
 R11
 R12
 !s100 [=DU@eD>T237mhZD3aKSX3
 !i10b 1
 !i111 1
 Ercfa_32
-R14
+R24
 R1
 R2
-R15
+R25
 R3
-R16
-R17
+R26
+R27
 l0
 L1567
 VYlfG6b:oZgJDZ5M70Y<5g2
-!s100 oOB0_[4PD`bFjFCHo`G<10
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
+!s100 oOB0_[4PD`bFjFCHo`G<10
+!i10b 1
+!i111 1
 Astructural
 R1
 R2
-R15
+R25
 DEx4 work 7 rcfa_32 0 22 YlfG6b:oZgJDZ5M70Y<5g2
 l1592
 L1576
 V<@i[5QZ^3Om[MIPCfWRcV2
-!s100 Y=?=jbC23946Wb=MNFY5E1
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
+!s100 Y=?=jbC23946Wb=MNFY5E1
+!i10b 1
+!i111 1
 Eregistern
-Z39 w1575850490
+Z48 w1575850490
 R1
 R2
 R3
-Z40 8/home/mjs5127/DigIC/project_VHDL/Register2N.vhd
-Z41 F/home/mjs5127/DigIC/project_VHDL/Register2N.vhd
+Z49 8/home/mjs5127/DigIC/project_VHDL/Register2N.vhd
+Z50 F/home/mjs5127/DigIC/project_VHDL/Register2N.vhd
 l0
 L15
 VYXKDD[GKX^achD]HV0CT@1
 R6
 32
-Z42 !s110 1575851432
-Z43 !s108 1575851432.025828
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/Register2N.vhd|
-Z45 !s107 /home/mjs5127/DigIC/project_VHDL/Register2N.vhd|
+Z51 !s110 1575868597
+Z52 !s108 1575868596.985478
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-novopt|/home/mjs5127/DigIC/project_VHDL/Register2N.vhd|
+Z54 !s107 /home/mjs5127/DigIC/project_VHDL/Register2N.vhd|
 R11
 R12
 !s100 >g1LP=LTok3`BIhF:6BLk1
@@ -356,59 +434,59 @@ R12
 Abehavioral
 R1
 R2
-Z46 DEx4 work 9 registern 0 22 YXKDD[GKX^achD]HV0CT@1
+DEx4 work 9 registern 0 22 YXKDD[GKX^achD]HV0CT@1
 l27
 L26
 VdWP>FPN;`ClWVQUlkLU3z2
 R6
 32
-R42
-R43
-R44
-R45
+R51
+R52
+R53
+R54
 R11
 R12
 !s100 AI6Y3izSJ]A^G4kccB0Ya1
 !i10b 1
 !i111 1
 Eregistern_32
-R14
+R24
 R1
 R2
-R15
+R25
 R3
-R16
-R17
+R26
+R27
 l0
 L1803
 VI5E2YJFTHlGonQTRUO6aS2
-!s100 ]4z]8NI0ioIiLM:8UgVmz0
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
+!s100 ]4z]8NI0ioIiLM:8UgVmz0
+!i10b 1
+!i111 1
 Abehavioral
 R1
 R2
-R15
+R25
 DEx4 work 12 registern_32 0 22 I5E2YJFTHlGonQTRUO6aS2
 l1826
 L1812
 VEk9ICjkeIZMJ[E6BFYdB<0
-!s100 M3O=hQaPZM5UDz^5g9VXX1
 R6
 32
-R18
-!i10b 1
-R19
-R20
-R21
-!i111 1
+R28
+R29
+R30
+R31
 R11
 R12
+!s100 M3O=hQaPZM5UDz^5g9VXX1
+!i10b 1
+!i111 1

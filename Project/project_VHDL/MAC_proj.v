@@ -1,6 +1,6 @@
 //
 // Verilog description for cell MAC, 
-// Sun Dec  8 19:33:49 2019
+// Mon Dec  9 00:24:26 2019
 //
 // LeonardoSpectrum Level 3, 2008b.3 
 //
@@ -50,34 +50,8 @@ module MAC ( A, B, clk, rst, test_mode, Result_OUT ) ;
          REG_OUT_22, REG_OUT_21, REG_OUT_20, REG_OUT_19, REG_OUT_18, REG_OUT_17, 
          REG_OUT_16, REG_OUT_15, REG_OUT_14, REG_OUT_13, REG_OUT_12, REG_OUT_11, 
          REG_OUT_10, REG_OUT_9, REG_OUT_8, REG_OUT_7, REG_OUT_6, REG_OUT_5, 
-         REG_OUT_4, REG_OUT_3, REG_OUT_2, REG_OUT_1, REG_OUT_0, MISR_EN, GND0, 
-         PWR, nx0, clk_cnt_30, nx937, clk_cnt_29, clk_cnt_28, clk_cnt_27, 
-         clk_cnt_26, clk_cnt_25, clk_cnt_24, clk_cnt_23, clk_cnt_22, clk_cnt_21, 
-         clk_cnt_20, clk_cnt_19, clk_cnt_18, clk_cnt_17, clk_cnt_16, clk_cnt_15, 
-         clk_cnt_14, clk_cnt_13, clk_cnt_12, clk_cnt_11, clk_cnt_10, clk_cnt_9, 
-         clk_cnt_8, clk_cnt_7, clk_cnt_6, clk_cnt_5, clk_cnt_4, clk_cnt_3, 
-         clk_cnt_2, clk_cnt_1, clk_cnt_0, nx4, nx18, nx28, nx44, nx943, nx76, 
-         nx947, nx108, nx949, nx130, nx140, nx953, nx162, nx172, nx956, nx194, 
-         nx204, nx959, nx226, nx236, nx963, nx258, nx268, nx965, nx290, nx300, 
-         nx969, nx322, nx332, nx972, nx354, nx364, nx975, nx386, nx396, nx979, 
-         nx418, nx428, nx981, nx450, nx460, nx478, nx484, nx504, nx514, nx526, 
-         nx536, nx550, nx560, nx572, nx582, nx588, nx602, nx610, nx644, nx652, 
-         nx662, nx991, nx1001, nx1011, nx1021, nx1031, nx1041, nx1051, nx1061, 
-         nx1071, nx1081, nx1091, nx1101, nx1111, nx1121, nx1131, nx1141, nx1151, 
-         nx1161, nx1171, nx1181, nx1191, nx1201, nx1211, nx1221, nx1231, nx1241, 
-         nx1251, nx1261, nx1271, nx1281, nx1291, nx1299, nx1311, nx1321, nx1327, 
-         nx1331, nx1334, nx1336, nx1340, nx1344, nx1347, nx1351, nx1353, nx1357, 
-         nx1361, nx1364, nx1368, nx1370, nx1374, nx1378, nx1381, nx1385, nx1387, 
-         nx1391, nx1395, nx1398, nx1402, nx1404, nx1408, nx1412, nx1415, nx1419, 
-         nx1421, nx1425, nx1429, nx1432, nx1436, nx1438, nx1442, nx1446, nx1449, 
-         nx1453, nx1455, nx1459, nx1463, nx1466, nx1470, nx1472, nx1476, nx1480, 
-         nx1483, nx1487, nx1489, nx1493, nx1497, nx1500, nx1504, nx1506, nx1510, 
-         nx1514, nx1517, nx1521, nx1523, nx1527, nx1530, nx1533, nx1537, nx1539, 
-         nx1543, nx1546, nx1549, nx1553, nx1555, nx1558, nx1562, nx1564, nx1567, 
-         nx1572, nx1590, nx1592, nx1597, nx1603, nx1608, nx1615, nx1691, nx1693, 
-         nx1695, nx1697, nx1699, nx1701, nx1705, nx1711, nx1713, nx1715, nx1717, 
-         nx1719, nx1721;
-    wire [4:0] \$dummy ;
+         REG_OUT_4, REG_OUT_3, REG_OUT_2, REG_OUT_1, REG_OUT_0, GND0, PWR;
+    wire [0:0] \$dummy ;
 
 
 
@@ -95,6 +69,25 @@ module MAC ( A, B, clk, rst, test_mode, Result_OUT ) ;
                   MULT_OUT_11,MULT_OUT_10,MULT_OUT_9,MULT_OUT_8,MULT_OUT_7,
                   MULT_OUT_6,MULT_OUT_5,MULT_OUT_4,MULT_OUT_3,MULT_OUT_2,
                   MULT_OUT_1,MULT_OUT_0})) ;
+    RCFA_32 RCFA0 (.A ({MULT_OUT_31,MULT_OUT_30,MULT_OUT_29,MULT_OUT_28,
+            MULT_OUT_27,MULT_OUT_26,MULT_OUT_25,MULT_OUT_24,MULT_OUT_23,
+            MULT_OUT_22,MULT_OUT_21,MULT_OUT_20,MULT_OUT_19,MULT_OUT_18,
+            MULT_OUT_17,MULT_OUT_16,MULT_OUT_15,MULT_OUT_14,MULT_OUT_13,
+            MULT_OUT_12,MULT_OUT_11,MULT_OUT_10,MULT_OUT_9,MULT_OUT_8,MULT_OUT_7
+            ,MULT_OUT_6,MULT_OUT_5,MULT_OUT_4,MULT_OUT_3,MULT_OUT_2,MULT_OUT_1,
+            MULT_OUT_0}), .B ({REG_OUT_31,REG_OUT_30,REG_OUT_29,REG_OUT_28,
+            REG_OUT_27,REG_OUT_26,REG_OUT_25,REG_OUT_24,REG_OUT_23,REG_OUT_22,
+            REG_OUT_21,REG_OUT_20,REG_OUT_19,REG_OUT_18,REG_OUT_17,REG_OUT_16,
+            REG_OUT_15,REG_OUT_14,REG_OUT_13,REG_OUT_12,REG_OUT_11,REG_OUT_10,
+            REG_OUT_9,REG_OUT_8,REG_OUT_7,REG_OUT_6,REG_OUT_5,REG_OUT_4,
+            REG_OUT_3,REG_OUT_2,REG_OUT_1,REG_OUT_0}), .Cin (GND0), .Sum ({
+            ADDER_OUT_31,ADDER_OUT_30,ADDER_OUT_29,ADDER_OUT_28,ADDER_OUT_27,
+            ADDER_OUT_26,ADDER_OUT_25,ADDER_OUT_24,ADDER_OUT_23,ADDER_OUT_22,
+            ADDER_OUT_21,ADDER_OUT_20,ADDER_OUT_19,ADDER_OUT_18,ADDER_OUT_17,
+            ADDER_OUT_16,ADDER_OUT_15,ADDER_OUT_14,ADDER_OUT_13,ADDER_OUT_12,
+            ADDER_OUT_11,ADDER_OUT_10,ADDER_OUT_9,ADDER_OUT_8,ADDER_OUT_7,
+            ADDER_OUT_6,ADDER_OUT_5,ADDER_OUT_4,ADDER_OUT_3,ADDER_OUT_2,
+            ADDER_OUT_1,ADDER_OUT_0}), .Cout (\$dummy [0])) ;
     RegisterN_32 RegisterN0 (.clk (clk), .reset (rst), .enable (PWR), .\input  (
                  {ADDER_OUT_31,ADDER_OUT_30,ADDER_OUT_29,ADDER_OUT_28,
                  ADDER_OUT_27,ADDER_OUT_26,ADDER_OUT_25,ADDER_OUT_24,
@@ -117,7 +110,7 @@ module MAC ( A, B, clk, rst, test_mode, Result_OUT ) ;
          ,LFSR_OUT_14,LFSR_OUT_13,LFSR_OUT_12,LFSR_OUT_11,LFSR_OUT_10,LFSR_OUT_9
          ,LFSR_OUT_8,LFSR_OUT_7,LFSR_OUT_6,LFSR_OUT_5,LFSR_OUT_4,LFSR_OUT_3,
          LFSR_OUT_2,LFSR_OUT_1,LFSR_OUT_0})) ;
-    MISR MISR0 (.clk (clk), .rst (rst), .enable (MISR_EN), .mult_result ({
+    MISR MISR0 (.clk (clk), .rst (rst), .enable (test_mode), .mult_result ({
          REG_OUT_31,REG_OUT_30,REG_OUT_29,REG_OUT_28,REG_OUT_27,REG_OUT_26,
          REG_OUT_25,REG_OUT_24,REG_OUT_23,REG_OUT_22,REG_OUT_21,REG_OUT_20,
          REG_OUT_19,REG_OUT_18,REG_OUT_17,REG_OUT_16,REG_OUT_15,REG_OUT_14,
@@ -129,391 +122,634 @@ module MAC ( A, B, clk, rst, test_mode, Result_OUT ) ;
          MISR_OUT_17,MISR_OUT_16,MISR_OUT_15,MISR_OUT_14,MISR_OUT_13,MISR_OUT_12
          ,MISR_OUT_11,MISR_OUT_10,MISR_OUT_9,MISR_OUT_8,MISR_OUT_7,MISR_OUT_6,
          MISR_OUT_5,MISR_OUT_4,MISR_OUT_3,MISR_OUT_2,MISR_OUT_1,MISR_OUT_0})) ;
-    RCFA_32 RCFA0 (.A ({MULT_OUT_31,MULT_OUT_30,MULT_OUT_29,MULT_OUT_28,
-            MULT_OUT_27,MULT_OUT_26,MULT_OUT_25,MULT_OUT_24,MULT_OUT_23,
-            MULT_OUT_22,MULT_OUT_21,MULT_OUT_20,MULT_OUT_19,MULT_OUT_18,
-            MULT_OUT_17,MULT_OUT_16,MULT_OUT_15,MULT_OUT_14,MULT_OUT_13,
-            MULT_OUT_12,MULT_OUT_11,MULT_OUT_10,MULT_OUT_9,MULT_OUT_8,MULT_OUT_7
-            ,MULT_OUT_6,MULT_OUT_5,MULT_OUT_4,MULT_OUT_3,MULT_OUT_2,MULT_OUT_1,
-            MULT_OUT_0}), .B ({REG_OUT_31,REG_OUT_30,REG_OUT_29,REG_OUT_28,
-            REG_OUT_27,REG_OUT_26,REG_OUT_25,REG_OUT_24,REG_OUT_23,REG_OUT_22,
-            REG_OUT_21,REG_OUT_20,REG_OUT_19,REG_OUT_18,REG_OUT_17,REG_OUT_16,
-            REG_OUT_15,REG_OUT_14,REG_OUT_13,REG_OUT_12,REG_OUT_11,REG_OUT_10,
-            REG_OUT_9,REG_OUT_8,REG_OUT_7,REG_OUT_6,REG_OUT_5,REG_OUT_4,
-            REG_OUT_3,REG_OUT_2,REG_OUT_1,REG_OUT_0}), .Cin (GND0), .Sum ({
-            ADDER_OUT_31,ADDER_OUT_30,ADDER_OUT_29,ADDER_OUT_28,ADDER_OUT_27,
-            ADDER_OUT_26,ADDER_OUT_25,ADDER_OUT_24,ADDER_OUT_23,ADDER_OUT_22,
-            ADDER_OUT_21,ADDER_OUT_20,ADDER_OUT_19,ADDER_OUT_18,ADDER_OUT_17,
-            ADDER_OUT_16,ADDER_OUT_15,ADDER_OUT_14,ADDER_OUT_13,ADDER_OUT_12,
-            ADDER_OUT_11,ADDER_OUT_10,ADDER_OUT_9,ADDER_OUT_8,ADDER_OUT_7,
-            ADDER_OUT_6,ADDER_OUT_5,ADDER_OUT_4,ADDER_OUT_3,ADDER_OUT_2,
-            ADDER_OUT_1,ADDER_OUT_0}), .Cout (\$dummy [0])) ;
-    fake_vcc ix799 (.Y (PWR)) ;
-    fake_gnd ix797 (.Y (GND0)) ;
-    dff reg_MISR_EN (.Q (MISR_EN), .QB (\$dummy [1]), .D (nx1311), .CLK (clk)) ;
-    mux21 ix663 (.Y (nx662), .A0 (MISR_EN), .A1 (nx610), .S0 (nx1615)) ;
-    oai21 ix611 (.Y (nx610), .A0 (nx1321), .A1 (nx1597), .B0 (nx1608)) ;
-    nand04 ix1322 (.Y (nx1321), .A0 (nx504), .A1 (nx514), .A2 (nx526), .A3 (
-           nx536)) ;
-    aoi21 ix485 (.Y (nx484), .A0 (nx1327), .A1 (nx1590), .B0 (nx1592)) ;
-    nand02 ix1328 (.Y (nx1327), .A0 (clk_cnt_29), .A1 (nx981)) ;
-    oai21 ix1282 (.Y (nx1281), .A0 (nx1331), .A1 (nx1693), .B0 (nx1336)) ;
-    dff reg_clk_cnt_29 (.Q (clk_cnt_29), .QB (nx1331), .D (nx1281), .CLK (clk)
-        ) ;
-    nand02 ix1335 (.Y (nx1334), .A0 (rst), .A1 (test_mode)) ;
-    nand04 ix1337 (.Y (nx1336), .A0 (nx460), .A1 (nx0), .A2 (nx1327), .A3 (
-           nx1697)) ;
-    or02 ix461 (.Y (nx460), .A0 (nx981), .A1 (clk_cnt_29)) ;
-    nor03 ix451 (.Y (nx450), .A0 (nx1344), .A1 (nx1699), .A2 (nx981)) ;
-    dff reg_clk_cnt_28 (.Q (clk_cnt_28), .QB (nx1340), .D (nx1271), .CLK (clk)
-        ) ;
-    nand02 ix1348 (.Y (nx1347), .A0 (clk_cnt_27), .A1 (nx979)) ;
-    oai21 ix1262 (.Y (nx1261), .A0 (nx1351), .A1 (nx1693), .B0 (nx1353)) ;
-    dff reg_clk_cnt_27 (.Q (clk_cnt_27), .QB (nx1351), .D (nx1261), .CLK (clk)
-        ) ;
-    nand04 ix1354 (.Y (nx1353), .A0 (nx428), .A1 (nx0), .A2 (nx1347), .A3 (
-           nx1697)) ;
-    or02 ix429 (.Y (nx428), .A0 (nx979), .A1 (clk_cnt_27)) ;
-    nor03 ix419 (.Y (nx418), .A0 (nx1361), .A1 (nx1699), .A2 (nx979)) ;
-    dff reg_clk_cnt_26 (.Q (clk_cnt_26), .QB (nx1357), .D (nx1251), .CLK (clk)
-        ) ;
-    nand02 ix1365 (.Y (nx1364), .A0 (clk_cnt_25), .A1 (nx975)) ;
-    oai21 ix1242 (.Y (nx1241), .A0 (nx1368), .A1 (nx1693), .B0 (nx1370)) ;
-    dff reg_clk_cnt_25 (.Q (clk_cnt_25), .QB (nx1368), .D (nx1241), .CLK (clk)
-        ) ;
-    nand04 ix1371 (.Y (nx1370), .A0 (nx396), .A1 (nx0), .A2 (nx1364), .A3 (
-           nx1697)) ;
-    or02 ix397 (.Y (nx396), .A0 (nx975), .A1 (clk_cnt_25)) ;
-    nor03 ix387 (.Y (nx386), .A0 (nx1378), .A1 (nx1699), .A2 (nx975)) ;
-    dff reg_clk_cnt_24 (.Q (clk_cnt_24), .QB (nx1374), .D (nx1231), .CLK (clk)
-        ) ;
-    nand02 ix1382 (.Y (nx1381), .A0 (clk_cnt_23), .A1 (nx972)) ;
-    oai21 ix1222 (.Y (nx1221), .A0 (nx1385), .A1 (nx1693), .B0 (nx1387)) ;
-    dff reg_clk_cnt_23 (.Q (clk_cnt_23), .QB (nx1385), .D (nx1221), .CLK (clk)
-        ) ;
-    nand04 ix1388 (.Y (nx1387), .A0 (nx364), .A1 (nx0), .A2 (nx1381), .A3 (
-           nx1697)) ;
-    or02 ix365 (.Y (nx364), .A0 (nx972), .A1 (clk_cnt_23)) ;
-    nor03 ix355 (.Y (nx354), .A0 (nx1395), .A1 (nx1699), .A2 (nx972)) ;
-    dff reg_clk_cnt_22 (.Q (clk_cnt_22), .QB (nx1391), .D (nx1211), .CLK (clk)
-        ) ;
-    nand02 ix1399 (.Y (nx1398), .A0 (clk_cnt_21), .A1 (nx969)) ;
-    oai21 ix1202 (.Y (nx1201), .A0 (nx1402), .A1 (nx1693), .B0 (nx1404)) ;
-    dff reg_clk_cnt_21 (.Q (clk_cnt_21), .QB (nx1402), .D (nx1201), .CLK (clk)
-        ) ;
-    nand04 ix1405 (.Y (nx1404), .A0 (nx332), .A1 (nx1691), .A2 (nx1398), .A3 (
-           nx1695)) ;
-    or02 ix333 (.Y (nx332), .A0 (nx969), .A1 (clk_cnt_21)) ;
-    nor03 ix323 (.Y (nx322), .A0 (nx1412), .A1 (nx1699), .A2 (nx969)) ;
-    dff reg_clk_cnt_20 (.Q (clk_cnt_20), .QB (nx1408), .D (nx1191), .CLK (clk)
-        ) ;
-    nand02 ix1416 (.Y (nx1415), .A0 (clk_cnt_19), .A1 (nx965)) ;
-    oai21 ix1182 (.Y (nx1181), .A0 (nx1419), .A1 (nx1693), .B0 (nx1421)) ;
-    dff reg_clk_cnt_19 (.Q (clk_cnt_19), .QB (nx1419), .D (nx1181), .CLK (clk)
-        ) ;
-    nand04 ix1422 (.Y (nx1421), .A0 (nx300), .A1 (nx1691), .A2 (nx1415), .A3 (
-           nx1695)) ;
-    or02 ix301 (.Y (nx300), .A0 (nx965), .A1 (clk_cnt_19)) ;
-    nor03 ix291 (.Y (nx290), .A0 (nx1429), .A1 (nx1699), .A2 (nx965)) ;
-    dff reg_clk_cnt_18 (.Q (clk_cnt_18), .QB (nx1425), .D (nx1171), .CLK (clk)
-        ) ;
-    nand02 ix1433 (.Y (nx1432), .A0 (clk_cnt_17), .A1 (nx963)) ;
-    oai21 ix1162 (.Y (nx1161), .A0 (nx1436), .A1 (nx1693), .B0 (nx1438)) ;
-    dff reg_clk_cnt_17 (.Q (clk_cnt_17), .QB (nx1436), .D (nx1161), .CLK (clk)
-        ) ;
-    nand04 ix1439 (.Y (nx1438), .A0 (nx268), .A1 (nx1691), .A2 (nx1432), .A3 (
-           nx1695)) ;
-    or02 ix269 (.Y (nx268), .A0 (nx963), .A1 (clk_cnt_17)) ;
-    nor03 ix259 (.Y (nx258), .A0 (nx1446), .A1 (nx1699), .A2 (nx963)) ;
-    dff reg_clk_cnt_16 (.Q (clk_cnt_16), .QB (nx1442), .D (nx1151), .CLK (clk)
-        ) ;
-    nand02 ix1450 (.Y (nx1449), .A0 (clk_cnt_15), .A1 (nx959)) ;
-    oai21 ix1142 (.Y (nx1141), .A0 (nx1453), .A1 (nx1693), .B0 (nx1455)) ;
-    dff reg_clk_cnt_15 (.Q (clk_cnt_15), .QB (nx1453), .D (nx1141), .CLK (clk)
-        ) ;
-    nand04 ix1456 (.Y (nx1455), .A0 (nx236), .A1 (nx1691), .A2 (nx1449), .A3 (
-           nx1695)) ;
-    or02 ix237 (.Y (nx236), .A0 (nx959), .A1 (clk_cnt_15)) ;
-    nor03 ix227 (.Y (nx226), .A0 (nx1463), .A1 (nx1699), .A2 (nx959)) ;
-    dff reg_clk_cnt_14 (.Q (clk_cnt_14), .QB (nx1459), .D (nx1131), .CLK (clk)
-        ) ;
-    nand02 ix1467 (.Y (nx1466), .A0 (clk_cnt_13), .A1 (nx956)) ;
-    oai21 ix1122 (.Y (nx1121), .A0 (nx1470), .A1 (nx1693), .B0 (nx1472)) ;
-    dff reg_clk_cnt_13 (.Q (clk_cnt_13), .QB (nx1470), .D (nx1121), .CLK (clk)
-        ) ;
-    nand04 ix1473 (.Y (nx1472), .A0 (nx204), .A1 (nx1691), .A2 (nx1466), .A3 (
-           nx1695)) ;
-    or02 ix205 (.Y (nx204), .A0 (nx956), .A1 (clk_cnt_13)) ;
-    nor03 ix195 (.Y (nx194), .A0 (nx1480), .A1 (nx1699), .A2 (nx956)) ;
-    dff reg_clk_cnt_12 (.Q (clk_cnt_12), .QB (nx1476), .D (nx1111), .CLK (clk)
-        ) ;
-    nand02 ix1484 (.Y (nx1483), .A0 (clk_cnt_11), .A1 (nx953)) ;
-    oai21 ix1102 (.Y (nx1101), .A0 (nx1487), .A1 (nx1693), .B0 (nx1489)) ;
-    dff reg_clk_cnt_11 (.Q (clk_cnt_11), .QB (nx1487), .D (nx1101), .CLK (clk)
-        ) ;
-    nand04 ix1490 (.Y (nx1489), .A0 (nx172), .A1 (nx1691), .A2 (nx1483), .A3 (
-           nx1695)) ;
-    or02 ix173 (.Y (nx172), .A0 (nx953), .A1 (clk_cnt_11)) ;
-    nor03 ix163 (.Y (nx162), .A0 (nx1497), .A1 (nx1699), .A2 (nx953)) ;
-    dff reg_clk_cnt_10 (.Q (clk_cnt_10), .QB (nx1493), .D (nx1091), .CLK (clk)
-        ) ;
-    nand02 ix1501 (.Y (nx1500), .A0 (clk_cnt_9), .A1 (nx949)) ;
-    oai21 ix1082 (.Y (nx1081), .A0 (nx1504), .A1 (nx1693), .B0 (nx1506)) ;
-    dff reg_clk_cnt_9 (.Q (clk_cnt_9), .QB (nx1504), .D (nx1081), .CLK (clk)) ;
-    nand04 ix1507 (.Y (nx1506), .A0 (nx140), .A1 (nx1691), .A2 (nx1500), .A3 (
-           nx1695)) ;
-    or02 ix141 (.Y (nx140), .A0 (nx949), .A1 (clk_cnt_9)) ;
-    nor03 ix131 (.Y (nx130), .A0 (nx1514), .A1 (nx1699), .A2 (nx949)) ;
-    dff reg_clk_cnt_8 (.Q (clk_cnt_8), .QB (nx1510), .D (nx1071), .CLK (clk)) ;
-    nand02 ix1518 (.Y (nx1517), .A0 (clk_cnt_7), .A1 (nx947)) ;
-    oai21 ix1062 (.Y (nx1061), .A0 (nx1521), .A1 (nx1693), .B0 (nx1523)) ;
-    dff reg_clk_cnt_7 (.Q (clk_cnt_7), .QB (nx1521), .D (nx1061), .CLK (clk)) ;
-    nand04 ix1524 (.Y (nx1523), .A0 (nx108), .A1 (nx1691), .A2 (nx1517), .A3 (
-           nx1695)) ;
-    or02 ix109 (.Y (nx108), .A0 (nx947), .A1 (clk_cnt_7)) ;
-    oai21 ix1052 (.Y (nx1051), .A0 (nx1527), .A1 (nx1693), .B0 (nx1530)) ;
-    nand02 ix1534 (.Y (nx1533), .A0 (clk_cnt_5), .A1 (nx943)) ;
-    oai21 ix1042 (.Y (nx1041), .A0 (nx1537), .A1 (nx1693), .B0 (nx1539)) ;
-    dff reg_clk_cnt_5 (.Q (clk_cnt_5), .QB (nx1537), .D (nx1041), .CLK (clk)) ;
-    nand04 ix1540 (.Y (nx1539), .A0 (nx76), .A1 (nx1691), .A2 (nx1533), .A3 (
-           nx1695)) ;
-    or02 ix77 (.Y (nx76), .A0 (nx943), .A1 (clk_cnt_5)) ;
-    oai21 ix1032 (.Y (nx1031), .A0 (nx1543), .A1 (nx1693), .B0 (nx1546)) ;
-    nand04 ix1550 (.Y (nx1549), .A0 (clk_cnt_3), .A1 (clk_cnt_2), .A2 (clk_cnt_1
-           ), .A3 (clk_cnt_0)) ;
-    oai21 ix1022 (.Y (nx1021), .A0 (nx1553), .A1 (nx1695), .B0 (nx1555)) ;
-    dff reg_clk_cnt_3 (.Q (clk_cnt_3), .QB (nx1553), .D (nx1021), .CLK (clk)) ;
-    nand04 ix1556 (.Y (nx1555), .A0 (nx44), .A1 (nx1691), .A2 (nx1549), .A3 (
-           nx1695)) ;
-    nand02 ix45 (.Y (nx44), .A0 (nx1558), .A1 (nx1553)) ;
-    nand03 ix1559 (.Y (nx1558), .A0 (clk_cnt_2), .A1 (clk_cnt_1), .A2 (clk_cnt_0
-           )) ;
-    oai21 ix1012 (.Y (nx1011), .A0 (nx1562), .A1 (nx1695), .B0 (nx1564)) ;
-    dff reg_clk_cnt_2 (.Q (clk_cnt_2), .QB (nx1562), .D (nx1011), .CLK (clk)) ;
-    nand04 ix1565 (.Y (nx1564), .A0 (nx28), .A1 (nx1691), .A2 (nx1558), .A3 (
-           nx1695)) ;
-    nand02 ix29 (.Y (nx28), .A0 (nx1567), .A1 (nx1562)) ;
-    nand02 ix1568 (.Y (nx1567), .A0 (clk_cnt_1), .A1 (clk_cnt_0)) ;
-    dff reg_clk_cnt_1 (.Q (clk_cnt_1), .QB (\$dummy [2]), .D (nx1001), .CLK (clk
-        )) ;
-    oai21 ix1573 (.Y (nx1572), .A0 (clk_cnt_0), .A1 (clk_cnt_1), .B0 (nx1567)) ;
-    dff reg_clk_cnt_0 (.Q (clk_cnt_0), .QB (\$dummy [3]), .D (nx991), .CLK (clk)
-        ) ;
-    dff reg_clk_cnt_4 (.Q (clk_cnt_4), .QB (nx1543), .D (nx1031), .CLK (clk)) ;
-    dff reg_clk_cnt_6 (.Q (clk_cnt_6), .QB (nx1527), .D (nx1051), .CLK (clk)) ;
-    dff reg_clk_cnt_30 (.Q (clk_cnt_30), .QB (nx1590), .D (nx1291), .CLK (clk)
-        ) ;
-    oai21 ix1593 (.Y (nx1592), .A0 (nx1590), .A1 (nx1327), .B0 (nx1691)) ;
-    nand04 ix1598 (.Y (nx1597), .A0 (nx550), .A1 (nx560), .A2 (nx572), .A3 (
-           nx602)) ;
-    nor03 ix603 (.Y (nx602), .A0 (nx1603), .A1 (clk_cnt_8), .A2 (clk_cnt_7)) ;
-    aoi21 ix1604 (.Y (nx1603), .A0 (nx582), .A1 (nx588), .B0 (nx1527)) ;
-    dff clk_cnt_31 (.Q (\$dummy [4]), .QB (nx1608), .D (nx1299), .CLK (clk)) ;
-    oai21 ix645 (.Y (nx644), .A0 (clk_cnt_1), .A1 (clk_cnt_0), .B0 (clk_cnt_2)
+    fake_vcc ix502 (.Y (PWR)) ;
+    fake_gnd ix500 (.Y (GND0)) ;
+    mux21 ix135 (.Y (MultIn2_0), .A0 (B[0]), .A1 (LFSR_OUT_0), .S0 (test_mode)
           ) ;
-    mux21 ix805 (.Y (MultIn2_0), .A0 (B[0]), .A1 (LFSR_OUT_0), .S0 (test_mode)
+    mux21 ix143 (.Y (MultIn2_1), .A0 (B[1]), .A1 (LFSR_OUT_1), .S0 (test_mode)
           ) ;
-    mux21 ix813 (.Y (MultIn2_1), .A0 (B[1]), .A1 (LFSR_OUT_1), .S0 (test_mode)
+    mux21 ix151 (.Y (MultIn2_2), .A0 (B[2]), .A1 (LFSR_OUT_2), .S0 (test_mode)
           ) ;
-    mux21 ix821 (.Y (MultIn2_2), .A0 (B[2]), .A1 (LFSR_OUT_2), .S0 (test_mode)
+    mux21 ix159 (.Y (MultIn2_3), .A0 (B[3]), .A1 (LFSR_OUT_3), .S0 (test_mode)
           ) ;
-    mux21 ix829 (.Y (MultIn2_3), .A0 (B[3]), .A1 (LFSR_OUT_3), .S0 (test_mode)
+    mux21 ix167 (.Y (MultIn2_4), .A0 (B[4]), .A1 (LFSR_OUT_4), .S0 (test_mode)
           ) ;
-    mux21 ix837 (.Y (MultIn2_4), .A0 (B[4]), .A1 (LFSR_OUT_4), .S0 (test_mode)
+    mux21 ix175 (.Y (MultIn2_5), .A0 (B[5]), .A1 (LFSR_OUT_5), .S0 (test_mode)
           ) ;
-    mux21 ix845 (.Y (MultIn2_5), .A0 (B[5]), .A1 (LFSR_OUT_5), .S0 (test_mode)
+    mux21 ix183 (.Y (MultIn2_6), .A0 (B[6]), .A1 (LFSR_OUT_6), .S0 (test_mode)
           ) ;
-    mux21 ix853 (.Y (MultIn2_6), .A0 (B[6]), .A1 (LFSR_OUT_6), .S0 (test_mode)
+    mux21 ix191 (.Y (MultIn2_7), .A0 (B[7]), .A1 (LFSR_OUT_7), .S0 (test_mode)
           ) ;
-    mux21 ix861 (.Y (MultIn2_7), .A0 (B[7]), .A1 (LFSR_OUT_7), .S0 (test_mode)
+    mux21 ix199 (.Y (MultIn2_8), .A0 (B[8]), .A1 (LFSR_OUT_8), .S0 (test_mode)
           ) ;
-    mux21 ix869 (.Y (MultIn2_8), .A0 (B[8]), .A1 (LFSR_OUT_8), .S0 (test_mode)
+    mux21 ix207 (.Y (MultIn2_9), .A0 (B[9]), .A1 (LFSR_OUT_9), .S0 (test_mode)
           ) ;
-    mux21 ix877 (.Y (MultIn2_9), .A0 (B[9]), .A1 (LFSR_OUT_9), .S0 (test_mode)
-          ) ;
-    mux21 ix885 (.Y (MultIn2_10), .A0 (B[10]), .A1 (LFSR_OUT_10), .S0 (test_mode
+    mux21 ix215 (.Y (MultIn2_10), .A0 (B[10]), .A1 (LFSR_OUT_10), .S0 (test_mode
           )) ;
-    mux21 ix893 (.Y (MultIn2_11), .A0 (B[11]), .A1 (LFSR_OUT_11), .S0 (test_mode
+    mux21 ix223 (.Y (MultIn2_11), .A0 (B[11]), .A1 (LFSR_OUT_11), .S0 (test_mode
           )) ;
-    mux21 ix901 (.Y (MultIn2_12), .A0 (B[12]), .A1 (LFSR_OUT_12), .S0 (test_mode
+    mux21 ix231 (.Y (MultIn2_12), .A0 (B[12]), .A1 (LFSR_OUT_12), .S0 (test_mode
           )) ;
-    mux21 ix909 (.Y (MultIn2_13), .A0 (B[13]), .A1 (LFSR_OUT_13), .S0 (test_mode
+    mux21 ix239 (.Y (MultIn2_13), .A0 (B[13]), .A1 (LFSR_OUT_13), .S0 (test_mode
           )) ;
-    mux21 ix917 (.Y (MultIn2_14), .A0 (B[14]), .A1 (LFSR_OUT_14), .S0 (test_mode
+    mux21 ix247 (.Y (MultIn2_14), .A0 (B[14]), .A1 (LFSR_OUT_14), .S0 (test_mode
           )) ;
-    mux21 ix925 (.Y (MultIn2_15), .A0 (B[15]), .A1 (LFSR_OUT_15), .S0 (test_mode
+    mux21 ix255 (.Y (MultIn2_15), .A0 (B[15]), .A1 (LFSR_OUT_15), .S0 (test_mode
           )) ;
-    mux21 ix677 (.Y (MultIn1_0), .A0 (A[0]), .A1 (LFSR_OUT_16), .S0 (test_mode)
+    mux21 ix7 (.Y (MultIn1_0), .A0 (A[0]), .A1 (LFSR_OUT_16), .S0 (test_mode)) ;
+    mux21 ix15 (.Y (MultIn1_1), .A0 (A[1]), .A1 (LFSR_OUT_17), .S0 (test_mode)
           ) ;
-    mux21 ix685 (.Y (MultIn1_1), .A0 (A[1]), .A1 (LFSR_OUT_17), .S0 (test_mode)
+    mux21 ix23 (.Y (MultIn1_2), .A0 (A[2]), .A1 (LFSR_OUT_18), .S0 (test_mode)
           ) ;
-    mux21 ix693 (.Y (MultIn1_2), .A0 (A[2]), .A1 (LFSR_OUT_18), .S0 (test_mode)
+    mux21 ix31 (.Y (MultIn1_3), .A0 (A[3]), .A1 (LFSR_OUT_19), .S0 (test_mode)
           ) ;
-    mux21 ix701 (.Y (MultIn1_3), .A0 (A[3]), .A1 (LFSR_OUT_19), .S0 (test_mode)
+    mux21 ix39 (.Y (MultIn1_4), .A0 (A[4]), .A1 (LFSR_OUT_20), .S0 (test_mode)
           ) ;
-    mux21 ix709 (.Y (MultIn1_4), .A0 (A[4]), .A1 (LFSR_OUT_20), .S0 (test_mode)
+    mux21 ix47 (.Y (MultIn1_5), .A0 (A[5]), .A1 (LFSR_OUT_21), .S0 (test_mode)
           ) ;
-    mux21 ix717 (.Y (MultIn1_5), .A0 (A[5]), .A1 (LFSR_OUT_21), .S0 (test_mode)
+    mux21 ix55 (.Y (MultIn1_6), .A0 (A[6]), .A1 (LFSR_OUT_22), .S0 (test_mode)
           ) ;
-    mux21 ix725 (.Y (MultIn1_6), .A0 (A[6]), .A1 (LFSR_OUT_22), .S0 (test_mode)
+    mux21 ix63 (.Y (MultIn1_7), .A0 (A[7]), .A1 (LFSR_OUT_23), .S0 (test_mode)
           ) ;
-    mux21 ix733 (.Y (MultIn1_7), .A0 (A[7]), .A1 (LFSR_OUT_23), .S0 (test_mode)
+    mux21 ix71 (.Y (MultIn1_8), .A0 (A[8]), .A1 (LFSR_OUT_24), .S0 (test_mode)
           ) ;
-    mux21 ix741 (.Y (MultIn1_8), .A0 (A[8]), .A1 (LFSR_OUT_24), .S0 (test_mode)
+    mux21 ix79 (.Y (MultIn1_9), .A0 (A[9]), .A1 (LFSR_OUT_25), .S0 (test_mode)
           ) ;
-    mux21 ix749 (.Y (MultIn1_9), .A0 (A[9]), .A1 (LFSR_OUT_25), .S0 (test_mode)
+    mux21 ix87 (.Y (MultIn1_10), .A0 (A[10]), .A1 (LFSR_OUT_26), .S0 (test_mode)
           ) ;
-    mux21 ix757 (.Y (MultIn1_10), .A0 (A[10]), .A1 (LFSR_OUT_26), .S0 (test_mode
+    mux21 ix95 (.Y (MultIn1_11), .A0 (A[11]), .A1 (LFSR_OUT_27), .S0 (test_mode)
+          ) ;
+    mux21 ix103 (.Y (MultIn1_12), .A0 (A[12]), .A1 (LFSR_OUT_28), .S0 (test_mode
           )) ;
-    mux21 ix765 (.Y (MultIn1_11), .A0 (A[11]), .A1 (LFSR_OUT_27), .S0 (test_mode
+    mux21 ix111 (.Y (MultIn1_13), .A0 (A[13]), .A1 (LFSR_OUT_29), .S0 (test_mode
           )) ;
-    mux21 ix773 (.Y (MultIn1_12), .A0 (A[12]), .A1 (LFSR_OUT_28), .S0 (test_mode
+    mux21 ix119 (.Y (MultIn1_14), .A0 (A[14]), .A1 (LFSR_OUT_30), .S0 (test_mode
           )) ;
-    mux21 ix781 (.Y (MultIn1_13), .A0 (A[13]), .A1 (LFSR_OUT_29), .S0 (test_mode
+    mux21 ix127 (.Y (MultIn1_15), .A0 (A[15]), .A1 (LFSR_OUT_31), .S0 (test_mode
           )) ;
-    mux21 ix789 (.Y (MultIn1_14), .A0 (A[14]), .A1 (LFSR_OUT_30), .S0 (test_mode
-          )) ;
-    mux21 ix801 (.Y (MultIn1_15), .A0 (A[15]), .A1 (LFSR_OUT_31), .S0 (test_mode
-          )) ;
-    mux21 ix933 (.Y (Result_OUT[0]), .A0 (REG_OUT_0), .A1 (MISR_OUT_0), .S0 (
+    mux21 ix263 (.Y (Result_OUT[0]), .A0 (REG_OUT_0), .A1 (MISR_OUT_0), .S0 (
           test_mode)) ;
-    mux21 ix941 (.Y (Result_OUT[1]), .A0 (REG_OUT_1), .A1 (MISR_OUT_1), .S0 (
+    mux21 ix271 (.Y (Result_OUT[1]), .A0 (REG_OUT_1), .A1 (MISR_OUT_1), .S0 (
           test_mode)) ;
-    mux21 ix949 (.Y (Result_OUT[2]), .A0 (REG_OUT_2), .A1 (MISR_OUT_2), .S0 (
+    mux21 ix279 (.Y (Result_OUT[2]), .A0 (REG_OUT_2), .A1 (MISR_OUT_2), .S0 (
           test_mode)) ;
-    mux21 ix957 (.Y (Result_OUT[3]), .A0 (REG_OUT_3), .A1 (MISR_OUT_3), .S0 (
+    mux21 ix287 (.Y (Result_OUT[3]), .A0 (REG_OUT_3), .A1 (MISR_OUT_3), .S0 (
           test_mode)) ;
-    mux21 ix965 (.Y (Result_OUT[4]), .A0 (REG_OUT_4), .A1 (MISR_OUT_4), .S0 (
+    mux21 ix295 (.Y (Result_OUT[4]), .A0 (REG_OUT_4), .A1 (MISR_OUT_4), .S0 (
           test_mode)) ;
-    mux21 ix973 (.Y (Result_OUT[5]), .A0 (REG_OUT_5), .A1 (MISR_OUT_5), .S0 (
+    mux21 ix303 (.Y (Result_OUT[5]), .A0 (REG_OUT_5), .A1 (MISR_OUT_5), .S0 (
           test_mode)) ;
-    mux21 ix981 (.Y (Result_OUT[6]), .A0 (REG_OUT_6), .A1 (MISR_OUT_6), .S0 (
+    mux21 ix311 (.Y (Result_OUT[6]), .A0 (REG_OUT_6), .A1 (MISR_OUT_6), .S0 (
           test_mode)) ;
-    mux21 ix989 (.Y (Result_OUT[7]), .A0 (REG_OUT_7), .A1 (MISR_OUT_7), .S0 (
+    mux21 ix319 (.Y (Result_OUT[7]), .A0 (REG_OUT_7), .A1 (MISR_OUT_7), .S0 (
           test_mode)) ;
-    mux21 ix997 (.Y (Result_OUT[8]), .A0 (REG_OUT_8), .A1 (MISR_OUT_8), .S0 (
+    mux21 ix327 (.Y (Result_OUT[8]), .A0 (REG_OUT_8), .A1 (MISR_OUT_8), .S0 (
           test_mode)) ;
-    mux21 ix1005 (.Y (Result_OUT[9]), .A0 (REG_OUT_9), .A1 (MISR_OUT_9), .S0 (
+    mux21 ix335 (.Y (Result_OUT[9]), .A0 (REG_OUT_9), .A1 (MISR_OUT_9), .S0 (
           test_mode)) ;
-    mux21 ix1013 (.Y (Result_OUT[10]), .A0 (REG_OUT_10), .A1 (MISR_OUT_10), .S0 (
+    mux21 ix343 (.Y (Result_OUT[10]), .A0 (REG_OUT_10), .A1 (MISR_OUT_10), .S0 (
           test_mode)) ;
-    mux21 ix1021 (.Y (Result_OUT[11]), .A0 (REG_OUT_11), .A1 (MISR_OUT_11), .S0 (
+    mux21 ix351 (.Y (Result_OUT[11]), .A0 (REG_OUT_11), .A1 (MISR_OUT_11), .S0 (
           test_mode)) ;
-    mux21 ix1029 (.Y (Result_OUT[12]), .A0 (REG_OUT_12), .A1 (MISR_OUT_12), .S0 (
+    mux21 ix359 (.Y (Result_OUT[12]), .A0 (REG_OUT_12), .A1 (MISR_OUT_12), .S0 (
           test_mode)) ;
-    mux21 ix1037 (.Y (Result_OUT[13]), .A0 (REG_OUT_13), .A1 (MISR_OUT_13), .S0 (
+    mux21 ix367 (.Y (Result_OUT[13]), .A0 (REG_OUT_13), .A1 (MISR_OUT_13), .S0 (
           test_mode)) ;
-    mux21 ix1045 (.Y (Result_OUT[14]), .A0 (REG_OUT_14), .A1 (MISR_OUT_14), .S0 (
+    mux21 ix375 (.Y (Result_OUT[14]), .A0 (REG_OUT_14), .A1 (MISR_OUT_14), .S0 (
           test_mode)) ;
-    mux21 ix1053 (.Y (Result_OUT[15]), .A0 (REG_OUT_15), .A1 (MISR_OUT_15), .S0 (
+    mux21 ix383 (.Y (Result_OUT[15]), .A0 (REG_OUT_15), .A1 (MISR_OUT_15), .S0 (
           test_mode)) ;
-    mux21 ix1061 (.Y (Result_OUT[16]), .A0 (REG_OUT_16), .A1 (MISR_OUT_16), .S0 (
+    mux21 ix391 (.Y (Result_OUT[16]), .A0 (REG_OUT_16), .A1 (MISR_OUT_16), .S0 (
           test_mode)) ;
-    mux21 ix1069 (.Y (Result_OUT[17]), .A0 (REG_OUT_17), .A1 (MISR_OUT_17), .S0 (
+    mux21 ix399 (.Y (Result_OUT[17]), .A0 (REG_OUT_17), .A1 (MISR_OUT_17), .S0 (
           test_mode)) ;
-    mux21 ix1077 (.Y (Result_OUT[18]), .A0 (REG_OUT_18), .A1 (MISR_OUT_18), .S0 (
+    mux21 ix407 (.Y (Result_OUT[18]), .A0 (REG_OUT_18), .A1 (MISR_OUT_18), .S0 (
           test_mode)) ;
-    mux21 ix1085 (.Y (Result_OUT[19]), .A0 (REG_OUT_19), .A1 (MISR_OUT_19), .S0 (
+    mux21 ix415 (.Y (Result_OUT[19]), .A0 (REG_OUT_19), .A1 (MISR_OUT_19), .S0 (
           test_mode)) ;
-    mux21 ix1093 (.Y (Result_OUT[20]), .A0 (REG_OUT_20), .A1 (MISR_OUT_20), .S0 (
+    mux21 ix423 (.Y (Result_OUT[20]), .A0 (REG_OUT_20), .A1 (MISR_OUT_20), .S0 (
           test_mode)) ;
-    mux21 ix1101 (.Y (Result_OUT[21]), .A0 (REG_OUT_21), .A1 (MISR_OUT_21), .S0 (
+    mux21 ix431 (.Y (Result_OUT[21]), .A0 (REG_OUT_21), .A1 (MISR_OUT_21), .S0 (
           test_mode)) ;
-    mux21 ix1109 (.Y (Result_OUT[22]), .A0 (REG_OUT_22), .A1 (MISR_OUT_22), .S0 (
+    mux21 ix439 (.Y (Result_OUT[22]), .A0 (REG_OUT_22), .A1 (MISR_OUT_22), .S0 (
           test_mode)) ;
-    mux21 ix1117 (.Y (Result_OUT[23]), .A0 (REG_OUT_23), .A1 (MISR_OUT_23), .S0 (
+    mux21 ix447 (.Y (Result_OUT[23]), .A0 (REG_OUT_23), .A1 (MISR_OUT_23), .S0 (
           test_mode)) ;
-    mux21 ix1125 (.Y (Result_OUT[24]), .A0 (REG_OUT_24), .A1 (MISR_OUT_24), .S0 (
+    mux21 ix455 (.Y (Result_OUT[24]), .A0 (REG_OUT_24), .A1 (MISR_OUT_24), .S0 (
           test_mode)) ;
-    mux21 ix1133 (.Y (Result_OUT[25]), .A0 (REG_OUT_25), .A1 (MISR_OUT_25), .S0 (
+    mux21 ix463 (.Y (Result_OUT[25]), .A0 (REG_OUT_25), .A1 (MISR_OUT_25), .S0 (
           test_mode)) ;
-    mux21 ix1141 (.Y (Result_OUT[26]), .A0 (REG_OUT_26), .A1 (MISR_OUT_26), .S0 (
+    mux21 ix471 (.Y (Result_OUT[26]), .A0 (REG_OUT_26), .A1 (MISR_OUT_26), .S0 (
           test_mode)) ;
-    mux21 ix1149 (.Y (Result_OUT[27]), .A0 (REG_OUT_27), .A1 (MISR_OUT_27), .S0 (
+    mux21 ix479 (.Y (Result_OUT[27]), .A0 (REG_OUT_27), .A1 (MISR_OUT_27), .S0 (
           test_mode)) ;
-    mux21 ix1157 (.Y (Result_OUT[28]), .A0 (REG_OUT_28), .A1 (MISR_OUT_28), .S0 (
+    mux21 ix487 (.Y (Result_OUT[28]), .A0 (REG_OUT_28), .A1 (MISR_OUT_28), .S0 (
           test_mode)) ;
-    mux21 ix1165 (.Y (Result_OUT[29]), .A0 (REG_OUT_29), .A1 (MISR_OUT_29), .S0 (
+    mux21 ix495 (.Y (Result_OUT[29]), .A0 (REG_OUT_29), .A1 (MISR_OUT_29), .S0 (
           test_mode)) ;
-    mux21 ix1173 (.Y (Result_OUT[30]), .A0 (REG_OUT_30), .A1 (MISR_OUT_30), .S0 (
+    mux21 ix503 (.Y (Result_OUT[30]), .A0 (REG_OUT_30), .A1 (MISR_OUT_30), .S0 (
           test_mode)) ;
-    mux21 ix1181 (.Y (Result_OUT[31]), .A0 (REG_OUT_31), .A1 (MISR_OUT_31), .S0 (
+    mux21 ix511 (.Y (Result_OUT[31]), .A0 (REG_OUT_31), .A1 (MISR_OUT_31), .S0 (
           test_mode)) ;
-    inv01 ix1 (.Y (nx0), .A (nx1334)) ;
-    inv01 ix1690 (.Y (nx1691), .A (nx1701)) ;
-    inv02 ix1692 (.Y (nx1693), .A (nx1705)) ;
-    inv02 ix1694 (.Y (nx1695), .A (nx1705)) ;
-    inv02 ix1696 (.Y (nx1697), .A (nx1705)) ;
-    inv01 ix1698 (.Y (nx1699), .A (nx0)) ;
-    inv01 ix1700 (.Y (nx1701), .A (nx0)) ;
-    inv02 ix1704 (.Y (nx1705), .A (nx937)) ;
-    mux21 ix1312 (.Y (nx1311), .A0 (MISR_EN), .A1 (nx662), .S0 (nx0)) ;
-    and04 ix505 (.Y (nx504), .A0 (nx1590), .A1 (nx1331), .A2 (nx1340), .A3 (
-          nx1351)) ;
-    mux21 ix1292 (.Y (nx1291), .A0 (clk_cnt_30), .A1 (nx484), .S0 (nx1719)) ;
-    nor02ii ix459 (.Y (nx981), .A0 (nx1347), .A1 (clk_cnt_28)) ;
-    mux21 ix1272 (.Y (nx1271), .A0 (clk_cnt_28), .A1 (nx450), .S0 (nx1719)) ;
-    and02 ix1345 (.Y (nx1344), .A0 (nx1340), .A1 (nx1347)) ;
-    nor02ii ix427 (.Y (nx979), .A0 (nx1364), .A1 (clk_cnt_26)) ;
-    mux21 ix1252 (.Y (nx1251), .A0 (clk_cnt_26), .A1 (nx418), .S0 (nx1719)) ;
-    and02 ix1362 (.Y (nx1361), .A0 (nx1357), .A1 (nx1364)) ;
-    nor02ii ix395 (.Y (nx975), .A0 (nx1381), .A1 (clk_cnt_24)) ;
-    mux21 ix1232 (.Y (nx1231), .A0 (clk_cnt_24), .A1 (nx386), .S0 (nx1719)) ;
-    and02 ix1379 (.Y (nx1378), .A0 (nx1374), .A1 (nx1381)) ;
-    nor02ii ix363 (.Y (nx972), .A0 (nx1398), .A1 (clk_cnt_22)) ;
-    mux21 ix1212 (.Y (nx1211), .A0 (clk_cnt_22), .A1 (nx354), .S0 (nx1719)) ;
-    and02 ix1396 (.Y (nx1395), .A0 (nx1391), .A1 (nx1398)) ;
-    nor02ii ix331 (.Y (nx969), .A0 (nx1415), .A1 (clk_cnt_20)) ;
-    mux21 ix1192 (.Y (nx1191), .A0 (clk_cnt_20), .A1 (nx322), .S0 (nx1719)) ;
-    and02 ix1413 (.Y (nx1412), .A0 (nx1408), .A1 (nx1415)) ;
-    nor02ii ix299 (.Y (nx965), .A0 (nx1432), .A1 (clk_cnt_18)) ;
-    mux21 ix1172 (.Y (nx1171), .A0 (clk_cnt_18), .A1 (nx290), .S0 (nx1719)) ;
-    and02 ix1430 (.Y (nx1429), .A0 (nx1425), .A1 (nx1432)) ;
-    nor02ii ix267 (.Y (nx963), .A0 (nx1449), .A1 (clk_cnt_16)) ;
-    mux21 ix1152 (.Y (nx1151), .A0 (clk_cnt_16), .A1 (nx258), .S0 (nx1719)) ;
-    and02 ix1447 (.Y (nx1446), .A0 (nx1442), .A1 (nx1449)) ;
-    nor02ii ix235 (.Y (nx959), .A0 (nx1466), .A1 (clk_cnt_14)) ;
-    mux21 ix1132 (.Y (nx1131), .A0 (clk_cnt_14), .A1 (nx226), .S0 (nx1719)) ;
-    and02 ix1464 (.Y (nx1463), .A0 (nx1459), .A1 (nx1466)) ;
-    nor02ii ix203 (.Y (nx956), .A0 (nx1483), .A1 (clk_cnt_12)) ;
-    mux21 ix1112 (.Y (nx1111), .A0 (clk_cnt_12), .A1 (nx194), .S0 (nx1719)) ;
-    and02 ix1481 (.Y (nx1480), .A0 (nx1476), .A1 (nx1483)) ;
-    nor02ii ix171 (.Y (nx953), .A0 (nx1500), .A1 (clk_cnt_10)) ;
-    mux21 ix1092 (.Y (nx1091), .A0 (clk_cnt_10), .A1 (nx162), .S0 (nx1721)) ;
-    and02 ix1498 (.Y (nx1497), .A0 (nx1493), .A1 (nx1500)) ;
-    nor02ii ix139 (.Y (nx949), .A0 (nx1517), .A1 (clk_cnt_8)) ;
-    mux21 ix1072 (.Y (nx1071), .A0 (clk_cnt_8), .A1 (nx130), .S0 (nx1721)) ;
-    and02 ix1515 (.Y (nx1514), .A0 (nx1510), .A1 (nx1517)) ;
-    nor02ii ix107 (.Y (nx947), .A0 (nx1533), .A1 (clk_cnt_6)) ;
-    or04 ix1531 (.Y (nx1530), .A0 (nx1711), .A1 (nx1701), .A2 (nx947), .A3 (
-         nx1705)) ;
-    nor02ii ix93 (.Y (nx1711), .A0 (clk_cnt_6), .A1 (nx1533)) ;
-    nor02ii ix75 (.Y (nx943), .A0 (nx1549), .A1 (clk_cnt_4)) ;
-    or04 ix1547 (.Y (nx1546), .A0 (nx1713), .A1 (nx1701), .A2 (nx943), .A3 (
-         nx1705)) ;
-    nor02ii ix61 (.Y (nx1713), .A0 (clk_cnt_4), .A1 (nx1549)) ;
-    mux21 ix1002 (.Y (nx1001), .A0 (clk_cnt_1), .A1 (nx18), .S0 (nx1721)) ;
-    nor02ii ix19 (.Y (nx18), .A0 (nx1572), .A1 (nx0)) ;
-    mux21 ix992 (.Y (nx991), .A0 (clk_cnt_0), .A1 (nx4), .S0 (nx1721)) ;
-    nor02ii ix5 (.Y (nx4), .A0 (clk_cnt_0), .A1 (nx0)) ;
-    or02 ix1578 (.Y (nx937), .A0 (nx1699), .A1 (nx610)) ;
-    and03 ix515 (.Y (nx514), .A0 (nx1374), .A1 (nx1357), .A2 (nx1368)) ;
-    and03 ix527 (.Y (nx526), .A0 (nx1402), .A1 (nx1385), .A2 (nx1391)) ;
-    and03 ix537 (.Y (nx536), .A0 (nx1425), .A1 (nx1408), .A2 (nx1419)) ;
-    and03 ix551 (.Y (nx550), .A0 (nx1453), .A1 (nx1436), .A2 (nx1442)) ;
-    and03 ix561 (.Y (nx560), .A0 (nx1476), .A1 (nx1459), .A2 (nx1470)) ;
-    and03 ix573 (.Y (nx572), .A0 (nx1504), .A1 (nx1487), .A2 (nx1493)) ;
-    ao21 ix583 (.Y (nx582), .A0 (nx1562), .A1 (nx1567), .B0 (nx1553)) ;
-    and02 ix589 (.Y (nx588), .A0 (nx1537), .A1 (nx1543)) ;
-    and03 ix1300 (.Y (nx1299), .A0 (nx0), .A1 (nx1715), .A2 (nx1721)) ;
-    xnor2 ix1612 (.Y (nx1715), .A0 (nx1608), .A1 (nx478)) ;
-    nor02ii ix479 (.Y (nx478), .A0 (nx1327), .A1 (clk_cnt_30)) ;
-    nor02ii ix1616 (.Y (nx1615), .A0 (nx652), .A1 (nx1608)) ;
-    and04 ix653 (.Y (nx652), .A0 (nx1543), .A1 (nx1527), .A2 (nx1537), .A3 (
-          nx1717)) ;
-    and03 ix1619 (.Y (nx1717), .A0 (nx644), .A1 (nx1553), .A2 (nx610)) ;
-    inv01 ix1718 (.Y (nx1719), .A (nx1705)) ;
-    inv01 ix1720 (.Y (nx1721), .A (nx1705)) ;
+endmodule
+
+
+module MISR ( clk, rst, enable, mult_result, signature ) ;
+
+    input clk ;
+    input rst ;
+    input enable ;
+    input [31:0]mult_result ;
+    output [31:0]signature ;
+
+    wire nx4, nx6, nx8, nx10, NOT_clk, nx24, nx34, nx44, nx54, nx64, nx74, nx84, 
+         nx94, nx104, nx114, nx124, nx134, nx144, nx154, nx164, nx174, nx184, 
+         nx194, nx204, nx214, nx224, nx234, nx244, nx254, nx264, nx274, nx284, 
+         nx294, nx304, nx314, nx324, nx814, nx824, nx834, nx844, nx854, nx864, 
+         nx874, nx884, nx894, nx904, nx914, nx924, nx934, nx944, nx954, nx964, 
+         nx974, nx984, nx994, nx1004, nx1014, nx1024, nx1034, nx1044, nx1054, 
+         nx1064, nx1074, nx1084, nx1094, nx1104, nx1114, nx1124, nx1136, nx1138, 
+         nx1276, nx1278, nx1280, nx1282;
+    wire [31:0] \$dummy ;
+
+
+
+
+    dff reg_MISR_REG_0 (.Q (signature[0]), .QB (\$dummy [0]), .D (nx814), .CLK (
+        NOT_clk)) ;
+    ao221 ix815 (.Y (nx814), .A0 (signature[0]), .A1 (nx1280), .B0 (nx10), .B1 (
+          enable), .C0 (nx1138)) ;
+    inv01 ix1139 (.Y (nx1138), .A (rst)) ;
+    xnor2 ix11 (.Y (nx10), .A0 (nx4), .A1 (nx8)) ;
+    xnor2 ix5 (.Y (nx4), .A0 (signature[0]), .A1 (signature[1])) ;
+    dff reg_MISR_REG_1 (.Q (signature[1]), .QB (\$dummy [1]), .D (nx824), .CLK (
+        nx1276)) ;
+    ao32 ix825 (.Y (nx824), .A0 (rst), .A1 (nx24), .A2 (enable), .B0 (
+         signature[1]), .B1 (nx1280)) ;
+    xnor2 ix25 (.Y (nx24), .A0 (signature[0]), .A1 (mult_result[0])) ;
+    inv01 ix1146 (.Y (NOT_clk), .A (clk)) ;
+    xnor2 ix9 (.Y (nx8), .A0 (nx6), .A1 (mult_result[31])) ;
+    xnor2 ix7 (.Y (nx6), .A0 (signature[21]), .A1 (signature[31])) ;
+    dff reg_MISR_REG_21 (.Q (signature[21]), .QB (\$dummy [2]), .D (nx1024), .CLK (
+        nx1278)) ;
+    ao32 ix1025 (.Y (nx1024), .A0 (rst), .A1 (nx224), .A2 (enable), .B0 (
+         signature[21]), .B1 (nx1282)) ;
+    xnor2 ix225 (.Y (nx224), .A0 (signature[20]), .A1 (mult_result[20])) ;
+    dff reg_MISR_REG_20 (.Q (signature[20]), .QB (\$dummy [3]), .D (nx1014), .CLK (
+        nx1278)) ;
+    ao32 ix1015 (.Y (nx1014), .A0 (rst), .A1 (nx214), .A2 (enable), .B0 (
+         signature[20]), .B1 (nx1282)) ;
+    xnor2 ix215 (.Y (nx214), .A0 (signature[19]), .A1 (mult_result[19])) ;
+    dff reg_MISR_REG_19 (.Q (signature[19]), .QB (\$dummy [4]), .D (nx1004), .CLK (
+        nx1278)) ;
+    ao32 ix1005 (.Y (nx1004), .A0 (rst), .A1 (nx204), .A2 (enable), .B0 (
+         signature[19]), .B1 (nx1282)) ;
+    xnor2 ix205 (.Y (nx204), .A0 (signature[18]), .A1 (mult_result[18])) ;
+    dff reg_MISR_REG_18 (.Q (signature[18]), .QB (\$dummy [5]), .D (nx994), .CLK (
+        nx1278)) ;
+    ao32 ix995 (.Y (nx994), .A0 (rst), .A1 (nx194), .A2 (enable), .B0 (
+         signature[18]), .B1 (nx1282)) ;
+    xnor2 ix195 (.Y (nx194), .A0 (signature[17]), .A1 (mult_result[17])) ;
+    dff reg_MISR_REG_17 (.Q (signature[17]), .QB (\$dummy [6]), .D (nx984), .CLK (
+        nx1278)) ;
+    ao32 ix985 (.Y (nx984), .A0 (rst), .A1 (nx184), .A2 (enable), .B0 (
+         signature[17]), .B1 (nx1282)) ;
+    xnor2 ix185 (.Y (nx184), .A0 (signature[16]), .A1 (mult_result[16])) ;
+    dff reg_MISR_REG_16 (.Q (signature[16]), .QB (\$dummy [7]), .D (nx974), .CLK (
+        nx1278)) ;
+    ao32 ix975 (.Y (nx974), .A0 (rst), .A1 (nx174), .A2 (enable), .B0 (
+         signature[16]), .B1 (nx1282)) ;
+    xnor2 ix175 (.Y (nx174), .A0 (signature[15]), .A1 (mult_result[15])) ;
+    dff reg_MISR_REG_15 (.Q (signature[15]), .QB (\$dummy [8]), .D (nx964), .CLK (
+        nx1278)) ;
+    ao32 ix965 (.Y (nx964), .A0 (rst), .A1 (nx164), .A2 (enable), .B0 (
+         signature[15]), .B1 (nx1282)) ;
+    xnor2 ix165 (.Y (nx164), .A0 (signature[14]), .A1 (mult_result[14])) ;
+    dff reg_MISR_REG_14 (.Q (signature[14]), .QB (\$dummy [9]), .D (nx954), .CLK (
+        nx1278)) ;
+    ao32 ix955 (.Y (nx954), .A0 (rst), .A1 (nx154), .A2 (enable), .B0 (
+         signature[14]), .B1 (nx1282)) ;
+    xnor2 ix155 (.Y (nx154), .A0 (signature[13]), .A1 (mult_result[13])) ;
+    dff reg_MISR_REG_13 (.Q (signature[13]), .QB (\$dummy [10]), .D (nx944), .CLK (
+        nx1278)) ;
+    ao32 ix945 (.Y (nx944), .A0 (rst), .A1 (nx144), .A2 (enable), .B0 (
+         signature[13]), .B1 (nx1280)) ;
+    xnor2 ix145 (.Y (nx144), .A0 (signature[12]), .A1 (mult_result[12])) ;
+    dff reg_MISR_REG_12 (.Q (signature[12]), .QB (\$dummy [11]), .D (nx934), .CLK (
+        nx1276)) ;
+    ao32 ix935 (.Y (nx934), .A0 (rst), .A1 (nx134), .A2 (enable), .B0 (
+         signature[12]), .B1 (nx1280)) ;
+    xnor2 ix135 (.Y (nx134), .A0 (signature[11]), .A1 (mult_result[11])) ;
+    dff reg_MISR_REG_11 (.Q (signature[11]), .QB (\$dummy [12]), .D (nx924), .CLK (
+        nx1276)) ;
+    ao32 ix925 (.Y (nx924), .A0 (rst), .A1 (nx124), .A2 (enable), .B0 (
+         signature[11]), .B1 (nx1280)) ;
+    xnor2 ix125 (.Y (nx124), .A0 (signature[10]), .A1 (mult_result[10])) ;
+    dff reg_MISR_REG_10 (.Q (signature[10]), .QB (\$dummy [13]), .D (nx914), .CLK (
+        nx1276)) ;
+    ao32 ix915 (.Y (nx914), .A0 (rst), .A1 (nx114), .A2 (enable), .B0 (
+         signature[10]), .B1 (nx1280)) ;
+    xnor2 ix115 (.Y (nx114), .A0 (signature[9]), .A1 (mult_result[9])) ;
+    dff reg_MISR_REG_9 (.Q (signature[9]), .QB (\$dummy [14]), .D (nx904), .CLK (
+        nx1276)) ;
+    ao32 ix905 (.Y (nx904), .A0 (rst), .A1 (nx104), .A2 (enable), .B0 (
+         signature[9]), .B1 (nx1280)) ;
+    xnor2 ix105 (.Y (nx104), .A0 (signature[8]), .A1 (mult_result[8])) ;
+    dff reg_MISR_REG_8 (.Q (signature[8]), .QB (\$dummy [15]), .D (nx894), .CLK (
+        nx1276)) ;
+    ao32 ix895 (.Y (nx894), .A0 (rst), .A1 (nx94), .A2 (enable), .B0 (
+         signature[8]), .B1 (nx1280)) ;
+    xnor2 ix95 (.Y (nx94), .A0 (signature[7]), .A1 (mult_result[7])) ;
+    dff reg_MISR_REG_7 (.Q (signature[7]), .QB (\$dummy [16]), .D (nx884), .CLK (
+        nx1276)) ;
+    ao32 ix885 (.Y (nx884), .A0 (rst), .A1 (nx84), .A2 (enable), .B0 (
+         signature[7]), .B1 (nx1280)) ;
+    xnor2 ix85 (.Y (nx84), .A0 (signature[6]), .A1 (mult_result[6])) ;
+    dff reg_MISR_REG_6 (.Q (signature[6]), .QB (\$dummy [17]), .D (nx874), .CLK (
+        nx1276)) ;
+    ao32 ix875 (.Y (nx874), .A0 (rst), .A1 (nx74), .A2 (enable), .B0 (
+         signature[6]), .B1 (nx1280)) ;
+    xnor2 ix75 (.Y (nx74), .A0 (signature[5]), .A1 (mult_result[5])) ;
+    dff reg_MISR_REG_5 (.Q (signature[5]), .QB (\$dummy [18]), .D (nx864), .CLK (
+        nx1276)) ;
+    ao32 ix865 (.Y (nx864), .A0 (rst), .A1 (nx64), .A2 (enable), .B0 (
+         signature[5]), .B1 (nx1280)) ;
+    xnor2 ix65 (.Y (nx64), .A0 (signature[4]), .A1 (mult_result[4])) ;
+    dff reg_MISR_REG_4 (.Q (signature[4]), .QB (\$dummy [19]), .D (nx854), .CLK (
+        nx1276)) ;
+    ao32 ix855 (.Y (nx854), .A0 (rst), .A1 (nx54), .A2 (enable), .B0 (
+         signature[4]), .B1 (nx1280)) ;
+    xnor2 ix55 (.Y (nx54), .A0 (signature[3]), .A1 (mult_result[3])) ;
+    dff reg_MISR_REG_3 (.Q (signature[3]), .QB (\$dummy [20]), .D (nx844), .CLK (
+        nx1276)) ;
+    ao32 ix845 (.Y (nx844), .A0 (rst), .A1 (nx44), .A2 (enable), .B0 (
+         signature[3]), .B1 (nx1280)) ;
+    xnor2 ix45 (.Y (nx44), .A0 (signature[2]), .A1 (mult_result[2])) ;
+    dff reg_MISR_REG_2 (.Q (signature[2]), .QB (\$dummy [21]), .D (nx834), .CLK (
+        nx1276)) ;
+    ao32 ix835 (.Y (nx834), .A0 (rst), .A1 (nx34), .A2 (enable), .B0 (
+         signature[2]), .B1 (nx1280)) ;
+    xnor2 ix35 (.Y (nx34), .A0 (signature[1]), .A1 (mult_result[1])) ;
+    dff reg_MISR_REG_31 (.Q (signature[31]), .QB (\$dummy [22]), .D (nx1124), .CLK (
+        NOT_clk)) ;
+    ao32 ix1125 (.Y (nx1124), .A0 (rst), .A1 (nx324), .A2 (enable), .B0 (
+         signature[31]), .B1 (nx1136)) ;
+    xnor2 ix325 (.Y (nx324), .A0 (signature[30]), .A1 (mult_result[30])) ;
+    dff reg_MISR_REG_30 (.Q (signature[30]), .QB (\$dummy [23]), .D (nx1114), .CLK (
+        NOT_clk)) ;
+    ao32 ix1115 (.Y (nx1114), .A0 (rst), .A1 (nx314), .A2 (enable), .B0 (
+         signature[30]), .B1 (nx1136)) ;
+    xnor2 ix315 (.Y (nx314), .A0 (signature[29]), .A1 (mult_result[29])) ;
+    dff reg_MISR_REG_29 (.Q (signature[29]), .QB (\$dummy [24]), .D (nx1104), .CLK (
+        NOT_clk)) ;
+    ao32 ix1105 (.Y (nx1104), .A0 (rst), .A1 (nx304), .A2 (enable), .B0 (
+         signature[29]), .B1 (nx1136)) ;
+    xnor2 ix305 (.Y (nx304), .A0 (signature[28]), .A1 (mult_result[28])) ;
+    dff reg_MISR_REG_28 (.Q (signature[28]), .QB (\$dummy [25]), .D (nx1094), .CLK (
+        NOT_clk)) ;
+    ao32 ix1095 (.Y (nx1094), .A0 (rst), .A1 (nx294), .A2 (enable), .B0 (
+         signature[28]), .B1 (nx1282)) ;
+    xnor2 ix295 (.Y (nx294), .A0 (signature[27]), .A1 (mult_result[27])) ;
+    dff reg_MISR_REG_27 (.Q (signature[27]), .QB (\$dummy [26]), .D (nx1084), .CLK (
+        NOT_clk)) ;
+    ao32 ix1085 (.Y (nx1084), .A0 (rst), .A1 (nx284), .A2 (enable), .B0 (
+         signature[27]), .B1 (nx1282)) ;
+    xnor2 ix285 (.Y (nx284), .A0 (signature[26]), .A1 (mult_result[26])) ;
+    dff reg_MISR_REG_26 (.Q (signature[26]), .QB (\$dummy [27]), .D (nx1074), .CLK (
+        NOT_clk)) ;
+    ao32 ix1075 (.Y (nx1074), .A0 (rst), .A1 (nx274), .A2 (enable), .B0 (
+         signature[26]), .B1 (nx1282)) ;
+    xnor2 ix275 (.Y (nx274), .A0 (signature[25]), .A1 (mult_result[25])) ;
+    dff reg_MISR_REG_25 (.Q (signature[25]), .QB (\$dummy [28]), .D (nx1064), .CLK (
+        NOT_clk)) ;
+    ao32 ix1065 (.Y (nx1064), .A0 (rst), .A1 (nx264), .A2 (enable), .B0 (
+         signature[25]), .B1 (nx1282)) ;
+    xnor2 ix265 (.Y (nx264), .A0 (signature[24]), .A1 (mult_result[24])) ;
+    dff reg_MISR_REG_24 (.Q (signature[24]), .QB (\$dummy [29]), .D (nx1054), .CLK (
+        nx1278)) ;
+    ao32 ix1055 (.Y (nx1054), .A0 (rst), .A1 (nx254), .A2 (enable), .B0 (
+         signature[24]), .B1 (nx1282)) ;
+    xnor2 ix255 (.Y (nx254), .A0 (signature[23]), .A1 (mult_result[23])) ;
+    dff reg_MISR_REG_23 (.Q (signature[23]), .QB (\$dummy [30]), .D (nx1044), .CLK (
+        nx1278)) ;
+    ao32 ix1045 (.Y (nx1044), .A0 (rst), .A1 (nx244), .A2 (enable), .B0 (
+         signature[23]), .B1 (nx1282)) ;
+    xnor2 ix245 (.Y (nx244), .A0 (signature[22]), .A1 (mult_result[22])) ;
+    dff reg_MISR_REG_22 (.Q (signature[22]), .QB (\$dummy [31]), .D (nx1034), .CLK (
+        nx1278)) ;
+    ao32 ix1035 (.Y (nx1034), .A0 (rst), .A1 (nx234), .A2 (enable), .B0 (
+         signature[22]), .B1 (nx1282)) ;
+    xnor2 ix235 (.Y (nx234), .A0 (signature[21]), .A1 (mult_result[21])) ;
+    inv01 ix1275 (.Y (nx1276), .A (clk)) ;
+    inv01 ix1277 (.Y (nx1278), .A (clk)) ;
+    nor02ii ix1137 (.Y (nx1136), .A0 (enable), .A1 (rst)) ;
+    nor02ii ix1279 (.Y (nx1280), .A0 (enable), .A1 (rst)) ;
+    nor02ii ix1281 (.Y (nx1282), .A0 (enable), .A1 (rst)) ;
+endmodule
+
+
+module LFSR ( clk, rst, enable, bit_pattern ) ;
+
+    input clk ;
+    input rst ;
+    input enable ;
+    output [31:0]bit_pattern ;
+
+    wire nx4, nx238, nx240, nx716, nx726, nx736, nx746, nx756, nx766, nx776, 
+         nx786, nx796, nx806, nx816, nx826, nx836, nx846, nx856, nx866, nx876, 
+         nx886, nx896, nx906, nx916, nx926, nx936, nx946, nx956, nx966, nx976, 
+         nx986, nx996, nx1006, nx1016, nx1026, nx1038, nx1040, nx1144, nx1146;
+    wire [31:0] \$dummy ;
+
+
+
+
+    dff reg_LFSR_REG_0 (.Q (bit_pattern[0]), .QB (\$dummy [0]), .D (nx1006), .CLK (
+        clk)) ;
+    ao221 ix1007 (.Y (nx1006), .A0 (bit_pattern[0]), .A1 (nx1144), .B0 (nx240), 
+          .B1 (enable), .C0 (nx1040)) ;
+    inv01 ix1041 (.Y (nx1040), .A (rst)) ;
+    xnor2 ix241 (.Y (nx240), .A0 (nx4), .A1 (nx238)) ;
+    xnor2 ix5 (.Y (nx4), .A0 (bit_pattern[0]), .A1 (bit_pattern[1])) ;
+    dff reg_LFSR_REG_1 (.Q (bit_pattern[1]), .QB (\$dummy [1]), .D (nx1016), .CLK (
+        clk)) ;
+    ao32 ix1017 (.Y (nx1016), .A0 (rst), .A1 (bit_pattern[0]), .A2 (enable), .B0 (
+         bit_pattern[1]), .B1 (nx1144)) ;
+    xnor2 ix239 (.Y (nx238), .A0 (bit_pattern[21]), .A1 (bit_pattern[31])) ;
+    dff reg_LFSR_REG_21 (.Q (bit_pattern[21]), .QB (\$dummy [2]), .D (nx896), .CLK (
+        clk)) ;
+    ao32 ix897 (.Y (nx896), .A0 (rst), .A1 (bit_pattern[20]), .A2 (enable), .B0 (
+         bit_pattern[21]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_20 (.Q (bit_pattern[20]), .QB (\$dummy [3]), .D (nx886), .CLK (
+        clk)) ;
+    ao32 ix887 (.Y (nx886), .A0 (rst), .A1 (bit_pattern[19]), .A2 (enable), .B0 (
+         bit_pattern[20]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_19 (.Q (bit_pattern[19]), .QB (\$dummy [4]), .D (nx876), .CLK (
+        clk)) ;
+    ao32 ix877 (.Y (nx876), .A0 (rst), .A1 (bit_pattern[18]), .A2 (enable), .B0 (
+         bit_pattern[19]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_18 (.Q (bit_pattern[18]), .QB (\$dummy [5]), .D (nx866), .CLK (
+        clk)) ;
+    ao32 ix867 (.Y (nx866), .A0 (rst), .A1 (bit_pattern[17]), .A2 (enable), .B0 (
+         bit_pattern[18]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_17 (.Q (bit_pattern[17]), .QB (\$dummy [6]), .D (nx856), .CLK (
+        clk)) ;
+    ao32 ix857 (.Y (nx856), .A0 (rst), .A1 (bit_pattern[16]), .A2 (enable), .B0 (
+         bit_pattern[17]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_16 (.Q (bit_pattern[16]), .QB (\$dummy [7]), .D (nx846), .CLK (
+        clk)) ;
+    ao32 ix847 (.Y (nx846), .A0 (rst), .A1 (bit_pattern[15]), .A2 (enable), .B0 (
+         bit_pattern[16]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_15 (.Q (bit_pattern[15]), .QB (\$dummy [8]), .D (nx836), .CLK (
+        clk)) ;
+    ao32 ix837 (.Y (nx836), .A0 (rst), .A1 (bit_pattern[14]), .A2 (enable), .B0 (
+         bit_pattern[15]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_14 (.Q (bit_pattern[14]), .QB (\$dummy [9]), .D (nx826), .CLK (
+        clk)) ;
+    ao32 ix827 (.Y (nx826), .A0 (rst), .A1 (bit_pattern[13]), .A2 (enable), .B0 (
+         bit_pattern[14]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_13 (.Q (bit_pattern[13]), .QB (\$dummy [10]), .D (nx816), .CLK (
+        clk)) ;
+    ao32 ix817 (.Y (nx816), .A0 (rst), .A1 (bit_pattern[12]), .A2 (enable), .B0 (
+         bit_pattern[13]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_12 (.Q (bit_pattern[12]), .QB (\$dummy [11]), .D (nx806), .CLK (
+        clk)) ;
+    ao32 ix807 (.Y (nx806), .A0 (rst), .A1 (bit_pattern[11]), .A2 (enable), .B0 (
+         bit_pattern[12]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_11 (.Q (bit_pattern[11]), .QB (\$dummy [12]), .D (nx796), .CLK (
+        clk)) ;
+    ao32 ix797 (.Y (nx796), .A0 (rst), .A1 (bit_pattern[10]), .A2 (enable), .B0 (
+         bit_pattern[11]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_10 (.Q (bit_pattern[10]), .QB (\$dummy [13]), .D (nx786), .CLK (
+        clk)) ;
+    ao32 ix787 (.Y (nx786), .A0 (rst), .A1 (bit_pattern[9]), .A2 (enable), .B0 (
+         bit_pattern[10]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_9 (.Q (bit_pattern[9]), .QB (\$dummy [14]), .D (nx776), .CLK (
+        clk)) ;
+    ao32 ix777 (.Y (nx776), .A0 (rst), .A1 (bit_pattern[8]), .A2 (enable), .B0 (
+         bit_pattern[9]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_8 (.Q (bit_pattern[8]), .QB (\$dummy [15]), .D (nx766), .CLK (
+        clk)) ;
+    ao32 ix767 (.Y (nx766), .A0 (rst), .A1 (bit_pattern[7]), .A2 (enable), .B0 (
+         bit_pattern[8]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_7 (.Q (bit_pattern[7]), .QB (\$dummy [16]), .D (nx756), .CLK (
+        clk)) ;
+    ao32 ix757 (.Y (nx756), .A0 (rst), .A1 (bit_pattern[6]), .A2 (enable), .B0 (
+         bit_pattern[7]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_6 (.Q (bit_pattern[6]), .QB (\$dummy [17]), .D (nx746), .CLK (
+        clk)) ;
+    ao32 ix747 (.Y (nx746), .A0 (rst), .A1 (bit_pattern[5]), .A2 (enable), .B0 (
+         bit_pattern[6]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_5 (.Q (bit_pattern[5]), .QB (\$dummy [18]), .D (nx736), .CLK (
+        clk)) ;
+    ao32 ix737 (.Y (nx736), .A0 (rst), .A1 (bit_pattern[4]), .A2 (enable), .B0 (
+         bit_pattern[5]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_4 (.Q (bit_pattern[4]), .QB (\$dummy [19]), .D (nx726), .CLK (
+        clk)) ;
+    ao32 ix727 (.Y (nx726), .A0 (rst), .A1 (bit_pattern[3]), .A2 (enable), .B0 (
+         bit_pattern[4]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_3 (.Q (bit_pattern[3]), .QB (\$dummy [20]), .D (nx716), .CLK (
+        clk)) ;
+    ao32 ix717 (.Y (nx716), .A0 (rst), .A1 (bit_pattern[2]), .A2 (enable), .B0 (
+         bit_pattern[3]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_2 (.Q (bit_pattern[2]), .QB (\$dummy [21]), .D (nx1026), .CLK (
+        clk)) ;
+    ao32 ix1027 (.Y (nx1026), .A0 (rst), .A1 (bit_pattern[1]), .A2 (enable), .B0 (
+         bit_pattern[2]), .B1 (nx1144)) ;
+    dff reg_LFSR_REG_31 (.Q (bit_pattern[31]), .QB (\$dummy [22]), .D (nx996), .CLK (
+        clk)) ;
+    ao32 ix997 (.Y (nx996), .A0 (rst), .A1 (bit_pattern[30]), .A2 (enable), .B0 (
+         bit_pattern[31]), .B1 (nx1038)) ;
+    dff reg_LFSR_REG_30 (.Q (bit_pattern[30]), .QB (\$dummy [23]), .D (nx986), .CLK (
+        clk)) ;
+    ao32 ix987 (.Y (nx986), .A0 (rst), .A1 (bit_pattern[29]), .A2 (enable), .B0 (
+         bit_pattern[30]), .B1 (nx1038)) ;
+    dff reg_LFSR_REG_29 (.Q (bit_pattern[29]), .QB (\$dummy [24]), .D (nx976), .CLK (
+        clk)) ;
+    ao32 ix977 (.Y (nx976), .A0 (rst), .A1 (bit_pattern[28]), .A2 (enable), .B0 (
+         bit_pattern[29]), .B1 (nx1038)) ;
+    dff reg_LFSR_REG_28 (.Q (bit_pattern[28]), .QB (\$dummy [25]), .D (nx966), .CLK (
+        clk)) ;
+    ao32 ix967 (.Y (nx966), .A0 (rst), .A1 (bit_pattern[27]), .A2 (enable), .B0 (
+         bit_pattern[28]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_27 (.Q (bit_pattern[27]), .QB (\$dummy [26]), .D (nx956), .CLK (
+        clk)) ;
+    ao32 ix957 (.Y (nx956), .A0 (rst), .A1 (bit_pattern[26]), .A2 (enable), .B0 (
+         bit_pattern[27]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_26 (.Q (bit_pattern[26]), .QB (\$dummy [27]), .D (nx946), .CLK (
+        clk)) ;
+    ao32 ix947 (.Y (nx946), .A0 (rst), .A1 (bit_pattern[25]), .A2 (enable), .B0 (
+         bit_pattern[26]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_25 (.Q (bit_pattern[25]), .QB (\$dummy [28]), .D (nx936), .CLK (
+        clk)) ;
+    ao32 ix937 (.Y (nx936), .A0 (rst), .A1 (bit_pattern[24]), .A2 (enable), .B0 (
+         bit_pattern[25]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_24 (.Q (bit_pattern[24]), .QB (\$dummy [29]), .D (nx926), .CLK (
+        clk)) ;
+    ao32 ix927 (.Y (nx926), .A0 (rst), .A1 (bit_pattern[23]), .A2 (enable), .B0 (
+         bit_pattern[24]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_23 (.Q (bit_pattern[23]), .QB (\$dummy [30]), .D (nx916), .CLK (
+        clk)) ;
+    ao32 ix917 (.Y (nx916), .A0 (rst), .A1 (bit_pattern[22]), .A2 (enable), .B0 (
+         bit_pattern[23]), .B1 (nx1146)) ;
+    dff reg_LFSR_REG_22 (.Q (bit_pattern[22]), .QB (\$dummy [31]), .D (nx906), .CLK (
+        clk)) ;
+    ao32 ix907 (.Y (nx906), .A0 (rst), .A1 (bit_pattern[21]), .A2 (enable), .B0 (
+         bit_pattern[22]), .B1 (nx1146)) ;
+    nor02ii ix1039 (.Y (nx1038), .A0 (enable), .A1 (rst)) ;
+    nor02ii ix1143 (.Y (nx1144), .A0 (enable), .A1 (rst)) ;
+    nor02ii ix1145 (.Y (nx1146), .A0 (enable), .A1 (rst)) ;
+endmodule
+
+
+module RegisterN_32 ( clk, reset, enable, \input , \output  ) ;
+
+    input clk ;
+    input reset ;
+    input enable ;
+    input [31:0]\input  ;
+    output [31:0]\output  ;
+
+    wire NOT_reset, nx422, nx432, nx442, nx452, nx462, nx472, nx482, nx492, 
+         nx502, nx512, nx522, nx532, nx542, nx552, nx562, nx572, nx582, nx592, 
+         nx602, nx612, nx622, nx632, nx642, nx652, nx662, nx672, nx682, nx692, 
+         nx702, nx712, nx722, nx732, nx845, nx847;
+    wire [31:0] \$dummy ;
+
+
+
+
+    dffr reg_output_0 (.Q (\output [0]), .QB (\$dummy [0]), .D (nx422), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix423 (.Y (nx422), .A0 (\output [0]), .A1 (\input [0]), .S0 (enable)
+          ) ;
+    inv01 ix745 (.Y (NOT_reset), .A (reset)) ;
+    dffr reg_output_1 (.Q (\output [1]), .QB (\$dummy [1]), .D (nx432), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix433 (.Y (nx432), .A0 (\output [1]), .A1 (\input [1]), .S0 (enable)
+          ) ;
+    dffr reg_output_2 (.Q (\output [2]), .QB (\$dummy [2]), .D (nx442), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix443 (.Y (nx442), .A0 (\output [2]), .A1 (\input [2]), .S0 (enable)
+          ) ;
+    dffr reg_output_3 (.Q (\output [3]), .QB (\$dummy [3]), .D (nx452), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix453 (.Y (nx452), .A0 (\output [3]), .A1 (\input [3]), .S0 (enable)
+          ) ;
+    dffr reg_output_4 (.Q (\output [4]), .QB (\$dummy [4]), .D (nx462), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix463 (.Y (nx462), .A0 (\output [4]), .A1 (\input [4]), .S0 (enable)
+          ) ;
+    dffr reg_output_5 (.Q (\output [5]), .QB (\$dummy [5]), .D (nx472), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix473 (.Y (nx472), .A0 (\output [5]), .A1 (\input [5]), .S0 (enable)
+          ) ;
+    dffr reg_output_6 (.Q (\output [6]), .QB (\$dummy [6]), .D (nx482), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix483 (.Y (nx482), .A0 (\output [6]), .A1 (\input [6]), .S0 (enable)
+          ) ;
+    dffr reg_output_7 (.Q (\output [7]), .QB (\$dummy [7]), .D (nx492), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix493 (.Y (nx492), .A0 (\output [7]), .A1 (\input [7]), .S0 (enable)
+          ) ;
+    dffr reg_output_8 (.Q (\output [8]), .QB (\$dummy [8]), .D (nx502), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix503 (.Y (nx502), .A0 (\output [8]), .A1 (\input [8]), .S0 (enable)
+          ) ;
+    dffr reg_output_9 (.Q (\output [9]), .QB (\$dummy [9]), .D (nx512), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix513 (.Y (nx512), .A0 (\output [9]), .A1 (\input [9]), .S0 (enable)
+          ) ;
+    dffr reg_output_10 (.Q (\output [10]), .QB (\$dummy [10]), .D (nx522), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix523 (.Y (nx522), .A0 (\output [10]), .A1 (\input [10]), .S0 (enable)
+          ) ;
+    dffr reg_output_11 (.Q (\output [11]), .QB (\$dummy [11]), .D (nx532), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix533 (.Y (nx532), .A0 (\output [11]), .A1 (\input [11]), .S0 (enable)
+          ) ;
+    dffr reg_output_12 (.Q (\output [12]), .QB (\$dummy [12]), .D (nx542), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix543 (.Y (nx542), .A0 (\output [12]), .A1 (\input [12]), .S0 (enable)
+          ) ;
+    dffr reg_output_13 (.Q (\output [13]), .QB (\$dummy [13]), .D (nx552), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix553 (.Y (nx552), .A0 (\output [13]), .A1 (\input [13]), .S0 (enable)
+          ) ;
+    dffr reg_output_14 (.Q (\output [14]), .QB (\$dummy [14]), .D (nx562), .CLK (
+         clk), .R (nx845)) ;
+    mux21 ix563 (.Y (nx562), .A0 (\output [14]), .A1 (\input [14]), .S0 (enable)
+          ) ;
+    dffr reg_output_15 (.Q (\output [15]), .QB (\$dummy [15]), .D (nx572), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix573 (.Y (nx572), .A0 (\output [15]), .A1 (\input [15]), .S0 (enable)
+          ) ;
+    dffr reg_output_16 (.Q (\output [16]), .QB (\$dummy [16]), .D (nx582), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix583 (.Y (nx582), .A0 (\output [16]), .A1 (\input [16]), .S0 (enable)
+          ) ;
+    dffr reg_output_17 (.Q (\output [17]), .QB (\$dummy [17]), .D (nx592), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix593 (.Y (nx592), .A0 (\output [17]), .A1 (\input [17]), .S0 (enable)
+          ) ;
+    dffr reg_output_18 (.Q (\output [18]), .QB (\$dummy [18]), .D (nx602), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix603 (.Y (nx602), .A0 (\output [18]), .A1 (\input [18]), .S0 (enable)
+          ) ;
+    dffr reg_output_19 (.Q (\output [19]), .QB (\$dummy [19]), .D (nx612), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix613 (.Y (nx612), .A0 (\output [19]), .A1 (\input [19]), .S0 (enable)
+          ) ;
+    dffr reg_output_20 (.Q (\output [20]), .QB (\$dummy [20]), .D (nx622), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix623 (.Y (nx622), .A0 (\output [20]), .A1 (\input [20]), .S0 (enable)
+          ) ;
+    dffr reg_output_21 (.Q (\output [21]), .QB (\$dummy [21]), .D (nx632), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix633 (.Y (nx632), .A0 (\output [21]), .A1 (\input [21]), .S0 (enable)
+          ) ;
+    dffr reg_output_22 (.Q (\output [22]), .QB (\$dummy [22]), .D (nx642), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix643 (.Y (nx642), .A0 (\output [22]), .A1 (\input [22]), .S0 (enable)
+          ) ;
+    dffr reg_output_23 (.Q (\output [23]), .QB (\$dummy [23]), .D (nx652), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix653 (.Y (nx652), .A0 (\output [23]), .A1 (\input [23]), .S0 (enable)
+          ) ;
+    dffr reg_output_24 (.Q (\output [24]), .QB (\$dummy [24]), .D (nx662), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix663 (.Y (nx662), .A0 (\output [24]), .A1 (\input [24]), .S0 (enable)
+          ) ;
+    dffr reg_output_25 (.Q (\output [25]), .QB (\$dummy [25]), .D (nx672), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix673 (.Y (nx672), .A0 (\output [25]), .A1 (\input [25]), .S0 (enable)
+          ) ;
+    dffr reg_output_26 (.Q (\output [26]), .QB (\$dummy [26]), .D (nx682), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix683 (.Y (nx682), .A0 (\output [26]), .A1 (\input [26]), .S0 (enable)
+          ) ;
+    dffr reg_output_27 (.Q (\output [27]), .QB (\$dummy [27]), .D (nx692), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix693 (.Y (nx692), .A0 (\output [27]), .A1 (\input [27]), .S0 (enable)
+          ) ;
+    dffr reg_output_28 (.Q (\output [28]), .QB (\$dummy [28]), .D (nx702), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix703 (.Y (nx702), .A0 (\output [28]), .A1 (\input [28]), .S0 (enable)
+          ) ;
+    dffr reg_output_29 (.Q (\output [29]), .QB (\$dummy [29]), .D (nx712), .CLK (
+         clk), .R (nx847)) ;
+    mux21 ix713 (.Y (nx712), .A0 (\output [29]), .A1 (\input [29]), .S0 (enable)
+          ) ;
+    dffr reg_output_30 (.Q (\output [30]), .QB (\$dummy [30]), .D (nx722), .CLK (
+         clk), .R (NOT_reset)) ;
+    mux21 ix723 (.Y (nx722), .A0 (\output [30]), .A1 (\input [30]), .S0 (enable)
+          ) ;
+    dffr reg_output_31 (.Q (\output [31]), .QB (\$dummy [31]), .D (nx732), .CLK (
+         clk), .R (NOT_reset)) ;
+    mux21 ix733 (.Y (nx732), .A0 (\output [31]), .A1 (\input [31]), .S0 (enable)
+          ) ;
+    inv01 ix844 (.Y (nx845), .A (reset)) ;
+    inv01 ix846 (.Y (nx847), .A (reset)) ;
 endmodule
 
 
@@ -735,518 +971,6 @@ module RCFA_32 ( A, B, Cin, Sum, Cout ) ;
     inv01 ix31 (.Y (nx30), .A (nx580)) ;
     inv01 ix574 (.Y (nx573), .A (nx22)) ;
     inv01 ix11 (.Y (nx10), .A (nx571)) ;
-endmodule
-
-
-module MISR ( clk, rst, enable, mult_result, signature ) ;
-
-    input clk ;
-    input rst ;
-    input enable ;
-    input [31:0]mult_result ;
-    output [31:0]signature ;
-
-    wire zeroth_in, nx12, nx22, nx34, nx44, nx54, nx64, nx76, nx88, nx98, nx108, 
-         nx118, nx128, nx138, nx148, nx158, nx168, nx178, nx188, nx198, nx208, 
-         nx218, nx228, nx238, nx248, nx258, nx268, nx278, nx288, nx298, nx308, 
-         nx318, nx328, nx836, nx846, nx856, nx866, nx876, nx886, nx896, nx906, 
-         nx916, nx926, nx936, nx946, nx956, nx966, nx976, nx986, nx996, nx1006, 
-         nx1016, nx1026, nx1036, nx1046, nx1056, nx1066, nx1076, nx1086, nx1096, 
-         nx1106, nx1116, nx1126, nx1136, nx1146, nx1156, nx1168, nx1170, nx1245, 
-         nx1250, nx1264, nx1272, nx1276, nx1315, nx1317, nx1323, nx1325, nx1327, 
-         nx1329;
-    wire [31:0] \$dummy ;
-
-
-
-
-    dff reg_MISR_REG_0 (.Q (signature[0]), .QB (\$dummy [0]), .D (nx1156), .CLK (
-        clk)) ;
-    ao221 ix1157 (.Y (nx1156), .A0 (signature[0]), .A1 (nx1315), .B0 (nx328), .B1 (
-          nx1329), .C0 (nx1170)) ;
-    inv01 ix1171 (.Y (nx1170), .A (rst)) ;
-    xor2 ix329 (.Y (nx328), .A0 (mult_result[0]), .A1 (signature[1])) ;
-    dff reg_MISR_REG_1 (.Q (signature[1]), .QB (\$dummy [1]), .D (nx1146), .CLK (
-        clk)) ;
-    ao32 ix1147 (.Y (nx1146), .A0 (rst), .A1 (nx318), .A2 (nx1329), .B0 (
-         signature[1]), .B1 (nx1168)) ;
-    xor2 ix319 (.Y (nx318), .A0 (mult_result[1]), .A1 (signature[2])) ;
-    dff reg_MISR_REG_2 (.Q (signature[2]), .QB (\$dummy [2]), .D (nx1136), .CLK (
-        clk)) ;
-    ao32 ix1137 (.Y (nx1136), .A0 (rst), .A1 (nx308), .A2 (nx1329), .B0 (
-         signature[2]), .B1 (nx1168)) ;
-    xor2 ix309 (.Y (nx308), .A0 (mult_result[2]), .A1 (signature[3])) ;
-    dff reg_MISR_REG_3 (.Q (signature[3]), .QB (\$dummy [3]), .D (nx1126), .CLK (
-        clk)) ;
-    ao32 ix1127 (.Y (nx1126), .A0 (rst), .A1 (nx298), .A2 (nx1327), .B0 (
-         signature[3]), .B1 (nx1168)) ;
-    xor2 ix299 (.Y (nx298), .A0 (mult_result[3]), .A1 (signature[4])) ;
-    dff reg_MISR_REG_4 (.Q (signature[4]), .QB (\$dummy [4]), .D (nx1116), .CLK (
-        clk)) ;
-    ao32 ix1117 (.Y (nx1116), .A0 (rst), .A1 (nx288), .A2 (nx1327), .B0 (
-         signature[4]), .B1 (nx1317)) ;
-    xor2 ix289 (.Y (nx288), .A0 (mult_result[4]), .A1 (signature[5])) ;
-    dff reg_MISR_REG_5 (.Q (signature[5]), .QB (\$dummy [5]), .D (nx1106), .CLK (
-        clk)) ;
-    ao32 ix1107 (.Y (nx1106), .A0 (rst), .A1 (nx278), .A2 (nx1327), .B0 (
-         signature[5]), .B1 (nx1317)) ;
-    xor2 ix279 (.Y (nx278), .A0 (mult_result[5]), .A1 (signature[6])) ;
-    dff reg_MISR_REG_6 (.Q (signature[6]), .QB (\$dummy [6]), .D (nx1096), .CLK (
-        clk)) ;
-    ao32 ix1097 (.Y (nx1096), .A0 (rst), .A1 (nx268), .A2 (nx1327), .B0 (
-         signature[6]), .B1 (nx1317)) ;
-    xor2 ix269 (.Y (nx268), .A0 (mult_result[6]), .A1 (signature[7])) ;
-    dff reg_MISR_REG_7 (.Q (signature[7]), .QB (\$dummy [7]), .D (nx1086), .CLK (
-        clk)) ;
-    ao32 ix1087 (.Y (nx1086), .A0 (rst), .A1 (nx258), .A2 (nx1327), .B0 (
-         signature[7]), .B1 (nx1317)) ;
-    xor2 ix259 (.Y (nx258), .A0 (mult_result[7]), .A1 (signature[8])) ;
-    dff reg_MISR_REG_8 (.Q (signature[8]), .QB (\$dummy [8]), .D (nx1076), .CLK (
-        clk)) ;
-    ao32 ix1077 (.Y (nx1076), .A0 (rst), .A1 (nx248), .A2 (nx1327), .B0 (
-         signature[8]), .B1 (nx1317)) ;
-    xor2 ix249 (.Y (nx248), .A0 (mult_result[8]), .A1 (signature[9])) ;
-    dff reg_MISR_REG_9 (.Q (signature[9]), .QB (\$dummy [9]), .D (nx1066), .CLK (
-        clk)) ;
-    ao32 ix1067 (.Y (nx1066), .A0 (rst), .A1 (nx238), .A2 (nx1327), .B0 (
-         signature[9]), .B1 (nx1317)) ;
-    xor2 ix239 (.Y (nx238), .A0 (mult_result[9]), .A1 (signature[10])) ;
-    dff reg_MISR_REG_10 (.Q (signature[10]), .QB (\$dummy [10]), .D (nx1056), .CLK (
-        clk)) ;
-    ao32 ix1057 (.Y (nx1056), .A0 (rst), .A1 (nx228), .A2 (nx1327), .B0 (
-         signature[10]), .B1 (nx1317)) ;
-    xor2 ix229 (.Y (nx228), .A0 (mult_result[10]), .A1 (signature[11])) ;
-    dff reg_MISR_REG_11 (.Q (signature[11]), .QB (\$dummy [11]), .D (nx1046), .CLK (
-        clk)) ;
-    ao32 ix1047 (.Y (nx1046), .A0 (rst), .A1 (nx218), .A2 (nx1327), .B0 (
-         signature[11]), .B1 (nx1317)) ;
-    xor2 ix219 (.Y (nx218), .A0 (mult_result[11]), .A1 (signature[12])) ;
-    dff reg_MISR_REG_12 (.Q (signature[12]), .QB (\$dummy [12]), .D (nx1036), .CLK (
-        clk)) ;
-    ao32 ix1037 (.Y (nx1036), .A0 (rst), .A1 (nx208), .A2 (nx1327), .B0 (
-         signature[12]), .B1 (nx1317)) ;
-    xor2 ix209 (.Y (nx208), .A0 (mult_result[12]), .A1 (signature[13])) ;
-    dff reg_MISR_REG_13 (.Q (signature[13]), .QB (\$dummy [13]), .D (nx1026), .CLK (
-        clk)) ;
-    ao32 ix1027 (.Y (nx1026), .A0 (rst), .A1 (nx198), .A2 (nx1327), .B0 (
-         signature[13]), .B1 (nx1317)) ;
-    xor2 ix199 (.Y (nx198), .A0 (mult_result[13]), .A1 (signature[14])) ;
-    dff reg_MISR_REG_14 (.Q (signature[14]), .QB (\$dummy [14]), .D (nx1016), .CLK (
-        clk)) ;
-    ao32 ix1017 (.Y (nx1016), .A0 (rst), .A1 (nx188), .A2 (nx1327), .B0 (
-         signature[14]), .B1 (nx1317)) ;
-    xor2 ix189 (.Y (nx188), .A0 (mult_result[14]), .A1 (signature[15])) ;
-    dff reg_MISR_REG_15 (.Q (signature[15]), .QB (\$dummy [15]), .D (nx1006), .CLK (
-        clk)) ;
-    ao32 ix1007 (.Y (nx1006), .A0 (rst), .A1 (nx178), .A2 (nx1327), .B0 (
-         signature[15]), .B1 (nx1317)) ;
-    xor2 ix179 (.Y (nx178), .A0 (mult_result[15]), .A1 (signature[16])) ;
-    dff reg_MISR_REG_16 (.Q (signature[16]), .QB (\$dummy [16]), .D (nx996), .CLK (
-        clk)) ;
-    ao32 ix997 (.Y (nx996), .A0 (rst), .A1 (nx168), .A2 (nx1327), .B0 (
-         signature[16]), .B1 (nx1317)) ;
-    xor2 ix169 (.Y (nx168), .A0 (mult_result[16]), .A1 (signature[17])) ;
-    dff reg_MISR_REG_17 (.Q (signature[17]), .QB (\$dummy [17]), .D (nx986), .CLK (
-        clk)) ;
-    ao32 ix987 (.Y (nx986), .A0 (rst), .A1 (nx158), .A2 (nx1327), .B0 (
-         signature[17]), .B1 (nx1317)) ;
-    xor2 ix159 (.Y (nx158), .A0 (mult_result[17]), .A1 (signature[18])) ;
-    dff reg_MISR_REG_18 (.Q (signature[18]), .QB (\$dummy [18]), .D (nx976), .CLK (
-        clk)) ;
-    ao32 ix977 (.Y (nx976), .A0 (rst), .A1 (nx148), .A2 (nx1325), .B0 (
-         signature[18]), .B1 (nx1317)) ;
-    xor2 ix149 (.Y (nx148), .A0 (mult_result[18]), .A1 (signature[19])) ;
-    dff reg_MISR_REG_19 (.Q (signature[19]), .QB (\$dummy [19]), .D (nx966), .CLK (
-        clk)) ;
-    ao32 ix967 (.Y (nx966), .A0 (rst), .A1 (nx138), .A2 (nx1325), .B0 (
-         signature[19]), .B1 (nx1315)) ;
-    xor2 ix139 (.Y (nx138), .A0 (mult_result[19]), .A1 (signature[20])) ;
-    dff reg_MISR_REG_20 (.Q (signature[20]), .QB (\$dummy [20]), .D (nx956), .CLK (
-        clk)) ;
-    ao32 ix957 (.Y (nx956), .A0 (rst), .A1 (nx128), .A2 (nx1325), .B0 (
-         signature[20]), .B1 (nx1315)) ;
-    xor2 ix129 (.Y (nx128), .A0 (mult_result[20]), .A1 (signature[21])) ;
-    dff reg_MISR_REG_21 (.Q (signature[21]), .QB (\$dummy [21]), .D (nx946), .CLK (
-        clk)) ;
-    ao32 ix947 (.Y (nx946), .A0 (rst), .A1 (nx118), .A2 (nx1325), .B0 (
-         signature[21]), .B1 (nx1315)) ;
-    xor2 ix119 (.Y (nx118), .A0 (mult_result[21]), .A1 (signature[22])) ;
-    dff reg_MISR_REG_22 (.Q (signature[22]), .QB (\$dummy [22]), .D (nx936), .CLK (
-        clk)) ;
-    ao32 ix937 (.Y (nx936), .A0 (rst), .A1 (nx108), .A2 (nx1325), .B0 (
-         signature[22]), .B1 (nx1315)) ;
-    xor2 ix109 (.Y (nx108), .A0 (mult_result[22]), .A1 (signature[23])) ;
-    dff reg_MISR_REG_23 (.Q (signature[23]), .QB (\$dummy [23]), .D (nx926), .CLK (
-        clk)) ;
-    ao32 ix927 (.Y (nx926), .A0 (rst), .A1 (nx98), .A2 (nx1325), .B0 (
-         signature[23]), .B1 (nx1315)) ;
-    xor2 ix99 (.Y (nx98), .A0 (mult_result[23]), .A1 (signature[24])) ;
-    dff reg_MISR_REG_24 (.Q (signature[24]), .QB (\$dummy [24]), .D (nx916), .CLK (
-        clk)) ;
-    ao32 ix917 (.Y (nx916), .A0 (rst), .A1 (nx88), .A2 (nx1325), .B0 (
-         signature[24]), .B1 (nx1315)) ;
-    xnor2 ix1246 (.Y (nx1245), .A0 (mult_result[24]), .A1 (signature[25])) ;
-    dff reg_MISR_REG_25 (.Q (signature[25]), .QB (\$dummy [25]), .D (nx906), .CLK (
-        clk)) ;
-    ao32 ix907 (.Y (nx906), .A0 (rst), .A1 (nx76), .A2 (nx1325), .B0 (
-         signature[25]), .B1 (nx1315)) ;
-    xnor2 ix1251 (.Y (nx1250), .A0 (mult_result[25]), .A1 (signature[26])) ;
-    dff reg_MISR_REG_26 (.Q (signature[26]), .QB (\$dummy [26]), .D (nx896), .CLK (
-        clk)) ;
-    ao32 ix897 (.Y (nx896), .A0 (rst), .A1 (nx64), .A2 (nx1325), .B0 (
-         signature[26]), .B1 (nx1315)) ;
-    xor2 ix65 (.Y (nx64), .A0 (mult_result[26]), .A1 (signature[27])) ;
-    dff reg_MISR_REG_27 (.Q (signature[27]), .QB (\$dummy [27]), .D (nx886), .CLK (
-        clk)) ;
-    ao32 ix887 (.Y (nx886), .A0 (rst), .A1 (nx54), .A2 (nx1325), .B0 (
-         signature[27]), .B1 (nx1315)) ;
-    xor2 ix55 (.Y (nx54), .A0 (mult_result[27]), .A1 (signature[28])) ;
-    dff reg_MISR_REG_28 (.Q (signature[28]), .QB (\$dummy [28]), .D (nx876), .CLK (
-        clk)) ;
-    ao32 ix877 (.Y (nx876), .A0 (rst), .A1 (nx44), .A2 (nx1325), .B0 (
-         signature[28]), .B1 (nx1315)) ;
-    xor2 ix45 (.Y (nx44), .A0 (mult_result[28]), .A1 (signature[29])) ;
-    dff reg_MISR_REG_29 (.Q (signature[29]), .QB (\$dummy [29]), .D (nx866), .CLK (
-        clk)) ;
-    ao32 ix867 (.Y (nx866), .A0 (rst), .A1 (nx34), .A2 (nx1325), .B0 (
-         signature[29]), .B1 (nx1315)) ;
-    xnor2 ix1265 (.Y (nx1264), .A0 (mult_result[29]), .A1 (signature[30])) ;
-    dff reg_MISR_REG_30 (.Q (signature[30]), .QB (\$dummy [30]), .D (nx856), .CLK (
-        clk)) ;
-    ao32 ix857 (.Y (nx856), .A0 (rst), .A1 (nx22), .A2 (nx1325), .B0 (
-         signature[30]), .B1 (nx1315)) ;
-    xor2 ix23 (.Y (nx22), .A0 (mult_result[30]), .A1 (signature[31])) ;
-    dff reg_MISR_REG_31 (.Q (signature[31]), .QB (\$dummy [31]), .D (nx846), .CLK (
-        clk)) ;
-    ao32 ix847 (.Y (nx846), .A0 (rst), .A1 (nx12), .A2 (nx1325), .B0 (
-         signature[31]), .B1 (nx1315)) ;
-    mux21 ix837 (.Y (nx836), .A0 (signature[0]), .A1 (zeroth_in), .S0 (nx1276)
-          ) ;
-    dff reg_zeroth_in (.Q (zeroth_in), .QB (nx1272), .D (nx836), .CLK (clk)) ;
-    nand02 ix1277 (.Y (nx1276), .A0 (nx1325), .A1 (rst)) ;
-    nor02ii ix1169 (.Y (nx1168), .A0 (nx1329), .A1 (rst)) ;
-    xor2 ix89 (.Y (nx88), .A0 (nx1245), .A1 (nx1272)) ;
-    xor2 ix77 (.Y (nx76), .A0 (nx1250), .A1 (nx1272)) ;
-    xor2 ix35 (.Y (nx34), .A0 (nx1264), .A1 (nx1272)) ;
-    xor2 ix13 (.Y (nx12), .A0 (mult_result[31]), .A1 (zeroth_in)) ;
-    nor02ii ix1314 (.Y (nx1315), .A0 (nx1329), .A1 (rst)) ;
-    nor02ii ix1316 (.Y (nx1317), .A0 (nx1329), .A1 (rst)) ;
-    inv01 ix1322 (.Y (nx1323), .A (enable)) ;
-    inv01 ix1324 (.Y (nx1325), .A (nx1323)) ;
-    inv01 ix1326 (.Y (nx1327), .A (nx1323)) ;
-    inv01 ix1328 (.Y (nx1329), .A (nx1323)) ;
-endmodule
-
-
-module LFSR ( clk, rst, enable, bit_pattern ) ;
-
-    input clk ;
-    input rst ;
-    input enable ;
-    output [31:0]bit_pattern ;
-
-    wire zeroth_in, nx38, nx72, nx82, nx740, nx750, nx760, nx770, nx780, nx790, 
-         nx800, nx810, nx820, nx830, nx840, nx850, nx860, nx870, nx880, nx890, 
-         nx900, nx910, nx920, nx930, nx940, nx950, nx960, nx970, nx980, nx990, 
-         nx1000, nx1010, nx1020, nx1030, nx1040, nx1050, nx1060, nx1139, nx1144, 
-         nx1183, nx1185, nx1187, nx1189;
-    wire [32:0] \$dummy ;
-
-
-
-
-    dff reg_LFSR_REG_0 (.Q (bit_pattern[0]), .QB (\$dummy [0]), .D (nx740), .CLK (
-        clk)) ;
-    ao221 ix741 (.Y (nx740), .A0 (bit_pattern[1]), .A1 (enable), .B0 (
-          bit_pattern[0]), .B1 (nx1189), .C0 (nx1144)) ;
-    dff reg_LFSR_REG_1 (.Q (bit_pattern[1]), .QB (\$dummy [1]), .D (nx1060), .CLK (
-        clk)) ;
-    ao32 ix1061 (.Y (nx1060), .A0 (rst), .A1 (bit_pattern[2]), .A2 (enable), .B0 (
-         bit_pattern[1]), .B1 (nx1189)) ;
-    dff reg_LFSR_REG_2 (.Q (bit_pattern[2]), .QB (\$dummy [2]), .D (nx1050), .CLK (
-        clk)) ;
-    ao32 ix1051 (.Y (nx1050), .A0 (rst), .A1 (bit_pattern[3]), .A2 (enable), .B0 (
-         bit_pattern[2]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_3 (.Q (bit_pattern[3]), .QB (\$dummy [3]), .D (nx1040), .CLK (
-        clk)) ;
-    ao32 ix1041 (.Y (nx1040), .A0 (rst), .A1 (bit_pattern[4]), .A2 (enable), .B0 (
-         bit_pattern[3]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_4 (.Q (bit_pattern[4]), .QB (\$dummy [4]), .D (nx1030), .CLK (
-        clk)) ;
-    ao32 ix1031 (.Y (nx1030), .A0 (rst), .A1 (bit_pattern[5]), .A2 (enable), .B0 (
-         bit_pattern[4]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_5 (.Q (bit_pattern[5]), .QB (\$dummy [5]), .D (nx1020), .CLK (
-        clk)) ;
-    ao32 ix1021 (.Y (nx1020), .A0 (rst), .A1 (bit_pattern[6]), .A2 (enable), .B0 (
-         bit_pattern[5]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_6 (.Q (bit_pattern[6]), .QB (\$dummy [6]), .D (nx1010), .CLK (
-        clk)) ;
-    ao32 ix1011 (.Y (nx1010), .A0 (rst), .A1 (bit_pattern[7]), .A2 (enable), .B0 (
-         bit_pattern[6]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_7 (.Q (bit_pattern[7]), .QB (\$dummy [7]), .D (nx1000), .CLK (
-        clk)) ;
-    ao32 ix1001 (.Y (nx1000), .A0 (rst), .A1 (bit_pattern[8]), .A2 (enable), .B0 (
-         bit_pattern[7]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_8 (.Q (bit_pattern[8]), .QB (\$dummy [8]), .D (nx990), .CLK (
-        clk)) ;
-    ao32 ix991 (.Y (nx990), .A0 (rst), .A1 (bit_pattern[9]), .A2 (enable), .B0 (
-         bit_pattern[8]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_9 (.Q (bit_pattern[9]), .QB (\$dummy [9]), .D (nx980), .CLK (
-        clk)) ;
-    ao32 ix981 (.Y (nx980), .A0 (rst), .A1 (bit_pattern[10]), .A2 (enable), .B0 (
-         bit_pattern[9]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_10 (.Q (bit_pattern[10]), .QB (\$dummy [10]), .D (nx970), .CLK (
-        clk)) ;
-    ao32 ix971 (.Y (nx970), .A0 (rst), .A1 (bit_pattern[11]), .A2 (enable), .B0 (
-         bit_pattern[10]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_11 (.Q (bit_pattern[11]), .QB (\$dummy [11]), .D (nx960), .CLK (
-        clk)) ;
-    ao32 ix961 (.Y (nx960), .A0 (rst), .A1 (bit_pattern[12]), .A2 (enable), .B0 (
-         bit_pattern[11]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_12 (.Q (bit_pattern[12]), .QB (\$dummy [12]), .D (nx950), .CLK (
-        clk)) ;
-    ao32 ix951 (.Y (nx950), .A0 (rst), .A1 (bit_pattern[13]), .A2 (enable), .B0 (
-         bit_pattern[12]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_13 (.Q (bit_pattern[13]), .QB (\$dummy [13]), .D (nx940), .CLK (
-        clk)) ;
-    ao32 ix941 (.Y (nx940), .A0 (rst), .A1 (bit_pattern[14]), .A2 (enable), .B0 (
-         bit_pattern[13]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_14 (.Q (bit_pattern[14]), .QB (\$dummy [14]), .D (nx930), .CLK (
-        clk)) ;
-    ao32 ix931 (.Y (nx930), .A0 (rst), .A1 (bit_pattern[15]), .A2 (enable), .B0 (
-         bit_pattern[14]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_15 (.Q (bit_pattern[15]), .QB (\$dummy [15]), .D (nx920), .CLK (
-        clk)) ;
-    ao32 ix921 (.Y (nx920), .A0 (rst), .A1 (bit_pattern[16]), .A2 (enable), .B0 (
-         bit_pattern[15]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_16 (.Q (bit_pattern[16]), .QB (\$dummy [16]), .D (nx910), .CLK (
-        clk)) ;
-    ao32 ix911 (.Y (nx910), .A0 (rst), .A1 (bit_pattern[17]), .A2 (enable), .B0 (
-         bit_pattern[16]), .B1 (nx1187)) ;
-    dff reg_LFSR_REG_17 (.Q (bit_pattern[17]), .QB (\$dummy [17]), .D (nx900), .CLK (
-        clk)) ;
-    ao32 ix901 (.Y (nx900), .A0 (rst), .A1 (bit_pattern[18]), .A2 (enable), .B0 (
-         bit_pattern[17]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_18 (.Q (bit_pattern[18]), .QB (\$dummy [18]), .D (nx890), .CLK (
-        clk)) ;
-    ao32 ix891 (.Y (nx890), .A0 (rst), .A1 (bit_pattern[19]), .A2 (enable), .B0 (
-         bit_pattern[18]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_19 (.Q (bit_pattern[19]), .QB (\$dummy [19]), .D (nx880), .CLK (
-        clk)) ;
-    ao32 ix881 (.Y (nx880), .A0 (rst), .A1 (bit_pattern[20]), .A2 (enable), .B0 (
-         bit_pattern[19]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_20 (.Q (bit_pattern[20]), .QB (\$dummy [20]), .D (nx870), .CLK (
-        clk)) ;
-    ao32 ix871 (.Y (nx870), .A0 (rst), .A1 (bit_pattern[21]), .A2 (enable), .B0 (
-         bit_pattern[20]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_21 (.Q (bit_pattern[21]), .QB (\$dummy [21]), .D (nx860), .CLK (
-        clk)) ;
-    ao32 ix861 (.Y (nx860), .A0 (rst), .A1 (bit_pattern[22]), .A2 (enable), .B0 (
-         bit_pattern[21]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_22 (.Q (bit_pattern[22]), .QB (\$dummy [22]), .D (nx850), .CLK (
-        clk)) ;
-    ao32 ix851 (.Y (nx850), .A0 (rst), .A1 (bit_pattern[23]), .A2 (enable), .B0 (
-         bit_pattern[22]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_23 (.Q (bit_pattern[23]), .QB (\$dummy [23]), .D (nx840), .CLK (
-        clk)) ;
-    ao32 ix841 (.Y (nx840), .A0 (rst), .A1 (bit_pattern[24]), .A2 (enable), .B0 (
-         bit_pattern[23]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_24 (.Q (bit_pattern[24]), .QB (\$dummy [24]), .D (nx830), .CLK (
-        clk)) ;
-    ao32 ix831 (.Y (nx830), .A0 (rst), .A1 (nx82), .A2 (enable), .B0 (
-         bit_pattern[24]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_25 (.Q (bit_pattern[25]), .QB (\$dummy [25]), .D (nx820), .CLK (
-        clk)) ;
-    ao32 ix821 (.Y (nx820), .A0 (rst), .A1 (nx72), .A2 (enable), .B0 (
-         bit_pattern[25]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_26 (.Q (bit_pattern[26]), .QB (\$dummy [26]), .D (nx810), .CLK (
-        clk)) ;
-    ao32 ix811 (.Y (nx810), .A0 (rst), .A1 (bit_pattern[27]), .A2 (enable), .B0 (
-         bit_pattern[26]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_27 (.Q (bit_pattern[27]), .QB (\$dummy [27]), .D (nx800), .CLK (
-        clk)) ;
-    ao32 ix801 (.Y (nx800), .A0 (rst), .A1 (bit_pattern[28]), .A2 (enable), .B0 (
-         bit_pattern[27]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_28 (.Q (bit_pattern[28]), .QB (\$dummy [28]), .D (nx790), .CLK (
-        clk)) ;
-    ao32 ix791 (.Y (nx790), .A0 (rst), .A1 (bit_pattern[29]), .A2 (enable), .B0 (
-         bit_pattern[28]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_29 (.Q (bit_pattern[29]), .QB (\$dummy [29]), .D (nx780), .CLK (
-        clk)) ;
-    ao32 ix781 (.Y (nx780), .A0 (rst), .A1 (nx38), .A2 (enable), .B0 (
-         bit_pattern[29]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_30 (.Q (bit_pattern[30]), .QB (\$dummy [30]), .D (nx770), .CLK (
-        clk)) ;
-    ao32 ix771 (.Y (nx770), .A0 (rst), .A1 (bit_pattern[31]), .A2 (enable), .B0 (
-         bit_pattern[30]), .B1 (nx1185)) ;
-    dff reg_LFSR_REG_31 (.Q (bit_pattern[31]), .QB (\$dummy [31]), .D (nx760), .CLK (
-        clk)) ;
-    ao32 ix761 (.Y (nx760), .A0 (rst), .A1 (zeroth_in), .A2 (enable), .B0 (
-         bit_pattern[31]), .B1 (nx1185)) ;
-    dff reg_zeroth_in (.Q (zeroth_in), .QB (\$dummy [32]), .D (nx750), .CLK (clk
-        )) ;
-    mux21 ix751 (.Y (nx750), .A0 (bit_pattern[0]), .A1 (zeroth_in), .S0 (nx1139)
-          ) ;
-    nand02 ix1140 (.Y (nx1139), .A0 (enable), .A1 (rst)) ;
-    inv01 ix1145 (.Y (nx1144), .A (rst)) ;
-    inv01 ix1184 (.Y (nx1185), .A (nx1183)) ;
-    inv01 ix1186 (.Y (nx1187), .A (nx1183)) ;
-    inv01 ix1188 (.Y (nx1189), .A (nx1183)) ;
-    xor2 ix83 (.Y (nx82), .A0 (bit_pattern[25]), .A1 (zeroth_in)) ;
-    xor2 ix73 (.Y (nx72), .A0 (bit_pattern[26]), .A1 (zeroth_in)) ;
-    xor2 ix39 (.Y (nx38), .A0 (bit_pattern[30]), .A1 (zeroth_in)) ;
-    or02 ix1143 (.Y (nx1183), .A0 (nx1144), .A1 (enable)) ;
-endmodule
-
-
-module RegisterN_32 ( clk, reset, enable, \input , \output  ) ;
-
-    input clk ;
-    input reset ;
-    input enable ;
-    input [31:0]\input  ;
-    output [31:0]\output  ;
-
-    wire NOT_reset, nx422, nx432, nx442, nx452, nx462, nx472, nx482, nx492, 
-         nx502, nx512, nx522, nx532, nx542, nx552, nx562, nx572, nx582, nx592, 
-         nx602, nx612, nx622, nx632, nx642, nx652, nx662, nx672, nx682, nx692, 
-         nx702, nx712, nx722, nx732, nx845, nx847;
-    wire [31:0] \$dummy ;
-
-
-
-
-    dffr reg_output_0 (.Q (\output [0]), .QB (\$dummy [0]), .D (nx422), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix423 (.Y (nx422), .A0 (\output [0]), .A1 (\input [0]), .S0 (enable)
-          ) ;
-    inv01 ix745 (.Y (NOT_reset), .A (reset)) ;
-    dffr reg_output_1 (.Q (\output [1]), .QB (\$dummy [1]), .D (nx432), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix433 (.Y (nx432), .A0 (\output [1]), .A1 (\input [1]), .S0 (enable)
-          ) ;
-    dffr reg_output_2 (.Q (\output [2]), .QB (\$dummy [2]), .D (nx442), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix443 (.Y (nx442), .A0 (\output [2]), .A1 (\input [2]), .S0 (enable)
-          ) ;
-    dffr reg_output_3 (.Q (\output [3]), .QB (\$dummy [3]), .D (nx452), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix453 (.Y (nx452), .A0 (\output [3]), .A1 (\input [3]), .S0 (enable)
-          ) ;
-    dffr reg_output_4 (.Q (\output [4]), .QB (\$dummy [4]), .D (nx462), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix463 (.Y (nx462), .A0 (\output [4]), .A1 (\input [4]), .S0 (enable)
-          ) ;
-    dffr reg_output_5 (.Q (\output [5]), .QB (\$dummy [5]), .D (nx472), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix473 (.Y (nx472), .A0 (\output [5]), .A1 (\input [5]), .S0 (enable)
-          ) ;
-    dffr reg_output_6 (.Q (\output [6]), .QB (\$dummy [6]), .D (nx482), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix483 (.Y (nx482), .A0 (\output [6]), .A1 (\input [6]), .S0 (enable)
-          ) ;
-    dffr reg_output_7 (.Q (\output [7]), .QB (\$dummy [7]), .D (nx492), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix493 (.Y (nx492), .A0 (\output [7]), .A1 (\input [7]), .S0 (enable)
-          ) ;
-    dffr reg_output_8 (.Q (\output [8]), .QB (\$dummy [8]), .D (nx502), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix503 (.Y (nx502), .A0 (\output [8]), .A1 (\input [8]), .S0 (enable)
-          ) ;
-    dffr reg_output_9 (.Q (\output [9]), .QB (\$dummy [9]), .D (nx512), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix513 (.Y (nx512), .A0 (\output [9]), .A1 (\input [9]), .S0 (enable)
-          ) ;
-    dffr reg_output_10 (.Q (\output [10]), .QB (\$dummy [10]), .D (nx522), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix523 (.Y (nx522), .A0 (\output [10]), .A1 (\input [10]), .S0 (enable)
-          ) ;
-    dffr reg_output_11 (.Q (\output [11]), .QB (\$dummy [11]), .D (nx532), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix533 (.Y (nx532), .A0 (\output [11]), .A1 (\input [11]), .S0 (enable)
-          ) ;
-    dffr reg_output_12 (.Q (\output [12]), .QB (\$dummy [12]), .D (nx542), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix543 (.Y (nx542), .A0 (\output [12]), .A1 (\input [12]), .S0 (enable)
-          ) ;
-    dffr reg_output_13 (.Q (\output [13]), .QB (\$dummy [13]), .D (nx552), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix553 (.Y (nx552), .A0 (\output [13]), .A1 (\input [13]), .S0 (enable)
-          ) ;
-    dffr reg_output_14 (.Q (\output [14]), .QB (\$dummy [14]), .D (nx562), .CLK (
-         clk), .R (nx845)) ;
-    mux21 ix563 (.Y (nx562), .A0 (\output [14]), .A1 (\input [14]), .S0 (enable)
-          ) ;
-    dffr reg_output_15 (.Q (\output [15]), .QB (\$dummy [15]), .D (nx572), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix573 (.Y (nx572), .A0 (\output [15]), .A1 (\input [15]), .S0 (enable)
-          ) ;
-    dffr reg_output_16 (.Q (\output [16]), .QB (\$dummy [16]), .D (nx582), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix583 (.Y (nx582), .A0 (\output [16]), .A1 (\input [16]), .S0 (enable)
-          ) ;
-    dffr reg_output_17 (.Q (\output [17]), .QB (\$dummy [17]), .D (nx592), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix593 (.Y (nx592), .A0 (\output [17]), .A1 (\input [17]), .S0 (enable)
-          ) ;
-    dffr reg_output_18 (.Q (\output [18]), .QB (\$dummy [18]), .D (nx602), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix603 (.Y (nx602), .A0 (\output [18]), .A1 (\input [18]), .S0 (enable)
-          ) ;
-    dffr reg_output_19 (.Q (\output [19]), .QB (\$dummy [19]), .D (nx612), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix613 (.Y (nx612), .A0 (\output [19]), .A1 (\input [19]), .S0 (enable)
-          ) ;
-    dffr reg_output_20 (.Q (\output [20]), .QB (\$dummy [20]), .D (nx622), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix623 (.Y (nx622), .A0 (\output [20]), .A1 (\input [20]), .S0 (enable)
-          ) ;
-    dffr reg_output_21 (.Q (\output [21]), .QB (\$dummy [21]), .D (nx632), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix633 (.Y (nx632), .A0 (\output [21]), .A1 (\input [21]), .S0 (enable)
-          ) ;
-    dffr reg_output_22 (.Q (\output [22]), .QB (\$dummy [22]), .D (nx642), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix643 (.Y (nx642), .A0 (\output [22]), .A1 (\input [22]), .S0 (enable)
-          ) ;
-    dffr reg_output_23 (.Q (\output [23]), .QB (\$dummy [23]), .D (nx652), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix653 (.Y (nx652), .A0 (\output [23]), .A1 (\input [23]), .S0 (enable)
-          ) ;
-    dffr reg_output_24 (.Q (\output [24]), .QB (\$dummy [24]), .D (nx662), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix663 (.Y (nx662), .A0 (\output [24]), .A1 (\input [24]), .S0 (enable)
-          ) ;
-    dffr reg_output_25 (.Q (\output [25]), .QB (\$dummy [25]), .D (nx672), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix673 (.Y (nx672), .A0 (\output [25]), .A1 (\input [25]), .S0 (enable)
-          ) ;
-    dffr reg_output_26 (.Q (\output [26]), .QB (\$dummy [26]), .D (nx682), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix683 (.Y (nx682), .A0 (\output [26]), .A1 (\input [26]), .S0 (enable)
-          ) ;
-    dffr reg_output_27 (.Q (\output [27]), .QB (\$dummy [27]), .D (nx692), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix693 (.Y (nx692), .A0 (\output [27]), .A1 (\input [27]), .S0 (enable)
-          ) ;
-    dffr reg_output_28 (.Q (\output [28]), .QB (\$dummy [28]), .D (nx702), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix703 (.Y (nx702), .A0 (\output [28]), .A1 (\input [28]), .S0 (enable)
-          ) ;
-    dffr reg_output_29 (.Q (\output [29]), .QB (\$dummy [29]), .D (nx712), .CLK (
-         clk), .R (nx847)) ;
-    mux21 ix713 (.Y (nx712), .A0 (\output [29]), .A1 (\input [29]), .S0 (enable)
-          ) ;
-    dffr reg_output_30 (.Q (\output [30]), .QB (\$dummy [30]), .D (nx722), .CLK (
-         clk), .R (NOT_reset)) ;
-    mux21 ix723 (.Y (nx722), .A0 (\output [30]), .A1 (\input [30]), .S0 (enable)
-          ) ;
-    dffr reg_output_31 (.Q (\output [31]), .QB (\$dummy [31]), .D (nx732), .CLK (
-         clk), .R (NOT_reset)) ;
-    mux21 ix733 (.Y (nx732), .A0 (\output [31]), .A1 (\input [31]), .S0 (enable)
-          ) ;
-    inv01 ix844 (.Y (nx845), .A (reset)) ;
-    inv01 ix846 (.Y (nx847), .A (reset)) ;
 endmodule
 
 

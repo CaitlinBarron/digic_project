@@ -2,7 +2,7 @@
 -- 
 -- Definition of  MAC
 -- 
---      Sun Dec  8 19:15:39 2019
+--      Mon Dec  9 00:24:26 2019
 --      
 --      LeonardoSpectrum Level 3, 2008b.3
 -- 
@@ -2013,12 +2013,12 @@ architecture Behavioral of LFSR is
       bit_pattern_11_EXMPLR, bit_pattern_10_EXMPLR, bit_pattern_9_EXMPLR, 
       bit_pattern_8_EXMPLR, bit_pattern_7_EXMPLR, bit_pattern_6_EXMPLR, 
       bit_pattern_5_EXMPLR, bit_pattern_4_EXMPLR, bit_pattern_3_EXMPLR, 
-      bit_pattern_2_EXMPLR, bit_pattern_1_EXMPLR, bit_pattern_0_EXMPLR, 
-      zeroth_in, nx38, nx72, nx82, nx740, nx750, nx760, nx770, nx780, nx790, 
-      nx800, nx810, nx820, nx830, nx840, nx850, nx860, nx870, nx880, nx890, 
-      nx900, nx910, nx920, nx930, nx940, nx950, nx960, nx970, nx980, nx990, 
-      nx1000, nx1010, nx1020, nx1030, nx1040, nx1050, nx1060, nx1139, nx1144, 
-      nx1183, nx1185, nx1187, nx1189: std_logic ;
+      bit_pattern_2_EXMPLR, bit_pattern_1_EXMPLR, bit_pattern_0_EXMPLR, nx4, 
+      nx238, nx240, nx716, nx726, nx736, nx746, nx756, nx766, nx776, nx786, 
+      nx796, nx806, nx816, nx826, nx836, nx846, nx856, nx866, nx876, nx886, 
+      nx896, nx906, nx916, nx926, nx936, nx946, nx956, nx966, nx976, nx986, 
+      nx996, nx1006, nx1016, nx1026, nx1038, nx1040, nx1144, nx1146: 
+   std_logic ;
 
 begin
    bit_pattern(31) <= bit_pattern_31_EXMPLR ;
@@ -2054,149 +2054,142 @@ begin
    bit_pattern(1) <= bit_pattern_1_EXMPLR ;
    bit_pattern(0) <= bit_pattern_0_EXMPLR ;
    reg_LFSR_REG_0 : dff port map ( Q=>bit_pattern_0_EXMPLR, QB=>OPEN, D=>
-      nx740, CLK=>clk);
-   ix741 : ao221 port map ( Y=>nx740, A0=>bit_pattern_1_EXMPLR, A1=>enable, 
-      B0=>bit_pattern_0_EXMPLR, B1=>nx1189, C0=>nx1144);
+      nx1006, CLK=>clk);
+   ix1007 : ao221 port map ( Y=>nx1006, A0=>bit_pattern_0_EXMPLR, A1=>nx1144, 
+      B0=>nx240, B1=>enable, C0=>nx1040);
+   ix1041 : inv01 port map ( Y=>nx1040, A=>rst);
+   ix241 : xnor2 port map ( Y=>nx240, A0=>nx4, A1=>nx238);
+   ix5 : xnor2 port map ( Y=>nx4, A0=>bit_pattern_0_EXMPLR, A1=>
+      bit_pattern_1_EXMPLR);
    reg_LFSR_REG_1 : dff port map ( Q=>bit_pattern_1_EXMPLR, QB=>OPEN, D=>
-      nx1060, CLK=>clk);
-   ix1061 : ao32 port map ( Y=>nx1060, A0=>rst, A1=>bit_pattern_2_EXMPLR, A2
-      =>enable, B0=>bit_pattern_1_EXMPLR, B1=>nx1189);
-   reg_LFSR_REG_2 : dff port map ( Q=>bit_pattern_2_EXMPLR, QB=>OPEN, D=>
-      nx1050, CLK=>clk);
-   ix1051 : ao32 port map ( Y=>nx1050, A0=>rst, A1=>bit_pattern_3_EXMPLR, A2
-      =>enable, B0=>bit_pattern_2_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_3 : dff port map ( Q=>bit_pattern_3_EXMPLR, QB=>OPEN, D=>
-      nx1040, CLK=>clk);
-   ix1041 : ao32 port map ( Y=>nx1040, A0=>rst, A1=>bit_pattern_4_EXMPLR, A2
-      =>enable, B0=>bit_pattern_3_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_4 : dff port map ( Q=>bit_pattern_4_EXMPLR, QB=>OPEN, D=>
-      nx1030, CLK=>clk);
-   ix1031 : ao32 port map ( Y=>nx1030, A0=>rst, A1=>bit_pattern_5_EXMPLR, A2
-      =>enable, B0=>bit_pattern_4_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_5 : dff port map ( Q=>bit_pattern_5_EXMPLR, QB=>OPEN, D=>
-      nx1020, CLK=>clk);
-   ix1021 : ao32 port map ( Y=>nx1020, A0=>rst, A1=>bit_pattern_6_EXMPLR, A2
-      =>enable, B0=>bit_pattern_5_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_6 : dff port map ( Q=>bit_pattern_6_EXMPLR, QB=>OPEN, D=>
-      nx1010, CLK=>clk);
-   ix1011 : ao32 port map ( Y=>nx1010, A0=>rst, A1=>bit_pattern_7_EXMPLR, A2
-      =>enable, B0=>bit_pattern_6_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_7 : dff port map ( Q=>bit_pattern_7_EXMPLR, QB=>OPEN, D=>
-      nx1000, CLK=>clk);
-   ix1001 : ao32 port map ( Y=>nx1000, A0=>rst, A1=>bit_pattern_8_EXMPLR, A2
-      =>enable, B0=>bit_pattern_7_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_8 : dff port map ( Q=>bit_pattern_8_EXMPLR, QB=>OPEN, D=>
-      nx990, CLK=>clk);
-   ix991 : ao32 port map ( Y=>nx990, A0=>rst, A1=>bit_pattern_9_EXMPLR, A2=>
-      enable, B0=>bit_pattern_8_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_9 : dff port map ( Q=>bit_pattern_9_EXMPLR, QB=>OPEN, D=>
-      nx980, CLK=>clk);
-   ix981 : ao32 port map ( Y=>nx980, A0=>rst, A1=>bit_pattern_10_EXMPLR, A2
-      =>enable, B0=>bit_pattern_9_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_10 : dff port map ( Q=>bit_pattern_10_EXMPLR, QB=>OPEN, D=>
-      nx970, CLK=>clk);
-   ix971 : ao32 port map ( Y=>nx970, A0=>rst, A1=>bit_pattern_11_EXMPLR, A2
-      =>enable, B0=>bit_pattern_10_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_11 : dff port map ( Q=>bit_pattern_11_EXMPLR, QB=>OPEN, D=>
-      nx960, CLK=>clk);
-   ix961 : ao32 port map ( Y=>nx960, A0=>rst, A1=>bit_pattern_12_EXMPLR, A2
-      =>enable, B0=>bit_pattern_11_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_12 : dff port map ( Q=>bit_pattern_12_EXMPLR, QB=>OPEN, D=>
-      nx950, CLK=>clk);
-   ix951 : ao32 port map ( Y=>nx950, A0=>rst, A1=>bit_pattern_13_EXMPLR, A2
-      =>enable, B0=>bit_pattern_12_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_13 : dff port map ( Q=>bit_pattern_13_EXMPLR, QB=>OPEN, D=>
-      nx940, CLK=>clk);
-   ix941 : ao32 port map ( Y=>nx940, A0=>rst, A1=>bit_pattern_14_EXMPLR, A2
-      =>enable, B0=>bit_pattern_13_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_14 : dff port map ( Q=>bit_pattern_14_EXMPLR, QB=>OPEN, D=>
-      nx930, CLK=>clk);
-   ix931 : ao32 port map ( Y=>nx930, A0=>rst, A1=>bit_pattern_15_EXMPLR, A2
-      =>enable, B0=>bit_pattern_14_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_15 : dff port map ( Q=>bit_pattern_15_EXMPLR, QB=>OPEN, D=>
-      nx920, CLK=>clk);
-   ix921 : ao32 port map ( Y=>nx920, A0=>rst, A1=>bit_pattern_16_EXMPLR, A2
-      =>enable, B0=>bit_pattern_15_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_16 : dff port map ( Q=>bit_pattern_16_EXMPLR, QB=>OPEN, D=>
-      nx910, CLK=>clk);
-   ix911 : ao32 port map ( Y=>nx910, A0=>rst, A1=>bit_pattern_17_EXMPLR, A2
-      =>enable, B0=>bit_pattern_16_EXMPLR, B1=>nx1187);
-   reg_LFSR_REG_17 : dff port map ( Q=>bit_pattern_17_EXMPLR, QB=>OPEN, D=>
-      nx900, CLK=>clk);
-   ix901 : ao32 port map ( Y=>nx900, A0=>rst, A1=>bit_pattern_18_EXMPLR, A2
-      =>enable, B0=>bit_pattern_17_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_18 : dff port map ( Q=>bit_pattern_18_EXMPLR, QB=>OPEN, D=>
-      nx890, CLK=>clk);
-   ix891 : ao32 port map ( Y=>nx890, A0=>rst, A1=>bit_pattern_19_EXMPLR, A2
-      =>enable, B0=>bit_pattern_18_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_19 : dff port map ( Q=>bit_pattern_19_EXMPLR, QB=>OPEN, D=>
-      nx880, CLK=>clk);
-   ix881 : ao32 port map ( Y=>nx880, A0=>rst, A1=>bit_pattern_20_EXMPLR, A2
-      =>enable, B0=>bit_pattern_19_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_20 : dff port map ( Q=>bit_pattern_20_EXMPLR, QB=>OPEN, D=>
-      nx870, CLK=>clk);
-   ix871 : ao32 port map ( Y=>nx870, A0=>rst, A1=>bit_pattern_21_EXMPLR, A2
-      =>enable, B0=>bit_pattern_20_EXMPLR, B1=>nx1185);
+      nx1016, CLK=>clk);
+   ix1017 : ao32 port map ( Y=>nx1016, A0=>rst, A1=>bit_pattern_0_EXMPLR, A2
+      =>enable, B0=>bit_pattern_1_EXMPLR, B1=>nx1144);
+   ix239 : xnor2 port map ( Y=>nx238, A0=>bit_pattern_21_EXMPLR, A1=>
+      bit_pattern_31_EXMPLR);
    reg_LFSR_REG_21 : dff port map ( Q=>bit_pattern_21_EXMPLR, QB=>OPEN, D=>
-      nx860, CLK=>clk);
-   ix861 : ao32 port map ( Y=>nx860, A0=>rst, A1=>bit_pattern_22_EXMPLR, A2
-      =>enable, B0=>bit_pattern_21_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_22 : dff port map ( Q=>bit_pattern_22_EXMPLR, QB=>OPEN, D=>
-      nx850, CLK=>clk);
-   ix851 : ao32 port map ( Y=>nx850, A0=>rst, A1=>bit_pattern_23_EXMPLR, A2
-      =>enable, B0=>bit_pattern_22_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_23 : dff port map ( Q=>bit_pattern_23_EXMPLR, QB=>OPEN, D=>
-      nx840, CLK=>clk);
-   ix841 : ao32 port map ( Y=>nx840, A0=>rst, A1=>bit_pattern_24_EXMPLR, A2
-      =>enable, B0=>bit_pattern_23_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_24 : dff port map ( Q=>bit_pattern_24_EXMPLR, QB=>OPEN, D=>
-      nx830, CLK=>clk);
-   ix831 : ao32 port map ( Y=>nx830, A0=>rst, A1=>nx82, A2=>enable, B0=>
-      bit_pattern_24_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_25 : dff port map ( Q=>bit_pattern_25_EXMPLR, QB=>OPEN, D=>
-      nx820, CLK=>clk);
-   ix821 : ao32 port map ( Y=>nx820, A0=>rst, A1=>nx72, A2=>enable, B0=>
-      bit_pattern_25_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_26 : dff port map ( Q=>bit_pattern_26_EXMPLR, QB=>OPEN, D=>
-      nx810, CLK=>clk);
-   ix811 : ao32 port map ( Y=>nx810, A0=>rst, A1=>bit_pattern_27_EXMPLR, A2
-      =>enable, B0=>bit_pattern_26_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_27 : dff port map ( Q=>bit_pattern_27_EXMPLR, QB=>OPEN, D=>
-      nx800, CLK=>clk);
-   ix801 : ao32 port map ( Y=>nx800, A0=>rst, A1=>bit_pattern_28_EXMPLR, A2
-      =>enable, B0=>bit_pattern_27_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_28 : dff port map ( Q=>bit_pattern_28_EXMPLR, QB=>OPEN, D=>
-      nx790, CLK=>clk);
-   ix791 : ao32 port map ( Y=>nx790, A0=>rst, A1=>bit_pattern_29_EXMPLR, A2
-      =>enable, B0=>bit_pattern_28_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_29 : dff port map ( Q=>bit_pattern_29_EXMPLR, QB=>OPEN, D=>
-      nx780, CLK=>clk);
-   ix781 : ao32 port map ( Y=>nx780, A0=>rst, A1=>nx38, A2=>enable, B0=>
-      bit_pattern_29_EXMPLR, B1=>nx1185);
-   reg_LFSR_REG_30 : dff port map ( Q=>bit_pattern_30_EXMPLR, QB=>OPEN, D=>
-      nx770, CLK=>clk);
-   ix771 : ao32 port map ( Y=>nx770, A0=>rst, A1=>bit_pattern_31_EXMPLR, A2
-      =>enable, B0=>bit_pattern_30_EXMPLR, B1=>nx1185);
+      nx896, CLK=>clk);
+   ix897 : ao32 port map ( Y=>nx896, A0=>rst, A1=>bit_pattern_20_EXMPLR, A2
+      =>enable, B0=>bit_pattern_21_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_20 : dff port map ( Q=>bit_pattern_20_EXMPLR, QB=>OPEN, D=>
+      nx886, CLK=>clk);
+   ix887 : ao32 port map ( Y=>nx886, A0=>rst, A1=>bit_pattern_19_EXMPLR, A2
+      =>enable, B0=>bit_pattern_20_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_19 : dff port map ( Q=>bit_pattern_19_EXMPLR, QB=>OPEN, D=>
+      nx876, CLK=>clk);
+   ix877 : ao32 port map ( Y=>nx876, A0=>rst, A1=>bit_pattern_18_EXMPLR, A2
+      =>enable, B0=>bit_pattern_19_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_18 : dff port map ( Q=>bit_pattern_18_EXMPLR, QB=>OPEN, D=>
+      nx866, CLK=>clk);
+   ix867 : ao32 port map ( Y=>nx866, A0=>rst, A1=>bit_pattern_17_EXMPLR, A2
+      =>enable, B0=>bit_pattern_18_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_17 : dff port map ( Q=>bit_pattern_17_EXMPLR, QB=>OPEN, D=>
+      nx856, CLK=>clk);
+   ix857 : ao32 port map ( Y=>nx856, A0=>rst, A1=>bit_pattern_16_EXMPLR, A2
+      =>enable, B0=>bit_pattern_17_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_16 : dff port map ( Q=>bit_pattern_16_EXMPLR, QB=>OPEN, D=>
+      nx846, CLK=>clk);
+   ix847 : ao32 port map ( Y=>nx846, A0=>rst, A1=>bit_pattern_15_EXMPLR, A2
+      =>enable, B0=>bit_pattern_16_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_15 : dff port map ( Q=>bit_pattern_15_EXMPLR, QB=>OPEN, D=>
+      nx836, CLK=>clk);
+   ix837 : ao32 port map ( Y=>nx836, A0=>rst, A1=>bit_pattern_14_EXMPLR, A2
+      =>enable, B0=>bit_pattern_15_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_14 : dff port map ( Q=>bit_pattern_14_EXMPLR, QB=>OPEN, D=>
+      nx826, CLK=>clk);
+   ix827 : ao32 port map ( Y=>nx826, A0=>rst, A1=>bit_pattern_13_EXMPLR, A2
+      =>enable, B0=>bit_pattern_14_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_13 : dff port map ( Q=>bit_pattern_13_EXMPLR, QB=>OPEN, D=>
+      nx816, CLK=>clk);
+   ix817 : ao32 port map ( Y=>nx816, A0=>rst, A1=>bit_pattern_12_EXMPLR, A2
+      =>enable, B0=>bit_pattern_13_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_12 : dff port map ( Q=>bit_pattern_12_EXMPLR, QB=>OPEN, D=>
+      nx806, CLK=>clk);
+   ix807 : ao32 port map ( Y=>nx806, A0=>rst, A1=>bit_pattern_11_EXMPLR, A2
+      =>enable, B0=>bit_pattern_12_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_11 : dff port map ( Q=>bit_pattern_11_EXMPLR, QB=>OPEN, D=>
+      nx796, CLK=>clk);
+   ix797 : ao32 port map ( Y=>nx796, A0=>rst, A1=>bit_pattern_10_EXMPLR, A2
+      =>enable, B0=>bit_pattern_11_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_10 : dff port map ( Q=>bit_pattern_10_EXMPLR, QB=>OPEN, D=>
+      nx786, CLK=>clk);
+   ix787 : ao32 port map ( Y=>nx786, A0=>rst, A1=>bit_pattern_9_EXMPLR, A2=>
+      enable, B0=>bit_pattern_10_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_9 : dff port map ( Q=>bit_pattern_9_EXMPLR, QB=>OPEN, D=>
+      nx776, CLK=>clk);
+   ix777 : ao32 port map ( Y=>nx776, A0=>rst, A1=>bit_pattern_8_EXMPLR, A2=>
+      enable, B0=>bit_pattern_9_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_8 : dff port map ( Q=>bit_pattern_8_EXMPLR, QB=>OPEN, D=>
+      nx766, CLK=>clk);
+   ix767 : ao32 port map ( Y=>nx766, A0=>rst, A1=>bit_pattern_7_EXMPLR, A2=>
+      enable, B0=>bit_pattern_8_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_7 : dff port map ( Q=>bit_pattern_7_EXMPLR, QB=>OPEN, D=>
+      nx756, CLK=>clk);
+   ix757 : ao32 port map ( Y=>nx756, A0=>rst, A1=>bit_pattern_6_EXMPLR, A2=>
+      enable, B0=>bit_pattern_7_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_6 : dff port map ( Q=>bit_pattern_6_EXMPLR, QB=>OPEN, D=>
+      nx746, CLK=>clk);
+   ix747 : ao32 port map ( Y=>nx746, A0=>rst, A1=>bit_pattern_5_EXMPLR, A2=>
+      enable, B0=>bit_pattern_6_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_5 : dff port map ( Q=>bit_pattern_5_EXMPLR, QB=>OPEN, D=>
+      nx736, CLK=>clk);
+   ix737 : ao32 port map ( Y=>nx736, A0=>rst, A1=>bit_pattern_4_EXMPLR, A2=>
+      enable, B0=>bit_pattern_5_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_4 : dff port map ( Q=>bit_pattern_4_EXMPLR, QB=>OPEN, D=>
+      nx726, CLK=>clk);
+   ix727 : ao32 port map ( Y=>nx726, A0=>rst, A1=>bit_pattern_3_EXMPLR, A2=>
+      enable, B0=>bit_pattern_4_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_3 : dff port map ( Q=>bit_pattern_3_EXMPLR, QB=>OPEN, D=>
+      nx716, CLK=>clk);
+   ix717 : ao32 port map ( Y=>nx716, A0=>rst, A1=>bit_pattern_2_EXMPLR, A2=>
+      enable, B0=>bit_pattern_3_EXMPLR, B1=>nx1144);
+   reg_LFSR_REG_2 : dff port map ( Q=>bit_pattern_2_EXMPLR, QB=>OPEN, D=>
+      nx1026, CLK=>clk);
+   ix1027 : ao32 port map ( Y=>nx1026, A0=>rst, A1=>bit_pattern_1_EXMPLR, A2
+      =>enable, B0=>bit_pattern_2_EXMPLR, B1=>nx1144);
    reg_LFSR_REG_31 : dff port map ( Q=>bit_pattern_31_EXMPLR, QB=>OPEN, D=>
-      nx760, CLK=>clk);
-   ix761 : ao32 port map ( Y=>nx760, A0=>rst, A1=>zeroth_in, A2=>enable, B0
-      =>bit_pattern_31_EXMPLR, B1=>nx1185);
-   reg_zeroth_in : dff port map ( Q=>zeroth_in, QB=>OPEN, D=>nx750, CLK=>clk
-   );
-   ix751 : mux21 port map ( Y=>nx750, A0=>bit_pattern_0_EXMPLR, A1=>
-      zeroth_in, S0=>nx1139);
-   ix1140 : nand02 port map ( Y=>nx1139, A0=>enable, A1=>rst);
-   ix1145 : inv01 port map ( Y=>nx1144, A=>rst);
-   ix1184 : inv01 port map ( Y=>nx1185, A=>nx1183);
-   ix1186 : inv01 port map ( Y=>nx1187, A=>nx1183);
-   ix1188 : inv01 port map ( Y=>nx1189, A=>nx1183);
-   ix83 : xor2 port map ( Y=>nx82, A0=>bit_pattern_25_EXMPLR, A1=>zeroth_in
-   );
-   ix73 : xor2 port map ( Y=>nx72, A0=>bit_pattern_26_EXMPLR, A1=>zeroth_in
-   );
-   ix39 : xor2 port map ( Y=>nx38, A0=>bit_pattern_30_EXMPLR, A1=>zeroth_in
-   );
-   ix1143 : or02 port map ( Y=>nx1183, A0=>nx1144, A1=>enable);
+      nx996, CLK=>clk);
+   ix997 : ao32 port map ( Y=>nx996, A0=>rst, A1=>bit_pattern_30_EXMPLR, A2
+      =>enable, B0=>bit_pattern_31_EXMPLR, B1=>nx1038);
+   reg_LFSR_REG_30 : dff port map ( Q=>bit_pattern_30_EXMPLR, QB=>OPEN, D=>
+      nx986, CLK=>clk);
+   ix987 : ao32 port map ( Y=>nx986, A0=>rst, A1=>bit_pattern_29_EXMPLR, A2
+      =>enable, B0=>bit_pattern_30_EXMPLR, B1=>nx1038);
+   reg_LFSR_REG_29 : dff port map ( Q=>bit_pattern_29_EXMPLR, QB=>OPEN, D=>
+      nx976, CLK=>clk);
+   ix977 : ao32 port map ( Y=>nx976, A0=>rst, A1=>bit_pattern_28_EXMPLR, A2
+      =>enable, B0=>bit_pattern_29_EXMPLR, B1=>nx1038);
+   reg_LFSR_REG_28 : dff port map ( Q=>bit_pattern_28_EXMPLR, QB=>OPEN, D=>
+      nx966, CLK=>clk);
+   ix967 : ao32 port map ( Y=>nx966, A0=>rst, A1=>bit_pattern_27_EXMPLR, A2
+      =>enable, B0=>bit_pattern_28_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_27 : dff port map ( Q=>bit_pattern_27_EXMPLR, QB=>OPEN, D=>
+      nx956, CLK=>clk);
+   ix957 : ao32 port map ( Y=>nx956, A0=>rst, A1=>bit_pattern_26_EXMPLR, A2
+      =>enable, B0=>bit_pattern_27_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_26 : dff port map ( Q=>bit_pattern_26_EXMPLR, QB=>OPEN, D=>
+      nx946, CLK=>clk);
+   ix947 : ao32 port map ( Y=>nx946, A0=>rst, A1=>bit_pattern_25_EXMPLR, A2
+      =>enable, B0=>bit_pattern_26_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_25 : dff port map ( Q=>bit_pattern_25_EXMPLR, QB=>OPEN, D=>
+      nx936, CLK=>clk);
+   ix937 : ao32 port map ( Y=>nx936, A0=>rst, A1=>bit_pattern_24_EXMPLR, A2
+      =>enable, B0=>bit_pattern_25_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_24 : dff port map ( Q=>bit_pattern_24_EXMPLR, QB=>OPEN, D=>
+      nx926, CLK=>clk);
+   ix927 : ao32 port map ( Y=>nx926, A0=>rst, A1=>bit_pattern_23_EXMPLR, A2
+      =>enable, B0=>bit_pattern_24_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_23 : dff port map ( Q=>bit_pattern_23_EXMPLR, QB=>OPEN, D=>
+      nx916, CLK=>clk);
+   ix917 : ao32 port map ( Y=>nx916, A0=>rst, A1=>bit_pattern_22_EXMPLR, A2
+      =>enable, B0=>bit_pattern_23_EXMPLR, B1=>nx1146);
+   reg_LFSR_REG_22 : dff port map ( Q=>bit_pattern_22_EXMPLR, QB=>OPEN, D=>
+      nx906, CLK=>clk);
+   ix907 : ao32 port map ( Y=>nx906, A0=>rst, A1=>bit_pattern_21_EXMPLR, A2
+      =>enable, B0=>bit_pattern_22_EXMPLR, B1=>nx1146);
+   ix1039 : nor02ii port map ( Y=>nx1038, A0=>enable, A1=>rst);
+   ix1143 : nor02ii port map ( Y=>nx1144, A0=>enable, A1=>rst);
+   ix1145 : nor02ii port map ( Y=>nx1146, A0=>enable, A1=>rst);
 end Behavioral ;
 
 library IEEE;
@@ -2224,15 +2217,15 @@ architecture Behavioral of MISR is
       signature_10_EXMPLR, signature_9_EXMPLR, signature_8_EXMPLR, 
       signature_7_EXMPLR, signature_6_EXMPLR, signature_5_EXMPLR, 
       signature_4_EXMPLR, signature_3_EXMPLR, signature_2_EXMPLR, 
-      signature_1_EXMPLR, signature_0_EXMPLR, zeroth_in, nx12, nx22, nx34, 
-      nx44, nx54, nx64, nx76, nx88, nx98, nx108, nx118, nx128, nx138, nx148, 
-      nx158, nx168, nx178, nx188, nx198, nx208, nx218, nx228, nx238, nx248, 
-      nx258, nx268, nx278, nx288, nx298, nx308, nx318, nx328, nx836, nx846, 
-      nx856, nx866, nx876, nx886, nx896, nx906, nx916, nx926, nx936, nx946, 
-      nx956, nx966, nx976, nx986, nx996, nx1006, nx1016, nx1026, nx1036, 
-      nx1046, nx1056, nx1066, nx1076, nx1086, nx1096, nx1106, nx1116, nx1126, 
-      nx1136, nx1146, nx1156, nx1168, nx1170, nx1245, nx1250, nx1264, nx1272, 
-      nx1276, nx1315, nx1317, nx1323, nx1325, nx1327, nx1329: std_logic ;
+      signature_1_EXMPLR, signature_0_EXMPLR, nx4, nx6, nx8, nx10, NOT_clk, 
+      nx24, nx34, nx44, nx54, nx64, nx74, nx84, nx94, nx104, nx114, nx124, 
+      nx134, nx144, nx154, nx164, nx174, nx184, nx194, nx204, nx214, nx224, 
+      nx234, nx244, nx254, nx264, nx274, nx284, nx294, nx304, nx314, nx324, 
+      nx814, nx824, nx834, nx844, nx854, nx864, nx874, nx884, nx894, nx904, 
+      nx914, nx924, nx934, nx944, nx954, nx964, nx974, nx984, nx994, nx1004, 
+      nx1014, nx1024, nx1034, nx1044, nx1054, nx1064, nx1074, nx1084, nx1094, 
+      nx1104, nx1114, nx1124, nx1136, nx1138, nx1276, nx1278, nx1280, nx1282
+   : std_logic ;
 
 begin
    signature(31) <= signature_31_EXMPLR ;
@@ -2267,213 +2260,209 @@ begin
    signature(2) <= signature_2_EXMPLR ;
    signature(1) <= signature_1_EXMPLR ;
    signature(0) <= signature_0_EXMPLR ;
-   reg_MISR_REG_0 : dff port map ( Q=>signature_0_EXMPLR, QB=>OPEN, D=>
-      nx1156, CLK=>clk);
-   ix1157 : ao221 port map ( Y=>nx1156, A0=>signature_0_EXMPLR, A1=>nx1315, 
-      B0=>nx328, B1=>nx1329, C0=>nx1170);
-   ix1171 : inv01 port map ( Y=>nx1170, A=>rst);
-   ix329 : xor2 port map ( Y=>nx328, A0=>mult_result(0), A1=>
+   reg_MISR_REG_0 : dff port map ( Q=>signature_0_EXMPLR, QB=>OPEN, D=>nx814, 
+      CLK=>NOT_clk);
+   ix815 : ao221 port map ( Y=>nx814, A0=>signature_0_EXMPLR, A1=>nx1280, B0
+      =>nx10, B1=>enable, C0=>nx1138);
+   ix1139 : inv01 port map ( Y=>nx1138, A=>rst);
+   ix11 : xnor2 port map ( Y=>nx10, A0=>nx4, A1=>nx8);
+   ix5 : xnor2 port map ( Y=>nx4, A0=>signature_0_EXMPLR, A1=>
       signature_1_EXMPLR);
-   reg_MISR_REG_1 : dff port map ( Q=>signature_1_EXMPLR, QB=>OPEN, D=>
-      nx1146, CLK=>clk);
-   ix1147 : ao32 port map ( Y=>nx1146, A0=>rst, A1=>nx318, A2=>nx1329, B0=>
-      signature_1_EXMPLR, B1=>nx1168);
-   ix319 : xor2 port map ( Y=>nx318, A0=>mult_result(1), A1=>
-      signature_2_EXMPLR);
-   reg_MISR_REG_2 : dff port map ( Q=>signature_2_EXMPLR, QB=>OPEN, D=>
-      nx1136, CLK=>clk);
-   ix1137 : ao32 port map ( Y=>nx1136, A0=>rst, A1=>nx308, A2=>nx1329, B0=>
-      signature_2_EXMPLR, B1=>nx1168);
-   ix309 : xor2 port map ( Y=>nx308, A0=>mult_result(2), A1=>
-      signature_3_EXMPLR);
-   reg_MISR_REG_3 : dff port map ( Q=>signature_3_EXMPLR, QB=>OPEN, D=>
-      nx1126, CLK=>clk);
-   ix1127 : ao32 port map ( Y=>nx1126, A0=>rst, A1=>nx298, A2=>nx1327, B0=>
-      signature_3_EXMPLR, B1=>nx1168);
-   ix299 : xor2 port map ( Y=>nx298, A0=>mult_result(3), A1=>
-      signature_4_EXMPLR);
-   reg_MISR_REG_4 : dff port map ( Q=>signature_4_EXMPLR, QB=>OPEN, D=>
-      nx1116, CLK=>clk);
-   ix1117 : ao32 port map ( Y=>nx1116, A0=>rst, A1=>nx288, A2=>nx1327, B0=>
-      signature_4_EXMPLR, B1=>nx1317);
-   ix289 : xor2 port map ( Y=>nx288, A0=>mult_result(4), A1=>
-      signature_5_EXMPLR);
-   reg_MISR_REG_5 : dff port map ( Q=>signature_5_EXMPLR, QB=>OPEN, D=>
-      nx1106, CLK=>clk);
-   ix1107 : ao32 port map ( Y=>nx1106, A0=>rst, A1=>nx278, A2=>nx1327, B0=>
-      signature_5_EXMPLR, B1=>nx1317);
-   ix279 : xor2 port map ( Y=>nx278, A0=>mult_result(5), A1=>
-      signature_6_EXMPLR);
-   reg_MISR_REG_6 : dff port map ( Q=>signature_6_EXMPLR, QB=>OPEN, D=>
-      nx1096, CLK=>clk);
-   ix1097 : ao32 port map ( Y=>nx1096, A0=>rst, A1=>nx268, A2=>nx1327, B0=>
-      signature_6_EXMPLR, B1=>nx1317);
-   ix269 : xor2 port map ( Y=>nx268, A0=>mult_result(6), A1=>
-      signature_7_EXMPLR);
-   reg_MISR_REG_7 : dff port map ( Q=>signature_7_EXMPLR, QB=>OPEN, D=>
-      nx1086, CLK=>clk);
-   ix1087 : ao32 port map ( Y=>nx1086, A0=>rst, A1=>nx258, A2=>nx1327, B0=>
-      signature_7_EXMPLR, B1=>nx1317);
-   ix259 : xor2 port map ( Y=>nx258, A0=>mult_result(7), A1=>
-      signature_8_EXMPLR);
-   reg_MISR_REG_8 : dff port map ( Q=>signature_8_EXMPLR, QB=>OPEN, D=>
-      nx1076, CLK=>clk);
-   ix1077 : ao32 port map ( Y=>nx1076, A0=>rst, A1=>nx248, A2=>nx1327, B0=>
-      signature_8_EXMPLR, B1=>nx1317);
-   ix249 : xor2 port map ( Y=>nx248, A0=>mult_result(8), A1=>
-      signature_9_EXMPLR);
-   reg_MISR_REG_9 : dff port map ( Q=>signature_9_EXMPLR, QB=>OPEN, D=>
-      nx1066, CLK=>clk);
-   ix1067 : ao32 port map ( Y=>nx1066, A0=>rst, A1=>nx238, A2=>nx1327, B0=>
-      signature_9_EXMPLR, B1=>nx1317);
-   ix239 : xor2 port map ( Y=>nx238, A0=>mult_result(9), A1=>
-      signature_10_EXMPLR);
-   reg_MISR_REG_10 : dff port map ( Q=>signature_10_EXMPLR, QB=>OPEN, D=>
-      nx1056, CLK=>clk);
-   ix1057 : ao32 port map ( Y=>nx1056, A0=>rst, A1=>nx228, A2=>nx1327, B0=>
-      signature_10_EXMPLR, B1=>nx1317);
-   ix229 : xor2 port map ( Y=>nx228, A0=>mult_result(10), A1=>
-      signature_11_EXMPLR);
-   reg_MISR_REG_11 : dff port map ( Q=>signature_11_EXMPLR, QB=>OPEN, D=>
-      nx1046, CLK=>clk);
-   ix1047 : ao32 port map ( Y=>nx1046, A0=>rst, A1=>nx218, A2=>nx1327, B0=>
-      signature_11_EXMPLR, B1=>nx1317);
-   ix219 : xor2 port map ( Y=>nx218, A0=>mult_result(11), A1=>
-      signature_12_EXMPLR);
-   reg_MISR_REG_12 : dff port map ( Q=>signature_12_EXMPLR, QB=>OPEN, D=>
-      nx1036, CLK=>clk);
-   ix1037 : ao32 port map ( Y=>nx1036, A0=>rst, A1=>nx208, A2=>nx1327, B0=>
-      signature_12_EXMPLR, B1=>nx1317);
-   ix209 : xor2 port map ( Y=>nx208, A0=>mult_result(12), A1=>
-      signature_13_EXMPLR);
-   reg_MISR_REG_13 : dff port map ( Q=>signature_13_EXMPLR, QB=>OPEN, D=>
-      nx1026, CLK=>clk);
-   ix1027 : ao32 port map ( Y=>nx1026, A0=>rst, A1=>nx198, A2=>nx1327, B0=>
-      signature_13_EXMPLR, B1=>nx1317);
-   ix199 : xor2 port map ( Y=>nx198, A0=>mult_result(13), A1=>
-      signature_14_EXMPLR);
-   reg_MISR_REG_14 : dff port map ( Q=>signature_14_EXMPLR, QB=>OPEN, D=>
-      nx1016, CLK=>clk);
-   ix1017 : ao32 port map ( Y=>nx1016, A0=>rst, A1=>nx188, A2=>nx1327, B0=>
-      signature_14_EXMPLR, B1=>nx1317);
-   ix189 : xor2 port map ( Y=>nx188, A0=>mult_result(14), A1=>
-      signature_15_EXMPLR);
-   reg_MISR_REG_15 : dff port map ( Q=>signature_15_EXMPLR, QB=>OPEN, D=>
-      nx1006, CLK=>clk);
-   ix1007 : ao32 port map ( Y=>nx1006, A0=>rst, A1=>nx178, A2=>nx1327, B0=>
-      signature_15_EXMPLR, B1=>nx1317);
-   ix179 : xor2 port map ( Y=>nx178, A0=>mult_result(15), A1=>
-      signature_16_EXMPLR);
-   reg_MISR_REG_16 : dff port map ( Q=>signature_16_EXMPLR, QB=>OPEN, D=>
-      nx996, CLK=>clk);
-   ix997 : ao32 port map ( Y=>nx996, A0=>rst, A1=>nx168, A2=>nx1327, B0=>
-      signature_16_EXMPLR, B1=>nx1317);
-   ix169 : xor2 port map ( Y=>nx168, A0=>mult_result(16), A1=>
-      signature_17_EXMPLR);
-   reg_MISR_REG_17 : dff port map ( Q=>signature_17_EXMPLR, QB=>OPEN, D=>
-      nx986, CLK=>clk);
-   ix987 : ao32 port map ( Y=>nx986, A0=>rst, A1=>nx158, A2=>nx1327, B0=>
-      signature_17_EXMPLR, B1=>nx1317);
-   ix159 : xor2 port map ( Y=>nx158, A0=>mult_result(17), A1=>
-      signature_18_EXMPLR);
-   reg_MISR_REG_18 : dff port map ( Q=>signature_18_EXMPLR, QB=>OPEN, D=>
-      nx976, CLK=>clk);
-   ix977 : ao32 port map ( Y=>nx976, A0=>rst, A1=>nx148, A2=>nx1325, B0=>
-      signature_18_EXMPLR, B1=>nx1317);
-   ix149 : xor2 port map ( Y=>nx148, A0=>mult_result(18), A1=>
-      signature_19_EXMPLR);
-   reg_MISR_REG_19 : dff port map ( Q=>signature_19_EXMPLR, QB=>OPEN, D=>
-      nx966, CLK=>clk);
-   ix967 : ao32 port map ( Y=>nx966, A0=>rst, A1=>nx138, A2=>nx1325, B0=>
-      signature_19_EXMPLR, B1=>nx1315);
-   ix139 : xor2 port map ( Y=>nx138, A0=>mult_result(19), A1=>
-      signature_20_EXMPLR);
-   reg_MISR_REG_20 : dff port map ( Q=>signature_20_EXMPLR, QB=>OPEN, D=>
-      nx956, CLK=>clk);
-   ix957 : ao32 port map ( Y=>nx956, A0=>rst, A1=>nx128, A2=>nx1325, B0=>
-      signature_20_EXMPLR, B1=>nx1315);
-   ix129 : xor2 port map ( Y=>nx128, A0=>mult_result(20), A1=>
-      signature_21_EXMPLR);
-   reg_MISR_REG_21 : dff port map ( Q=>signature_21_EXMPLR, QB=>OPEN, D=>
-      nx946, CLK=>clk);
-   ix947 : ao32 port map ( Y=>nx946, A0=>rst, A1=>nx118, A2=>nx1325, B0=>
-      signature_21_EXMPLR, B1=>nx1315);
-   ix119 : xor2 port map ( Y=>nx118, A0=>mult_result(21), A1=>
-      signature_22_EXMPLR);
-   reg_MISR_REG_22 : dff port map ( Q=>signature_22_EXMPLR, QB=>OPEN, D=>
-      nx936, CLK=>clk);
-   ix937 : ao32 port map ( Y=>nx936, A0=>rst, A1=>nx108, A2=>nx1325, B0=>
-      signature_22_EXMPLR, B1=>nx1315);
-   ix109 : xor2 port map ( Y=>nx108, A0=>mult_result(22), A1=>
-      signature_23_EXMPLR);
-   reg_MISR_REG_23 : dff port map ( Q=>signature_23_EXMPLR, QB=>OPEN, D=>
-      nx926, CLK=>clk);
-   ix927 : ao32 port map ( Y=>nx926, A0=>rst, A1=>nx98, A2=>nx1325, B0=>
-      signature_23_EXMPLR, B1=>nx1315);
-   ix99 : xor2 port map ( Y=>nx98, A0=>mult_result(23), A1=>
-      signature_24_EXMPLR);
-   reg_MISR_REG_24 : dff port map ( Q=>signature_24_EXMPLR, QB=>OPEN, D=>
-      nx916, CLK=>clk);
-   ix917 : ao32 port map ( Y=>nx916, A0=>rst, A1=>nx88, A2=>nx1325, B0=>
-      signature_24_EXMPLR, B1=>nx1315);
-   ix1246 : xnor2 port map ( Y=>nx1245, A0=>mult_result(24), A1=>
-      signature_25_EXMPLR);
-   reg_MISR_REG_25 : dff port map ( Q=>signature_25_EXMPLR, QB=>OPEN, D=>
-      nx906, CLK=>clk);
-   ix907 : ao32 port map ( Y=>nx906, A0=>rst, A1=>nx76, A2=>nx1325, B0=>
-      signature_25_EXMPLR, B1=>nx1315);
-   ix1251 : xnor2 port map ( Y=>nx1250, A0=>mult_result(25), A1=>
-      signature_26_EXMPLR);
-   reg_MISR_REG_26 : dff port map ( Q=>signature_26_EXMPLR, QB=>OPEN, D=>
-      nx896, CLK=>clk);
-   ix897 : ao32 port map ( Y=>nx896, A0=>rst, A1=>nx64, A2=>nx1325, B0=>
-      signature_26_EXMPLR, B1=>nx1315);
-   ix65 : xor2 port map ( Y=>nx64, A0=>mult_result(26), A1=>
-      signature_27_EXMPLR);
-   reg_MISR_REG_27 : dff port map ( Q=>signature_27_EXMPLR, QB=>OPEN, D=>
-      nx886, CLK=>clk);
-   ix887 : ao32 port map ( Y=>nx886, A0=>rst, A1=>nx54, A2=>nx1325, B0=>
-      signature_27_EXMPLR, B1=>nx1315);
-   ix55 : xor2 port map ( Y=>nx54, A0=>mult_result(27), A1=>
-      signature_28_EXMPLR);
-   reg_MISR_REG_28 : dff port map ( Q=>signature_28_EXMPLR, QB=>OPEN, D=>
-      nx876, CLK=>clk);
-   ix877 : ao32 port map ( Y=>nx876, A0=>rst, A1=>nx44, A2=>nx1325, B0=>
-      signature_28_EXMPLR, B1=>nx1315);
-   ix45 : xor2 port map ( Y=>nx44, A0=>mult_result(28), A1=>
-      signature_29_EXMPLR);
-   reg_MISR_REG_29 : dff port map ( Q=>signature_29_EXMPLR, QB=>OPEN, D=>
-      nx866, CLK=>clk);
-   ix867 : ao32 port map ( Y=>nx866, A0=>rst, A1=>nx34, A2=>nx1325, B0=>
-      signature_29_EXMPLR, B1=>nx1315);
-   ix1265 : xnor2 port map ( Y=>nx1264, A0=>mult_result(29), A1=>
-      signature_30_EXMPLR);
-   reg_MISR_REG_30 : dff port map ( Q=>signature_30_EXMPLR, QB=>OPEN, D=>
-      nx856, CLK=>clk);
-   ix857 : ao32 port map ( Y=>nx856, A0=>rst, A1=>nx22, A2=>nx1325, B0=>
-      signature_30_EXMPLR, B1=>nx1315);
-   ix23 : xor2 port map ( Y=>nx22, A0=>mult_result(30), A1=>
+   reg_MISR_REG_1 : dff port map ( Q=>signature_1_EXMPLR, QB=>OPEN, D=>nx824, 
+      CLK=>nx1276);
+   ix825 : ao32 port map ( Y=>nx824, A0=>rst, A1=>nx24, A2=>enable, B0=>
+      signature_1_EXMPLR, B1=>nx1280);
+   ix25 : xnor2 port map ( Y=>nx24, A0=>signature_0_EXMPLR, A1=>
+      mult_result(0));
+   ix1146 : inv01 port map ( Y=>NOT_clk, A=>clk);
+   ix9 : xnor2 port map ( Y=>nx8, A0=>nx6, A1=>mult_result(31));
+   ix7 : xnor2 port map ( Y=>nx6, A0=>signature_21_EXMPLR, A1=>
       signature_31_EXMPLR);
+   reg_MISR_REG_21 : dff port map ( Q=>signature_21_EXMPLR, QB=>OPEN, D=>
+      nx1024, CLK=>nx1278);
+   ix1025 : ao32 port map ( Y=>nx1024, A0=>rst, A1=>nx224, A2=>enable, B0=>
+      signature_21_EXMPLR, B1=>nx1282);
+   ix225 : xnor2 port map ( Y=>nx224, A0=>signature_20_EXMPLR, A1=>
+      mult_result(20));
+   reg_MISR_REG_20 : dff port map ( Q=>signature_20_EXMPLR, QB=>OPEN, D=>
+      nx1014, CLK=>nx1278);
+   ix1015 : ao32 port map ( Y=>nx1014, A0=>rst, A1=>nx214, A2=>enable, B0=>
+      signature_20_EXMPLR, B1=>nx1282);
+   ix215 : xnor2 port map ( Y=>nx214, A0=>signature_19_EXMPLR, A1=>
+      mult_result(19));
+   reg_MISR_REG_19 : dff port map ( Q=>signature_19_EXMPLR, QB=>OPEN, D=>
+      nx1004, CLK=>nx1278);
+   ix1005 : ao32 port map ( Y=>nx1004, A0=>rst, A1=>nx204, A2=>enable, B0=>
+      signature_19_EXMPLR, B1=>nx1282);
+   ix205 : xnor2 port map ( Y=>nx204, A0=>signature_18_EXMPLR, A1=>
+      mult_result(18));
+   reg_MISR_REG_18 : dff port map ( Q=>signature_18_EXMPLR, QB=>OPEN, D=>
+      nx994, CLK=>nx1278);
+   ix995 : ao32 port map ( Y=>nx994, A0=>rst, A1=>nx194, A2=>enable, B0=>
+      signature_18_EXMPLR, B1=>nx1282);
+   ix195 : xnor2 port map ( Y=>nx194, A0=>signature_17_EXMPLR, A1=>
+      mult_result(17));
+   reg_MISR_REG_17 : dff port map ( Q=>signature_17_EXMPLR, QB=>OPEN, D=>
+      nx984, CLK=>nx1278);
+   ix985 : ao32 port map ( Y=>nx984, A0=>rst, A1=>nx184, A2=>enable, B0=>
+      signature_17_EXMPLR, B1=>nx1282);
+   ix185 : xnor2 port map ( Y=>nx184, A0=>signature_16_EXMPLR, A1=>
+      mult_result(16));
+   reg_MISR_REG_16 : dff port map ( Q=>signature_16_EXMPLR, QB=>OPEN, D=>
+      nx974, CLK=>nx1278);
+   ix975 : ao32 port map ( Y=>nx974, A0=>rst, A1=>nx174, A2=>enable, B0=>
+      signature_16_EXMPLR, B1=>nx1282);
+   ix175 : xnor2 port map ( Y=>nx174, A0=>signature_15_EXMPLR, A1=>
+      mult_result(15));
+   reg_MISR_REG_15 : dff port map ( Q=>signature_15_EXMPLR, QB=>OPEN, D=>
+      nx964, CLK=>nx1278);
+   ix965 : ao32 port map ( Y=>nx964, A0=>rst, A1=>nx164, A2=>enable, B0=>
+      signature_15_EXMPLR, B1=>nx1282);
+   ix165 : xnor2 port map ( Y=>nx164, A0=>signature_14_EXMPLR, A1=>
+      mult_result(14));
+   reg_MISR_REG_14 : dff port map ( Q=>signature_14_EXMPLR, QB=>OPEN, D=>
+      nx954, CLK=>nx1278);
+   ix955 : ao32 port map ( Y=>nx954, A0=>rst, A1=>nx154, A2=>enable, B0=>
+      signature_14_EXMPLR, B1=>nx1282);
+   ix155 : xnor2 port map ( Y=>nx154, A0=>signature_13_EXMPLR, A1=>
+      mult_result(13));
+   reg_MISR_REG_13 : dff port map ( Q=>signature_13_EXMPLR, QB=>OPEN, D=>
+      nx944, CLK=>nx1278);
+   ix945 : ao32 port map ( Y=>nx944, A0=>rst, A1=>nx144, A2=>enable, B0=>
+      signature_13_EXMPLR, B1=>nx1280);
+   ix145 : xnor2 port map ( Y=>nx144, A0=>signature_12_EXMPLR, A1=>
+      mult_result(12));
+   reg_MISR_REG_12 : dff port map ( Q=>signature_12_EXMPLR, QB=>OPEN, D=>
+      nx934, CLK=>nx1276);
+   ix935 : ao32 port map ( Y=>nx934, A0=>rst, A1=>nx134, A2=>enable, B0=>
+      signature_12_EXMPLR, B1=>nx1280);
+   ix135 : xnor2 port map ( Y=>nx134, A0=>signature_11_EXMPLR, A1=>
+      mult_result(11));
+   reg_MISR_REG_11 : dff port map ( Q=>signature_11_EXMPLR, QB=>OPEN, D=>
+      nx924, CLK=>nx1276);
+   ix925 : ao32 port map ( Y=>nx924, A0=>rst, A1=>nx124, A2=>enable, B0=>
+      signature_11_EXMPLR, B1=>nx1280);
+   ix125 : xnor2 port map ( Y=>nx124, A0=>signature_10_EXMPLR, A1=>
+      mult_result(10));
+   reg_MISR_REG_10 : dff port map ( Q=>signature_10_EXMPLR, QB=>OPEN, D=>
+      nx914, CLK=>nx1276);
+   ix915 : ao32 port map ( Y=>nx914, A0=>rst, A1=>nx114, A2=>enable, B0=>
+      signature_10_EXMPLR, B1=>nx1280);
+   ix115 : xnor2 port map ( Y=>nx114, A0=>signature_9_EXMPLR, A1=>
+      mult_result(9));
+   reg_MISR_REG_9 : dff port map ( Q=>signature_9_EXMPLR, QB=>OPEN, D=>nx904, 
+      CLK=>nx1276);
+   ix905 : ao32 port map ( Y=>nx904, A0=>rst, A1=>nx104, A2=>enable, B0=>
+      signature_9_EXMPLR, B1=>nx1280);
+   ix105 : xnor2 port map ( Y=>nx104, A0=>signature_8_EXMPLR, A1=>
+      mult_result(8));
+   reg_MISR_REG_8 : dff port map ( Q=>signature_8_EXMPLR, QB=>OPEN, D=>nx894, 
+      CLK=>nx1276);
+   ix895 : ao32 port map ( Y=>nx894, A0=>rst, A1=>nx94, A2=>enable, B0=>
+      signature_8_EXMPLR, B1=>nx1280);
+   ix95 : xnor2 port map ( Y=>nx94, A0=>signature_7_EXMPLR, A1=>
+      mult_result(7));
+   reg_MISR_REG_7 : dff port map ( Q=>signature_7_EXMPLR, QB=>OPEN, D=>nx884, 
+      CLK=>nx1276);
+   ix885 : ao32 port map ( Y=>nx884, A0=>rst, A1=>nx84, A2=>enable, B0=>
+      signature_7_EXMPLR, B1=>nx1280);
+   ix85 : xnor2 port map ( Y=>nx84, A0=>signature_6_EXMPLR, A1=>
+      mult_result(6));
+   reg_MISR_REG_6 : dff port map ( Q=>signature_6_EXMPLR, QB=>OPEN, D=>nx874, 
+      CLK=>nx1276);
+   ix875 : ao32 port map ( Y=>nx874, A0=>rst, A1=>nx74, A2=>enable, B0=>
+      signature_6_EXMPLR, B1=>nx1280);
+   ix75 : xnor2 port map ( Y=>nx74, A0=>signature_5_EXMPLR, A1=>
+      mult_result(5));
+   reg_MISR_REG_5 : dff port map ( Q=>signature_5_EXMPLR, QB=>OPEN, D=>nx864, 
+      CLK=>nx1276);
+   ix865 : ao32 port map ( Y=>nx864, A0=>rst, A1=>nx64, A2=>enable, B0=>
+      signature_5_EXMPLR, B1=>nx1280);
+   ix65 : xnor2 port map ( Y=>nx64, A0=>signature_4_EXMPLR, A1=>
+      mult_result(4));
+   reg_MISR_REG_4 : dff port map ( Q=>signature_4_EXMPLR, QB=>OPEN, D=>nx854, 
+      CLK=>nx1276);
+   ix855 : ao32 port map ( Y=>nx854, A0=>rst, A1=>nx54, A2=>enable, B0=>
+      signature_4_EXMPLR, B1=>nx1280);
+   ix55 : xnor2 port map ( Y=>nx54, A0=>signature_3_EXMPLR, A1=>
+      mult_result(3));
+   reg_MISR_REG_3 : dff port map ( Q=>signature_3_EXMPLR, QB=>OPEN, D=>nx844, 
+      CLK=>nx1276);
+   ix845 : ao32 port map ( Y=>nx844, A0=>rst, A1=>nx44, A2=>enable, B0=>
+      signature_3_EXMPLR, B1=>nx1280);
+   ix45 : xnor2 port map ( Y=>nx44, A0=>signature_2_EXMPLR, A1=>
+      mult_result(2));
+   reg_MISR_REG_2 : dff port map ( Q=>signature_2_EXMPLR, QB=>OPEN, D=>nx834, 
+      CLK=>nx1276);
+   ix835 : ao32 port map ( Y=>nx834, A0=>rst, A1=>nx34, A2=>enable, B0=>
+      signature_2_EXMPLR, B1=>nx1280);
+   ix35 : xnor2 port map ( Y=>nx34, A0=>signature_1_EXMPLR, A1=>
+      mult_result(1));
    reg_MISR_REG_31 : dff port map ( Q=>signature_31_EXMPLR, QB=>OPEN, D=>
-      nx846, CLK=>clk);
-   ix847 : ao32 port map ( Y=>nx846, A0=>rst, A1=>nx12, A2=>nx1325, B0=>
-      signature_31_EXMPLR, B1=>nx1315);
-   ix837 : mux21 port map ( Y=>nx836, A0=>signature_0_EXMPLR, A1=>zeroth_in, 
-      S0=>nx1276);
-   reg_zeroth_in : dff port map ( Q=>zeroth_in, QB=>nx1272, D=>nx836, CLK=>
-      clk);
-   ix1277 : nand02 port map ( Y=>nx1276, A0=>nx1325, A1=>rst);
-   ix1169 : nor02ii port map ( Y=>nx1168, A0=>nx1329, A1=>rst);
-   ix89 : xor2 port map ( Y=>nx88, A0=>nx1245, A1=>nx1272);
-   ix77 : xor2 port map ( Y=>nx76, A0=>nx1250, A1=>nx1272);
-   ix35 : xor2 port map ( Y=>nx34, A0=>nx1264, A1=>nx1272);
-   ix13 : xor2 port map ( Y=>nx12, A0=>mult_result(31), A1=>zeroth_in);
-   ix1314 : nor02ii port map ( Y=>nx1315, A0=>nx1329, A1=>rst);
-   ix1316 : nor02ii port map ( Y=>nx1317, A0=>nx1329, A1=>rst);
-   ix1322 : inv01 port map ( Y=>nx1323, A=>enable);
-   ix1324 : inv01 port map ( Y=>nx1325, A=>nx1323);
-   ix1326 : inv01 port map ( Y=>nx1327, A=>nx1323);
-   ix1328 : inv01 port map ( Y=>nx1329, A=>nx1323);
+      nx1124, CLK=>NOT_clk);
+   ix1125 : ao32 port map ( Y=>nx1124, A0=>rst, A1=>nx324, A2=>enable, B0=>
+      signature_31_EXMPLR, B1=>nx1136);
+   ix325 : xnor2 port map ( Y=>nx324, A0=>signature_30_EXMPLR, A1=>
+      mult_result(30));
+   reg_MISR_REG_30 : dff port map ( Q=>signature_30_EXMPLR, QB=>OPEN, D=>
+      nx1114, CLK=>NOT_clk);
+   ix1115 : ao32 port map ( Y=>nx1114, A0=>rst, A1=>nx314, A2=>enable, B0=>
+      signature_30_EXMPLR, B1=>nx1136);
+   ix315 : xnor2 port map ( Y=>nx314, A0=>signature_29_EXMPLR, A1=>
+      mult_result(29));
+   reg_MISR_REG_29 : dff port map ( Q=>signature_29_EXMPLR, QB=>OPEN, D=>
+      nx1104, CLK=>NOT_clk);
+   ix1105 : ao32 port map ( Y=>nx1104, A0=>rst, A1=>nx304, A2=>enable, B0=>
+      signature_29_EXMPLR, B1=>nx1136);
+   ix305 : xnor2 port map ( Y=>nx304, A0=>signature_28_EXMPLR, A1=>
+      mult_result(28));
+   reg_MISR_REG_28 : dff port map ( Q=>signature_28_EXMPLR, QB=>OPEN, D=>
+      nx1094, CLK=>NOT_clk);
+   ix1095 : ao32 port map ( Y=>nx1094, A0=>rst, A1=>nx294, A2=>enable, B0=>
+      signature_28_EXMPLR, B1=>nx1282);
+   ix295 : xnor2 port map ( Y=>nx294, A0=>signature_27_EXMPLR, A1=>
+      mult_result(27));
+   reg_MISR_REG_27 : dff port map ( Q=>signature_27_EXMPLR, QB=>OPEN, D=>
+      nx1084, CLK=>NOT_clk);
+   ix1085 : ao32 port map ( Y=>nx1084, A0=>rst, A1=>nx284, A2=>enable, B0=>
+      signature_27_EXMPLR, B1=>nx1282);
+   ix285 : xnor2 port map ( Y=>nx284, A0=>signature_26_EXMPLR, A1=>
+      mult_result(26));
+   reg_MISR_REG_26 : dff port map ( Q=>signature_26_EXMPLR, QB=>OPEN, D=>
+      nx1074, CLK=>NOT_clk);
+   ix1075 : ao32 port map ( Y=>nx1074, A0=>rst, A1=>nx274, A2=>enable, B0=>
+      signature_26_EXMPLR, B1=>nx1282);
+   ix275 : xnor2 port map ( Y=>nx274, A0=>signature_25_EXMPLR, A1=>
+      mult_result(25));
+   reg_MISR_REG_25 : dff port map ( Q=>signature_25_EXMPLR, QB=>OPEN, D=>
+      nx1064, CLK=>NOT_clk);
+   ix1065 : ao32 port map ( Y=>nx1064, A0=>rst, A1=>nx264, A2=>enable, B0=>
+      signature_25_EXMPLR, B1=>nx1282);
+   ix265 : xnor2 port map ( Y=>nx264, A0=>signature_24_EXMPLR, A1=>
+      mult_result(24));
+   reg_MISR_REG_24 : dff port map ( Q=>signature_24_EXMPLR, QB=>OPEN, D=>
+      nx1054, CLK=>nx1278);
+   ix1055 : ao32 port map ( Y=>nx1054, A0=>rst, A1=>nx254, A2=>enable, B0=>
+      signature_24_EXMPLR, B1=>nx1282);
+   ix255 : xnor2 port map ( Y=>nx254, A0=>signature_23_EXMPLR, A1=>
+      mult_result(23));
+   reg_MISR_REG_23 : dff port map ( Q=>signature_23_EXMPLR, QB=>OPEN, D=>
+      nx1044, CLK=>nx1278);
+   ix1045 : ao32 port map ( Y=>nx1044, A0=>rst, A1=>nx244, A2=>enable, B0=>
+      signature_23_EXMPLR, B1=>nx1282);
+   ix245 : xnor2 port map ( Y=>nx244, A0=>signature_22_EXMPLR, A1=>
+      mult_result(22));
+   reg_MISR_REG_22 : dff port map ( Q=>signature_22_EXMPLR, QB=>OPEN, D=>
+      nx1034, CLK=>nx1278);
+   ix1035 : ao32 port map ( Y=>nx1034, A0=>rst, A1=>nx234, A2=>enable, B0=>
+      signature_22_EXMPLR, B1=>nx1282);
+   ix235 : xnor2 port map ( Y=>nx234, A0=>signature_21_EXMPLR, A1=>
+      mult_result(21));
+   ix1275 : inv01 port map ( Y=>nx1276, A=>clk);
+   ix1277 : inv01 port map ( Y=>nx1278, A=>clk);
+   ix1137 : nor02ii port map ( Y=>nx1136, A0=>enable, A1=>rst);
+   ix1279 : nor02ii port map ( Y=>nx1280, A0=>enable, A1=>rst);
+   ix1281 : nor02ii port map ( Y=>nx1282, A0=>enable, A1=>rst);
 end Behavioral ;
 
 library IEEE;
@@ -2564,33 +2553,8 @@ architecture structural of MAC is
       REG_OUT_22, REG_OUT_21, REG_OUT_20, REG_OUT_19, REG_OUT_18, REG_OUT_17, 
       REG_OUT_16, REG_OUT_15, REG_OUT_14, REG_OUT_13, REG_OUT_12, REG_OUT_11, 
       REG_OUT_10, REG_OUT_9, REG_OUT_8, REG_OUT_7, REG_OUT_6, REG_OUT_5, 
-      REG_OUT_4, REG_OUT_3, REG_OUT_2, REG_OUT_1, REG_OUT_0, MISR_EN, GND0, 
-      PWR, nx0, clk_cnt_30, nx937, clk_cnt_29, clk_cnt_28, clk_cnt_27, 
-      clk_cnt_26, clk_cnt_25, clk_cnt_24, clk_cnt_23, clk_cnt_22, clk_cnt_21, 
-      clk_cnt_20, clk_cnt_19, clk_cnt_18, clk_cnt_17, clk_cnt_16, clk_cnt_15, 
-      clk_cnt_14, clk_cnt_13, clk_cnt_12, clk_cnt_11, clk_cnt_10, clk_cnt_9, 
-      clk_cnt_8, clk_cnt_7, clk_cnt_6, clk_cnt_5, clk_cnt_4, clk_cnt_3, 
-      clk_cnt_2, clk_cnt_1, clk_cnt_0, nx4, nx18, nx28, nx44, nx943, nx76, 
-      nx947, nx108, nx949, nx130, nx140, nx953, nx162, nx172, nx956, nx194, 
-      nx204, nx959, nx226, nx236, nx963, nx258, nx268, nx965, nx290, nx300, 
-      nx969, nx322, nx332, nx972, nx354, nx364, nx975, nx386, nx396, nx979, 
-      nx418, nx428, nx981, nx450, nx460, nx478, nx484, nx504, nx514, nx526, 
-      nx536, nx550, nx560, nx572, nx582, nx588, nx602, nx610, nx644, nx652, 
-      nx662, nx991, nx1001, nx1011, nx1021, nx1031, nx1041, nx1051, nx1061, 
-      nx1071, nx1081, nx1091, nx1101, nx1111, nx1121, nx1131, nx1141, nx1151, 
-      nx1161, nx1171, nx1181, nx1191, nx1201, nx1211, nx1221, nx1231, nx1241, 
-      nx1251, nx1261, nx1271, nx1281, nx1291, nx1299, nx1311, nx1321, nx1327, 
-      nx1331, nx1334, nx1336, nx1340, nx1344, nx1347, nx1351, nx1353, nx1357, 
-      nx1361, nx1364, nx1368, nx1370, nx1374, nx1378, nx1381, nx1385, nx1387, 
-      nx1391, nx1395, nx1398, nx1402, nx1404, nx1408, nx1412, nx1415, nx1419, 
-      nx1421, nx1425, nx1429, nx1432, nx1436, nx1438, nx1442, nx1446, nx1449, 
-      nx1453, nx1455, nx1459, nx1463, nx1466, nx1470, nx1472, nx1476, nx1480, 
-      nx1483, nx1487, nx1489, nx1493, nx1497, nx1500, nx1504, nx1506, nx1510, 
-      nx1514, nx1517, nx1521, nx1523, nx1527, nx1530, nx1533, nx1537, nx1539, 
-      nx1543, nx1546, nx1549, nx1553, nx1555, nx1558, nx1562, nx1564, nx1567, 
-      nx1572, nx1590, nx1592, nx1597, nx1603, nx1608, nx1615, nx1691, nx1693, 
-      nx1695, nx1697, nx1699, nx1701, nx1705, nx1711, nx1713, nx1715, nx1717, 
-      nx1719, nx1721: std_logic ;
+      REG_OUT_4, REG_OUT_3, REG_OUT_2, REG_OUT_1, REG_OUT_0, GND0, PWR: 
+   std_logic ;
    
    signal DANGLING : std_logic_vector (0 downto 0 );
 
@@ -2687,7 +2651,7 @@ begin
       =>LFSR_OUT_7, bit_pattern(6)=>LFSR_OUT_6, bit_pattern(5)=>LFSR_OUT_5, 
       bit_pattern(4)=>LFSR_OUT_4, bit_pattern(3)=>LFSR_OUT_3, bit_pattern(2)
       =>LFSR_OUT_2, bit_pattern(1)=>LFSR_OUT_1, bit_pattern(0)=>LFSR_OUT_0);
-   MISR0 : MISR port map ( clk=>clk, rst=>rst, enable=>MISR_EN, 
+   MISR0 : MISR port map ( clk=>clk, rst=>rst, enable=>test_mode, 
       mult_result(31)=>REG_OUT_31, mult_result(30)=>REG_OUT_30, 
       mult_result(29)=>REG_OUT_29, mult_result(28)=>REG_OUT_28, 
       mult_result(27)=>REG_OUT_27, mult_result(26)=>REG_OUT_26, 
@@ -2716,394 +2680,135 @@ begin
       signature(6)=>MISR_OUT_6, signature(5)=>MISR_OUT_5, signature(4)=>
       MISR_OUT_4, signature(3)=>MISR_OUT_3, signature(2)=>MISR_OUT_2, 
       signature(1)=>MISR_OUT_1, signature(0)=>MISR_OUT_0);
-   ix799 : fake_vcc port map ( Y=>PWR);
-   ix797 : fake_gnd port map ( Y=>GND0);
-   reg_MISR_EN : dff port map ( Q=>MISR_EN, QB=>OPEN, D=>nx1311, CLK=>clk);
-   ix663 : mux21 port map ( Y=>nx662, A0=>MISR_EN, A1=>nx610, S0=>nx1615);
-   ix611 : oai21 port map ( Y=>nx610, A0=>nx1321, A1=>nx1597, B0=>nx1608);
-   ix1322 : nand04 port map ( Y=>nx1321, A0=>nx504, A1=>nx514, A2=>nx526, A3
-      =>nx536);
-   ix485 : aoi21 port map ( Y=>nx484, A0=>nx1327, A1=>nx1590, B0=>nx1592);
-   ix1328 : nand02 port map ( Y=>nx1327, A0=>clk_cnt_29, A1=>nx981);
-   ix1282 : oai21 port map ( Y=>nx1281, A0=>nx1331, A1=>nx1693, B0=>nx1336);
-   reg_clk_cnt_29 : dff port map ( Q=>clk_cnt_29, QB=>nx1331, D=>nx1281, CLK
-      =>clk);
-   ix1335 : nand02 port map ( Y=>nx1334, A0=>rst, A1=>test_mode);
-   ix1337 : nand04 port map ( Y=>nx1336, A0=>nx460, A1=>nx0, A2=>nx1327, A3
-      =>nx1697);
-   ix461 : or02 port map ( Y=>nx460, A0=>nx981, A1=>clk_cnt_29);
-   ix451 : nor03 port map ( Y=>nx450, A0=>nx1344, A1=>nx1699, A2=>nx981);
-   reg_clk_cnt_28 : dff port map ( Q=>clk_cnt_28, QB=>nx1340, D=>nx1271, CLK
-      =>clk);
-   ix1348 : nand02 port map ( Y=>nx1347, A0=>clk_cnt_27, A1=>nx979);
-   ix1262 : oai21 port map ( Y=>nx1261, A0=>nx1351, A1=>nx1693, B0=>nx1353);
-   reg_clk_cnt_27 : dff port map ( Q=>clk_cnt_27, QB=>nx1351, D=>nx1261, CLK
-      =>clk);
-   ix1354 : nand04 port map ( Y=>nx1353, A0=>nx428, A1=>nx0, A2=>nx1347, A3
-      =>nx1697);
-   ix429 : or02 port map ( Y=>nx428, A0=>nx979, A1=>clk_cnt_27);
-   ix419 : nor03 port map ( Y=>nx418, A0=>nx1361, A1=>nx1699, A2=>nx979);
-   reg_clk_cnt_26 : dff port map ( Q=>clk_cnt_26, QB=>nx1357, D=>nx1251, CLK
-      =>clk);
-   ix1365 : nand02 port map ( Y=>nx1364, A0=>clk_cnt_25, A1=>nx975);
-   ix1242 : oai21 port map ( Y=>nx1241, A0=>nx1368, A1=>nx1693, B0=>nx1370);
-   reg_clk_cnt_25 : dff port map ( Q=>clk_cnt_25, QB=>nx1368, D=>nx1241, CLK
-      =>clk);
-   ix1371 : nand04 port map ( Y=>nx1370, A0=>nx396, A1=>nx0, A2=>nx1364, A3
-      =>nx1697);
-   ix397 : or02 port map ( Y=>nx396, A0=>nx975, A1=>clk_cnt_25);
-   ix387 : nor03 port map ( Y=>nx386, A0=>nx1378, A1=>nx1699, A2=>nx975);
-   reg_clk_cnt_24 : dff port map ( Q=>clk_cnt_24, QB=>nx1374, D=>nx1231, CLK
-      =>clk);
-   ix1382 : nand02 port map ( Y=>nx1381, A0=>clk_cnt_23, A1=>nx972);
-   ix1222 : oai21 port map ( Y=>nx1221, A0=>nx1385, A1=>nx1693, B0=>nx1387);
-   reg_clk_cnt_23 : dff port map ( Q=>clk_cnt_23, QB=>nx1385, D=>nx1221, CLK
-      =>clk);
-   ix1388 : nand04 port map ( Y=>nx1387, A0=>nx364, A1=>nx0, A2=>nx1381, A3
-      =>nx1697);
-   ix365 : or02 port map ( Y=>nx364, A0=>nx972, A1=>clk_cnt_23);
-   ix355 : nor03 port map ( Y=>nx354, A0=>nx1395, A1=>nx1699, A2=>nx972);
-   reg_clk_cnt_22 : dff port map ( Q=>clk_cnt_22, QB=>nx1391, D=>nx1211, CLK
-      =>clk);
-   ix1399 : nand02 port map ( Y=>nx1398, A0=>clk_cnt_21, A1=>nx969);
-   ix1202 : oai21 port map ( Y=>nx1201, A0=>nx1402, A1=>nx1693, B0=>nx1404);
-   reg_clk_cnt_21 : dff port map ( Q=>clk_cnt_21, QB=>nx1402, D=>nx1201, CLK
-      =>clk);
-   ix1405 : nand04 port map ( Y=>nx1404, A0=>nx332, A1=>nx1691, A2=>nx1398, 
-      A3=>nx1695);
-   ix333 : or02 port map ( Y=>nx332, A0=>nx969, A1=>clk_cnt_21);
-   ix323 : nor03 port map ( Y=>nx322, A0=>nx1412, A1=>nx1699, A2=>nx969);
-   reg_clk_cnt_20 : dff port map ( Q=>clk_cnt_20, QB=>nx1408, D=>nx1191, CLK
-      =>clk);
-   ix1416 : nand02 port map ( Y=>nx1415, A0=>clk_cnt_19, A1=>nx965);
-   ix1182 : oai21 port map ( Y=>nx1181, A0=>nx1419, A1=>nx1693, B0=>nx1421);
-   reg_clk_cnt_19 : dff port map ( Q=>clk_cnt_19, QB=>nx1419, D=>nx1181, CLK
-      =>clk);
-   ix1422 : nand04 port map ( Y=>nx1421, A0=>nx300, A1=>nx1691, A2=>nx1415, 
-      A3=>nx1695);
-   ix301 : or02 port map ( Y=>nx300, A0=>nx965, A1=>clk_cnt_19);
-   ix291 : nor03 port map ( Y=>nx290, A0=>nx1429, A1=>nx1699, A2=>nx965);
-   reg_clk_cnt_18 : dff port map ( Q=>clk_cnt_18, QB=>nx1425, D=>nx1171, CLK
-      =>clk);
-   ix1433 : nand02 port map ( Y=>nx1432, A0=>clk_cnt_17, A1=>nx963);
-   ix1162 : oai21 port map ( Y=>nx1161, A0=>nx1436, A1=>nx1693, B0=>nx1438);
-   reg_clk_cnt_17 : dff port map ( Q=>clk_cnt_17, QB=>nx1436, D=>nx1161, CLK
-      =>clk);
-   ix1439 : nand04 port map ( Y=>nx1438, A0=>nx268, A1=>nx1691, A2=>nx1432, 
-      A3=>nx1695);
-   ix269 : or02 port map ( Y=>nx268, A0=>nx963, A1=>clk_cnt_17);
-   ix259 : nor03 port map ( Y=>nx258, A0=>nx1446, A1=>nx1699, A2=>nx963);
-   reg_clk_cnt_16 : dff port map ( Q=>clk_cnt_16, QB=>nx1442, D=>nx1151, CLK
-      =>clk);
-   ix1450 : nand02 port map ( Y=>nx1449, A0=>clk_cnt_15, A1=>nx959);
-   ix1142 : oai21 port map ( Y=>nx1141, A0=>nx1453, A1=>nx1693, B0=>nx1455);
-   reg_clk_cnt_15 : dff port map ( Q=>clk_cnt_15, QB=>nx1453, D=>nx1141, CLK
-      =>clk);
-   ix1456 : nand04 port map ( Y=>nx1455, A0=>nx236, A1=>nx1691, A2=>nx1449, 
-      A3=>nx1695);
-   ix237 : or02 port map ( Y=>nx236, A0=>nx959, A1=>clk_cnt_15);
-   ix227 : nor03 port map ( Y=>nx226, A0=>nx1463, A1=>nx1699, A2=>nx959);
-   reg_clk_cnt_14 : dff port map ( Q=>clk_cnt_14, QB=>nx1459, D=>nx1131, CLK
-      =>clk);
-   ix1467 : nand02 port map ( Y=>nx1466, A0=>clk_cnt_13, A1=>nx956);
-   ix1122 : oai21 port map ( Y=>nx1121, A0=>nx1470, A1=>nx1693, B0=>nx1472);
-   reg_clk_cnt_13 : dff port map ( Q=>clk_cnt_13, QB=>nx1470, D=>nx1121, CLK
-      =>clk);
-   ix1473 : nand04 port map ( Y=>nx1472, A0=>nx204, A1=>nx1691, A2=>nx1466, 
-      A3=>nx1695);
-   ix205 : or02 port map ( Y=>nx204, A0=>nx956, A1=>clk_cnt_13);
-   ix195 : nor03 port map ( Y=>nx194, A0=>nx1480, A1=>nx1699, A2=>nx956);
-   reg_clk_cnt_12 : dff port map ( Q=>clk_cnt_12, QB=>nx1476, D=>nx1111, CLK
-      =>clk);
-   ix1484 : nand02 port map ( Y=>nx1483, A0=>clk_cnt_11, A1=>nx953);
-   ix1102 : oai21 port map ( Y=>nx1101, A0=>nx1487, A1=>nx1693, B0=>nx1489);
-   reg_clk_cnt_11 : dff port map ( Q=>clk_cnt_11, QB=>nx1487, D=>nx1101, CLK
-      =>clk);
-   ix1490 : nand04 port map ( Y=>nx1489, A0=>nx172, A1=>nx1691, A2=>nx1483, 
-      A3=>nx1695);
-   ix173 : or02 port map ( Y=>nx172, A0=>nx953, A1=>clk_cnt_11);
-   ix163 : nor03 port map ( Y=>nx162, A0=>nx1497, A1=>nx1699, A2=>nx953);
-   reg_clk_cnt_10 : dff port map ( Q=>clk_cnt_10, QB=>nx1493, D=>nx1091, CLK
-      =>clk);
-   ix1501 : nand02 port map ( Y=>nx1500, A0=>clk_cnt_9, A1=>nx949);
-   ix1082 : oai21 port map ( Y=>nx1081, A0=>nx1504, A1=>nx1693, B0=>nx1506);
-   reg_clk_cnt_9 : dff port map ( Q=>clk_cnt_9, QB=>nx1504, D=>nx1081, CLK=>
-      clk);
-   ix1507 : nand04 port map ( Y=>nx1506, A0=>nx140, A1=>nx1691, A2=>nx1500, 
-      A3=>nx1695);
-   ix141 : or02 port map ( Y=>nx140, A0=>nx949, A1=>clk_cnt_9);
-   ix131 : nor03 port map ( Y=>nx130, A0=>nx1514, A1=>nx1699, A2=>nx949);
-   reg_clk_cnt_8 : dff port map ( Q=>clk_cnt_8, QB=>nx1510, D=>nx1071, CLK=>
-      clk);
-   ix1518 : nand02 port map ( Y=>nx1517, A0=>clk_cnt_7, A1=>nx947);
-   ix1062 : oai21 port map ( Y=>nx1061, A0=>nx1521, A1=>nx1693, B0=>nx1523);
-   reg_clk_cnt_7 : dff port map ( Q=>clk_cnt_7, QB=>nx1521, D=>nx1061, CLK=>
-      clk);
-   ix1524 : nand04 port map ( Y=>nx1523, A0=>nx108, A1=>nx1691, A2=>nx1517, 
-      A3=>nx1695);
-   ix109 : or02 port map ( Y=>nx108, A0=>nx947, A1=>clk_cnt_7);
-   ix1052 : oai21 port map ( Y=>nx1051, A0=>nx1527, A1=>nx1693, B0=>nx1530);
-   ix1534 : nand02 port map ( Y=>nx1533, A0=>clk_cnt_5, A1=>nx943);
-   ix1042 : oai21 port map ( Y=>nx1041, A0=>nx1537, A1=>nx1693, B0=>nx1539);
-   reg_clk_cnt_5 : dff port map ( Q=>clk_cnt_5, QB=>nx1537, D=>nx1041, CLK=>
-      clk);
-   ix1540 : nand04 port map ( Y=>nx1539, A0=>nx76, A1=>nx1691, A2=>nx1533, 
-      A3=>nx1695);
-   ix77 : or02 port map ( Y=>nx76, A0=>nx943, A1=>clk_cnt_5);
-   ix1032 : oai21 port map ( Y=>nx1031, A0=>nx1543, A1=>nx1693, B0=>nx1546);
-   ix1550 : nand04 port map ( Y=>nx1549, A0=>clk_cnt_3, A1=>clk_cnt_2, A2=>
-      clk_cnt_1, A3=>clk_cnt_0);
-   ix1022 : oai21 port map ( Y=>nx1021, A0=>nx1553, A1=>nx1695, B0=>nx1555);
-   reg_clk_cnt_3 : dff port map ( Q=>clk_cnt_3, QB=>nx1553, D=>nx1021, CLK=>
-      clk);
-   ix1556 : nand04 port map ( Y=>nx1555, A0=>nx44, A1=>nx1691, A2=>nx1549, 
-      A3=>nx1695);
-   ix45 : nand02 port map ( Y=>nx44, A0=>nx1558, A1=>nx1553);
-   ix1559 : nand03 port map ( Y=>nx1558, A0=>clk_cnt_2, A1=>clk_cnt_1, A2=>
-      clk_cnt_0);
-   ix1012 : oai21 port map ( Y=>nx1011, A0=>nx1562, A1=>nx1695, B0=>nx1564);
-   reg_clk_cnt_2 : dff port map ( Q=>clk_cnt_2, QB=>nx1562, D=>nx1011, CLK=>
-      clk);
-   ix1565 : nand04 port map ( Y=>nx1564, A0=>nx28, A1=>nx1691, A2=>nx1558, 
-      A3=>nx1695);
-   ix29 : nand02 port map ( Y=>nx28, A0=>nx1567, A1=>nx1562);
-   ix1568 : nand02 port map ( Y=>nx1567, A0=>clk_cnt_1, A1=>clk_cnt_0);
-   reg_clk_cnt_1 : dff port map ( Q=>clk_cnt_1, QB=>OPEN, D=>nx1001, CLK=>
-      clk);
-   ix1573 : oai21 port map ( Y=>nx1572, A0=>clk_cnt_0, A1=>clk_cnt_1, B0=>
-      nx1567);
-   reg_clk_cnt_0 : dff port map ( Q=>clk_cnt_0, QB=>OPEN, D=>nx991, CLK=>clk
-   );
-   reg_clk_cnt_4 : dff port map ( Q=>clk_cnt_4, QB=>nx1543, D=>nx1031, CLK=>
-      clk);
-   reg_clk_cnt_6 : dff port map ( Q=>clk_cnt_6, QB=>nx1527, D=>nx1051, CLK=>
-      clk);
-   reg_clk_cnt_30 : dff port map ( Q=>clk_cnt_30, QB=>nx1590, D=>nx1291, CLK
-      =>clk);
-   ix1593 : oai21 port map ( Y=>nx1592, A0=>nx1590, A1=>nx1327, B0=>nx1691);
-   ix1598 : nand04 port map ( Y=>nx1597, A0=>nx550, A1=>nx560, A2=>nx572, A3
-      =>nx602);
-   ix603 : nor03 port map ( Y=>nx602, A0=>nx1603, A1=>clk_cnt_8, A2=>
-      clk_cnt_7);
-   ix1604 : aoi21 port map ( Y=>nx1603, A0=>nx582, A1=>nx588, B0=>nx1527);
-   clk_cnt_31 : dff port map ( Q=>OPEN, QB=>nx1608, D=>nx1299, CLK=>clk);
-   ix645 : oai21 port map ( Y=>nx644, A0=>clk_cnt_1, A1=>clk_cnt_0, B0=>
-      clk_cnt_2);
-   ix805 : mux21 port map ( Y=>MultIn2_0, A0=>B(0), A1=>LFSR_OUT_0, S0=>
+   ix502 : fake_vcc port map ( Y=>PWR);
+   ix500 : fake_gnd port map ( Y=>GND0);
+   ix135 : mux21 port map ( Y=>MultIn2_0, A0=>B(0), A1=>LFSR_OUT_0, S0=>
       test_mode);
-   ix813 : mux21 port map ( Y=>MultIn2_1, A0=>B(1), A1=>LFSR_OUT_1, S0=>
+   ix143 : mux21 port map ( Y=>MultIn2_1, A0=>B(1), A1=>LFSR_OUT_1, S0=>
       test_mode);
-   ix821 : mux21 port map ( Y=>MultIn2_2, A0=>B(2), A1=>LFSR_OUT_2, S0=>
+   ix151 : mux21 port map ( Y=>MultIn2_2, A0=>B(2), A1=>LFSR_OUT_2, S0=>
       test_mode);
-   ix829 : mux21 port map ( Y=>MultIn2_3, A0=>B(3), A1=>LFSR_OUT_3, S0=>
+   ix159 : mux21 port map ( Y=>MultIn2_3, A0=>B(3), A1=>LFSR_OUT_3, S0=>
       test_mode);
-   ix837 : mux21 port map ( Y=>MultIn2_4, A0=>B(4), A1=>LFSR_OUT_4, S0=>
+   ix167 : mux21 port map ( Y=>MultIn2_4, A0=>B(4), A1=>LFSR_OUT_4, S0=>
       test_mode);
-   ix845 : mux21 port map ( Y=>MultIn2_5, A0=>B(5), A1=>LFSR_OUT_5, S0=>
+   ix175 : mux21 port map ( Y=>MultIn2_5, A0=>B(5), A1=>LFSR_OUT_5, S0=>
       test_mode);
-   ix853 : mux21 port map ( Y=>MultIn2_6, A0=>B(6), A1=>LFSR_OUT_6, S0=>
+   ix183 : mux21 port map ( Y=>MultIn2_6, A0=>B(6), A1=>LFSR_OUT_6, S0=>
       test_mode);
-   ix861 : mux21 port map ( Y=>MultIn2_7, A0=>B(7), A1=>LFSR_OUT_7, S0=>
+   ix191 : mux21 port map ( Y=>MultIn2_7, A0=>B(7), A1=>LFSR_OUT_7, S0=>
       test_mode);
-   ix869 : mux21 port map ( Y=>MultIn2_8, A0=>B(8), A1=>LFSR_OUT_8, S0=>
+   ix199 : mux21 port map ( Y=>MultIn2_8, A0=>B(8), A1=>LFSR_OUT_8, S0=>
       test_mode);
-   ix877 : mux21 port map ( Y=>MultIn2_9, A0=>B(9), A1=>LFSR_OUT_9, S0=>
+   ix207 : mux21 port map ( Y=>MultIn2_9, A0=>B(9), A1=>LFSR_OUT_9, S0=>
       test_mode);
-   ix885 : mux21 port map ( Y=>MultIn2_10, A0=>B(10), A1=>LFSR_OUT_10, S0=>
+   ix215 : mux21 port map ( Y=>MultIn2_10, A0=>B(10), A1=>LFSR_OUT_10, S0=>
       test_mode);
-   ix893 : mux21 port map ( Y=>MultIn2_11, A0=>B(11), A1=>LFSR_OUT_11, S0=>
+   ix223 : mux21 port map ( Y=>MultIn2_11, A0=>B(11), A1=>LFSR_OUT_11, S0=>
       test_mode);
-   ix901 : mux21 port map ( Y=>MultIn2_12, A0=>B(12), A1=>LFSR_OUT_12, S0=>
+   ix231 : mux21 port map ( Y=>MultIn2_12, A0=>B(12), A1=>LFSR_OUT_12, S0=>
       test_mode);
-   ix909 : mux21 port map ( Y=>MultIn2_13, A0=>B(13), A1=>LFSR_OUT_13, S0=>
+   ix239 : mux21 port map ( Y=>MultIn2_13, A0=>B(13), A1=>LFSR_OUT_13, S0=>
       test_mode);
-   ix917 : mux21 port map ( Y=>MultIn2_14, A0=>B(14), A1=>LFSR_OUT_14, S0=>
+   ix247 : mux21 port map ( Y=>MultIn2_14, A0=>B(14), A1=>LFSR_OUT_14, S0=>
       test_mode);
-   ix925 : mux21 port map ( Y=>MultIn2_15, A0=>B(15), A1=>LFSR_OUT_15, S0=>
+   ix255 : mux21 port map ( Y=>MultIn2_15, A0=>B(15), A1=>LFSR_OUT_15, S0=>
       test_mode);
-   ix677 : mux21 port map ( Y=>MultIn1_0, A0=>A(0), A1=>LFSR_OUT_16, S0=>
+   ix7 : mux21 port map ( Y=>MultIn1_0, A0=>A(0), A1=>LFSR_OUT_16, S0=>
       test_mode);
-   ix685 : mux21 port map ( Y=>MultIn1_1, A0=>A(1), A1=>LFSR_OUT_17, S0=>
+   ix15 : mux21 port map ( Y=>MultIn1_1, A0=>A(1), A1=>LFSR_OUT_17, S0=>
       test_mode);
-   ix693 : mux21 port map ( Y=>MultIn1_2, A0=>A(2), A1=>LFSR_OUT_18, S0=>
+   ix23 : mux21 port map ( Y=>MultIn1_2, A0=>A(2), A1=>LFSR_OUT_18, S0=>
       test_mode);
-   ix701 : mux21 port map ( Y=>MultIn1_3, A0=>A(3), A1=>LFSR_OUT_19, S0=>
+   ix31 : mux21 port map ( Y=>MultIn1_3, A0=>A(3), A1=>LFSR_OUT_19, S0=>
       test_mode);
-   ix709 : mux21 port map ( Y=>MultIn1_4, A0=>A(4), A1=>LFSR_OUT_20, S0=>
+   ix39 : mux21 port map ( Y=>MultIn1_4, A0=>A(4), A1=>LFSR_OUT_20, S0=>
       test_mode);
-   ix717 : mux21 port map ( Y=>MultIn1_5, A0=>A(5), A1=>LFSR_OUT_21, S0=>
+   ix47 : mux21 port map ( Y=>MultIn1_5, A0=>A(5), A1=>LFSR_OUT_21, S0=>
       test_mode);
-   ix725 : mux21 port map ( Y=>MultIn1_6, A0=>A(6), A1=>LFSR_OUT_22, S0=>
+   ix55 : mux21 port map ( Y=>MultIn1_6, A0=>A(6), A1=>LFSR_OUT_22, S0=>
       test_mode);
-   ix733 : mux21 port map ( Y=>MultIn1_7, A0=>A(7), A1=>LFSR_OUT_23, S0=>
+   ix63 : mux21 port map ( Y=>MultIn1_7, A0=>A(7), A1=>LFSR_OUT_23, S0=>
       test_mode);
-   ix741 : mux21 port map ( Y=>MultIn1_8, A0=>A(8), A1=>LFSR_OUT_24, S0=>
+   ix71 : mux21 port map ( Y=>MultIn1_8, A0=>A(8), A1=>LFSR_OUT_24, S0=>
       test_mode);
-   ix749 : mux21 port map ( Y=>MultIn1_9, A0=>A(9), A1=>LFSR_OUT_25, S0=>
+   ix79 : mux21 port map ( Y=>MultIn1_9, A0=>A(9), A1=>LFSR_OUT_25, S0=>
       test_mode);
-   ix757 : mux21 port map ( Y=>MultIn1_10, A0=>A(10), A1=>LFSR_OUT_26, S0=>
+   ix87 : mux21 port map ( Y=>MultIn1_10, A0=>A(10), A1=>LFSR_OUT_26, S0=>
       test_mode);
-   ix765 : mux21 port map ( Y=>MultIn1_11, A0=>A(11), A1=>LFSR_OUT_27, S0=>
+   ix95 : mux21 port map ( Y=>MultIn1_11, A0=>A(11), A1=>LFSR_OUT_27, S0=>
       test_mode);
-   ix773 : mux21 port map ( Y=>MultIn1_12, A0=>A(12), A1=>LFSR_OUT_28, S0=>
+   ix103 : mux21 port map ( Y=>MultIn1_12, A0=>A(12), A1=>LFSR_OUT_28, S0=>
       test_mode);
-   ix781 : mux21 port map ( Y=>MultIn1_13, A0=>A(13), A1=>LFSR_OUT_29, S0=>
+   ix111 : mux21 port map ( Y=>MultIn1_13, A0=>A(13), A1=>LFSR_OUT_29, S0=>
       test_mode);
-   ix789 : mux21 port map ( Y=>MultIn1_14, A0=>A(14), A1=>LFSR_OUT_30, S0=>
+   ix119 : mux21 port map ( Y=>MultIn1_14, A0=>A(14), A1=>LFSR_OUT_30, S0=>
       test_mode);
-   ix801 : mux21 port map ( Y=>MultIn1_15, A0=>A(15), A1=>LFSR_OUT_31, S0=>
+   ix127 : mux21 port map ( Y=>MultIn1_15, A0=>A(15), A1=>LFSR_OUT_31, S0=>
       test_mode);
-   ix933 : mux21 port map ( Y=>Result_OUT(0), A0=>REG_OUT_0, A1=>MISR_OUT_0, 
+   ix263 : mux21 port map ( Y=>Result_OUT(0), A0=>REG_OUT_0, A1=>MISR_OUT_0, 
       S0=>test_mode);
-   ix941 : mux21 port map ( Y=>Result_OUT(1), A0=>REG_OUT_1, A1=>MISR_OUT_1, 
+   ix271 : mux21 port map ( Y=>Result_OUT(1), A0=>REG_OUT_1, A1=>MISR_OUT_1, 
       S0=>test_mode);
-   ix949 : mux21 port map ( Y=>Result_OUT(2), A0=>REG_OUT_2, A1=>MISR_OUT_2, 
+   ix279 : mux21 port map ( Y=>Result_OUT(2), A0=>REG_OUT_2, A1=>MISR_OUT_2, 
       S0=>test_mode);
-   ix957 : mux21 port map ( Y=>Result_OUT(3), A0=>REG_OUT_3, A1=>MISR_OUT_3, 
+   ix287 : mux21 port map ( Y=>Result_OUT(3), A0=>REG_OUT_3, A1=>MISR_OUT_3, 
       S0=>test_mode);
-   ix965 : mux21 port map ( Y=>Result_OUT(4), A0=>REG_OUT_4, A1=>MISR_OUT_4, 
+   ix295 : mux21 port map ( Y=>Result_OUT(4), A0=>REG_OUT_4, A1=>MISR_OUT_4, 
       S0=>test_mode);
-   ix973 : mux21 port map ( Y=>Result_OUT(5), A0=>REG_OUT_5, A1=>MISR_OUT_5, 
+   ix303 : mux21 port map ( Y=>Result_OUT(5), A0=>REG_OUT_5, A1=>MISR_OUT_5, 
       S0=>test_mode);
-   ix981 : mux21 port map ( Y=>Result_OUT(6), A0=>REG_OUT_6, A1=>MISR_OUT_6, 
+   ix311 : mux21 port map ( Y=>Result_OUT(6), A0=>REG_OUT_6, A1=>MISR_OUT_6, 
       S0=>test_mode);
-   ix989 : mux21 port map ( Y=>Result_OUT(7), A0=>REG_OUT_7, A1=>MISR_OUT_7, 
+   ix319 : mux21 port map ( Y=>Result_OUT(7), A0=>REG_OUT_7, A1=>MISR_OUT_7, 
       S0=>test_mode);
-   ix997 : mux21 port map ( Y=>Result_OUT(8), A0=>REG_OUT_8, A1=>MISR_OUT_8, 
+   ix327 : mux21 port map ( Y=>Result_OUT(8), A0=>REG_OUT_8, A1=>MISR_OUT_8, 
       S0=>test_mode);
-   ix1005 : mux21 port map ( Y=>Result_OUT(9), A0=>REG_OUT_9, A1=>MISR_OUT_9, 
+   ix335 : mux21 port map ( Y=>Result_OUT(9), A0=>REG_OUT_9, A1=>MISR_OUT_9, 
       S0=>test_mode);
-   ix1013 : mux21 port map ( Y=>Result_OUT(10), A0=>REG_OUT_10, A1=>
+   ix343 : mux21 port map ( Y=>Result_OUT(10), A0=>REG_OUT_10, A1=>
       MISR_OUT_10, S0=>test_mode);
-   ix1021 : mux21 port map ( Y=>Result_OUT(11), A0=>REG_OUT_11, A1=>
+   ix351 : mux21 port map ( Y=>Result_OUT(11), A0=>REG_OUT_11, A1=>
       MISR_OUT_11, S0=>test_mode);
-   ix1029 : mux21 port map ( Y=>Result_OUT(12), A0=>REG_OUT_12, A1=>
+   ix359 : mux21 port map ( Y=>Result_OUT(12), A0=>REG_OUT_12, A1=>
       MISR_OUT_12, S0=>test_mode);
-   ix1037 : mux21 port map ( Y=>Result_OUT(13), A0=>REG_OUT_13, A1=>
+   ix367 : mux21 port map ( Y=>Result_OUT(13), A0=>REG_OUT_13, A1=>
       MISR_OUT_13, S0=>test_mode);
-   ix1045 : mux21 port map ( Y=>Result_OUT(14), A0=>REG_OUT_14, A1=>
+   ix375 : mux21 port map ( Y=>Result_OUT(14), A0=>REG_OUT_14, A1=>
       MISR_OUT_14, S0=>test_mode);
-   ix1053 : mux21 port map ( Y=>Result_OUT(15), A0=>REG_OUT_15, A1=>
+   ix383 : mux21 port map ( Y=>Result_OUT(15), A0=>REG_OUT_15, A1=>
       MISR_OUT_15, S0=>test_mode);
-   ix1061 : mux21 port map ( Y=>Result_OUT(16), A0=>REG_OUT_16, A1=>
+   ix391 : mux21 port map ( Y=>Result_OUT(16), A0=>REG_OUT_16, A1=>
       MISR_OUT_16, S0=>test_mode);
-   ix1069 : mux21 port map ( Y=>Result_OUT(17), A0=>REG_OUT_17, A1=>
+   ix399 : mux21 port map ( Y=>Result_OUT(17), A0=>REG_OUT_17, A1=>
       MISR_OUT_17, S0=>test_mode);
-   ix1077 : mux21 port map ( Y=>Result_OUT(18), A0=>REG_OUT_18, A1=>
+   ix407 : mux21 port map ( Y=>Result_OUT(18), A0=>REG_OUT_18, A1=>
       MISR_OUT_18, S0=>test_mode);
-   ix1085 : mux21 port map ( Y=>Result_OUT(19), A0=>REG_OUT_19, A1=>
+   ix415 : mux21 port map ( Y=>Result_OUT(19), A0=>REG_OUT_19, A1=>
       MISR_OUT_19, S0=>test_mode);
-   ix1093 : mux21 port map ( Y=>Result_OUT(20), A0=>REG_OUT_20, A1=>
+   ix423 : mux21 port map ( Y=>Result_OUT(20), A0=>REG_OUT_20, A1=>
       MISR_OUT_20, S0=>test_mode);
-   ix1101 : mux21 port map ( Y=>Result_OUT(21), A0=>REG_OUT_21, A1=>
+   ix431 : mux21 port map ( Y=>Result_OUT(21), A0=>REG_OUT_21, A1=>
       MISR_OUT_21, S0=>test_mode);
-   ix1109 : mux21 port map ( Y=>Result_OUT(22), A0=>REG_OUT_22, A1=>
+   ix439 : mux21 port map ( Y=>Result_OUT(22), A0=>REG_OUT_22, A1=>
       MISR_OUT_22, S0=>test_mode);
-   ix1117 : mux21 port map ( Y=>Result_OUT(23), A0=>REG_OUT_23, A1=>
+   ix447 : mux21 port map ( Y=>Result_OUT(23), A0=>REG_OUT_23, A1=>
       MISR_OUT_23, S0=>test_mode);
-   ix1125 : mux21 port map ( Y=>Result_OUT(24), A0=>REG_OUT_24, A1=>
+   ix455 : mux21 port map ( Y=>Result_OUT(24), A0=>REG_OUT_24, A1=>
       MISR_OUT_24, S0=>test_mode);
-   ix1133 : mux21 port map ( Y=>Result_OUT(25), A0=>REG_OUT_25, A1=>
+   ix463 : mux21 port map ( Y=>Result_OUT(25), A0=>REG_OUT_25, A1=>
       MISR_OUT_25, S0=>test_mode);
-   ix1141 : mux21 port map ( Y=>Result_OUT(26), A0=>REG_OUT_26, A1=>
+   ix471 : mux21 port map ( Y=>Result_OUT(26), A0=>REG_OUT_26, A1=>
       MISR_OUT_26, S0=>test_mode);
-   ix1149 : mux21 port map ( Y=>Result_OUT(27), A0=>REG_OUT_27, A1=>
+   ix479 : mux21 port map ( Y=>Result_OUT(27), A0=>REG_OUT_27, A1=>
       MISR_OUT_27, S0=>test_mode);
-   ix1157 : mux21 port map ( Y=>Result_OUT(28), A0=>REG_OUT_28, A1=>
+   ix487 : mux21 port map ( Y=>Result_OUT(28), A0=>REG_OUT_28, A1=>
       MISR_OUT_28, S0=>test_mode);
-   ix1165 : mux21 port map ( Y=>Result_OUT(29), A0=>REG_OUT_29, A1=>
+   ix495 : mux21 port map ( Y=>Result_OUT(29), A0=>REG_OUT_29, A1=>
       MISR_OUT_29, S0=>test_mode);
-   ix1173 : mux21 port map ( Y=>Result_OUT(30), A0=>REG_OUT_30, A1=>
+   ix503 : mux21 port map ( Y=>Result_OUT(30), A0=>REG_OUT_30, A1=>
       MISR_OUT_30, S0=>test_mode);
-   ix1181 : mux21 port map ( Y=>Result_OUT(31), A0=>REG_OUT_31, A1=>
+   ix511 : mux21 port map ( Y=>Result_OUT(31), A0=>REG_OUT_31, A1=>
       MISR_OUT_31, S0=>test_mode);
-   ix1 : inv01 port map ( Y=>nx0, A=>nx1334);
-   ix1690 : inv01 port map ( Y=>nx1691, A=>nx1701);
-   ix1692 : inv02 port map ( Y=>nx1693, A=>nx1705);
-   ix1694 : inv02 port map ( Y=>nx1695, A=>nx1705);
-   ix1696 : inv02 port map ( Y=>nx1697, A=>nx1705);
-   ix1698 : inv01 port map ( Y=>nx1699, A=>nx0);
-   ix1700 : inv01 port map ( Y=>nx1701, A=>nx0);
-   ix1704 : inv02 port map ( Y=>nx1705, A=>nx937);
-   ix1312 : mux21 port map ( Y=>nx1311, A0=>MISR_EN, A1=>nx662, S0=>nx0);
-   ix505 : and04 port map ( Y=>nx504, A0=>nx1590, A1=>nx1331, A2=>nx1340, A3
-      =>nx1351);
-   ix1292 : mux21 port map ( Y=>nx1291, A0=>clk_cnt_30, A1=>nx484, S0=>
-      nx1719);
-   ix459 : nor02ii port map ( Y=>nx981, A0=>nx1347, A1=>clk_cnt_28);
-   ix1272 : mux21 port map ( Y=>nx1271, A0=>clk_cnt_28, A1=>nx450, S0=>
-      nx1719);
-   ix1345 : and02 port map ( Y=>nx1344, A0=>nx1340, A1=>nx1347);
-   ix427 : nor02ii port map ( Y=>nx979, A0=>nx1364, A1=>clk_cnt_26);
-   ix1252 : mux21 port map ( Y=>nx1251, A0=>clk_cnt_26, A1=>nx418, S0=>
-      nx1719);
-   ix1362 : and02 port map ( Y=>nx1361, A0=>nx1357, A1=>nx1364);
-   ix395 : nor02ii port map ( Y=>nx975, A0=>nx1381, A1=>clk_cnt_24);
-   ix1232 : mux21 port map ( Y=>nx1231, A0=>clk_cnt_24, A1=>nx386, S0=>
-      nx1719);
-   ix1379 : and02 port map ( Y=>nx1378, A0=>nx1374, A1=>nx1381);
-   ix363 : nor02ii port map ( Y=>nx972, A0=>nx1398, A1=>clk_cnt_22);
-   ix1212 : mux21 port map ( Y=>nx1211, A0=>clk_cnt_22, A1=>nx354, S0=>
-      nx1719);
-   ix1396 : and02 port map ( Y=>nx1395, A0=>nx1391, A1=>nx1398);
-   ix331 : nor02ii port map ( Y=>nx969, A0=>nx1415, A1=>clk_cnt_20);
-   ix1192 : mux21 port map ( Y=>nx1191, A0=>clk_cnt_20, A1=>nx322, S0=>
-      nx1719);
-   ix1413 : and02 port map ( Y=>nx1412, A0=>nx1408, A1=>nx1415);
-   ix299 : nor02ii port map ( Y=>nx965, A0=>nx1432, A1=>clk_cnt_18);
-   ix1172 : mux21 port map ( Y=>nx1171, A0=>clk_cnt_18, A1=>nx290, S0=>
-      nx1719);
-   ix1430 : and02 port map ( Y=>nx1429, A0=>nx1425, A1=>nx1432);
-   ix267 : nor02ii port map ( Y=>nx963, A0=>nx1449, A1=>clk_cnt_16);
-   ix1152 : mux21 port map ( Y=>nx1151, A0=>clk_cnt_16, A1=>nx258, S0=>
-      nx1719);
-   ix1447 : and02 port map ( Y=>nx1446, A0=>nx1442, A1=>nx1449);
-   ix235 : nor02ii port map ( Y=>nx959, A0=>nx1466, A1=>clk_cnt_14);
-   ix1132 : mux21 port map ( Y=>nx1131, A0=>clk_cnt_14, A1=>nx226, S0=>
-      nx1719);
-   ix1464 : and02 port map ( Y=>nx1463, A0=>nx1459, A1=>nx1466);
-   ix203 : nor02ii port map ( Y=>nx956, A0=>nx1483, A1=>clk_cnt_12);
-   ix1112 : mux21 port map ( Y=>nx1111, A0=>clk_cnt_12, A1=>nx194, S0=>
-      nx1719);
-   ix1481 : and02 port map ( Y=>nx1480, A0=>nx1476, A1=>nx1483);
-   ix171 : nor02ii port map ( Y=>nx953, A0=>nx1500, A1=>clk_cnt_10);
-   ix1092 : mux21 port map ( Y=>nx1091, A0=>clk_cnt_10, A1=>nx162, S0=>
-      nx1721);
-   ix1498 : and02 port map ( Y=>nx1497, A0=>nx1493, A1=>nx1500);
-   ix139 : nor02ii port map ( Y=>nx949, A0=>nx1517, A1=>clk_cnt_8);
-   ix1072 : mux21 port map ( Y=>nx1071, A0=>clk_cnt_8, A1=>nx130, S0=>nx1721
-   );
-   ix1515 : and02 port map ( Y=>nx1514, A0=>nx1510, A1=>nx1517);
-   ix107 : nor02ii port map ( Y=>nx947, A0=>nx1533, A1=>clk_cnt_6);
-   ix1531 : or04 port map ( Y=>nx1530, A0=>nx1711, A1=>nx1701, A2=>nx947, A3
-      =>nx1705);
-   ix93 : nor02ii port map ( Y=>nx1711, A0=>clk_cnt_6, A1=>nx1533);
-   ix75 : nor02ii port map ( Y=>nx943, A0=>nx1549, A1=>clk_cnt_4);
-   ix1547 : or04 port map ( Y=>nx1546, A0=>nx1713, A1=>nx1701, A2=>nx943, A3
-      =>nx1705);
-   ix61 : nor02ii port map ( Y=>nx1713, A0=>clk_cnt_4, A1=>nx1549);
-   ix1002 : mux21 port map ( Y=>nx1001, A0=>clk_cnt_1, A1=>nx18, S0=>nx1721
-   );
-   ix19 : nor02ii port map ( Y=>nx18, A0=>nx1572, A1=>nx0);
-   ix992 : mux21 port map ( Y=>nx991, A0=>clk_cnt_0, A1=>nx4, S0=>nx1721);
-   ix5 : nor02ii port map ( Y=>nx4, A0=>clk_cnt_0, A1=>nx0);
-   ix1578 : or02 port map ( Y=>nx937, A0=>nx1699, A1=>nx610);
-   ix515 : and03 port map ( Y=>nx514, A0=>nx1374, A1=>nx1357, A2=>nx1368);
-   ix527 : and03 port map ( Y=>nx526, A0=>nx1402, A1=>nx1385, A2=>nx1391);
-   ix537 : and03 port map ( Y=>nx536, A0=>nx1425, A1=>nx1408, A2=>nx1419);
-   ix551 : and03 port map ( Y=>nx550, A0=>nx1453, A1=>nx1436, A2=>nx1442);
-   ix561 : and03 port map ( Y=>nx560, A0=>nx1476, A1=>nx1459, A2=>nx1470);
-   ix573 : and03 port map ( Y=>nx572, A0=>nx1504, A1=>nx1487, A2=>nx1493);
-   ix583 : ao21 port map ( Y=>nx582, A0=>nx1562, A1=>nx1567, B0=>nx1553);
-   ix589 : and02 port map ( Y=>nx588, A0=>nx1537, A1=>nx1543);
-   ix1300 : and03 port map ( Y=>nx1299, A0=>nx0, A1=>nx1715, A2=>nx1721);
-   ix1612 : xnor2 port map ( Y=>nx1715, A0=>nx1608, A1=>nx478);
-   ix479 : nor02ii port map ( Y=>nx478, A0=>nx1327, A1=>clk_cnt_30);
-   ix1616 : nor02ii port map ( Y=>nx1615, A0=>nx652, A1=>nx1608);
-   ix653 : and04 port map ( Y=>nx652, A0=>nx1543, A1=>nx1527, A2=>nx1537, A3
-      =>nx1717);
-   ix1619 : and03 port map ( Y=>nx1717, A0=>nx644, A1=>nx1553, A2=>nx610);
-   ix1718 : inv01 port map ( Y=>nx1719, A=>nx1705);
-   ix1720 : inv01 port map ( Y=>nx1721, A=>nx1705);
 end structural ;
 

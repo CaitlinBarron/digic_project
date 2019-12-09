@@ -86,12 +86,12 @@ LFSR0 : entity work.LFSR
 		port map (clk=> clk , rst=> rst, enable=>test_mode, bit_pattern=>LFSR_OUT);
 		
 MISR0 : entity work.MISR
-		port map (clk=> clk , rst=> rst, enable=>MISR_EN, mult_result=>REG_OUT , signature=>MISR_OUT);
+		port map (clk=> clk , rst=> rst, enable=>test_mode, mult_result=>REG_OUT , signature=>MISR_OUT);
 		
 
 ------------------------------------------------------------------------------------
 SIGNATURE_PROC: process(clk) is begin 
-	if clk'event and clk = '1' then
+	if clk'event and clk = '0' then
 	
 		if rst = '1' and test_mode = '1' then 
 		

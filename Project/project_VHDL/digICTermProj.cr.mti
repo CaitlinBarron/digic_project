@@ -1,37 +1,4 @@
-/home/mjs5127/DigIC/project_VHDL/Multiplier.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/Multiplier.vhd
-QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity Multiplier
--- Compiling architecture structural of Multiplier
--- Loading entity FullAdder
-
-} {} {}} /home/mjs5127/DigIC/project_VHDL/MISR.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/MISR.vhd
-QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity MISR
--- Compiling architecture Behavioral of MISR
-
-} {} {}} /home/mjs5127/DigIC/project_VHDL/FullAdder.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/FullAdder.vhd
-QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity FullAdder
--- Compiling architecture Behavioral of FullAdder
-
-} {} {}} /home/mjs5127/DigIC/project_VHDL/LFSR.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/LFSR.vhd
-QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity LFSR
--- Compiling architecture Behavioral of LFSR
-
-} {} {}} /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl {0 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl
+/home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl
 QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -41,181 +8,57 @@ QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
 -- Compiling architecture structural of Multiplier_32
 -- Compiling entity RCFA_32
 -- Compiling architecture structural of RCFA_32
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1591): (vcom-1141) Identifier "ao22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1593): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1595): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1597): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1599): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1601): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1603): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1605): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1607): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1609): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1611): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1613): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1615): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1617): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1619): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1621): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1623): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1625): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1627): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1629): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1631): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1633): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1635): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1637): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1639): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1641): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1643): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1645): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1647): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1649): (vcom-1141) Identifier "oai22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1651): (vcom-1141) Identifier "aoi22" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1653): (vcom-1141) Identifier "mux21" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1654): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1655): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1656): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1657): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1658): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1659): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1660): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1661): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1662): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1663): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1664): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1665): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1666): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1667): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1668): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1669): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1670): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1671): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1672): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1673): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1674): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1675): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1676): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1677): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1678): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1679): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1680): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1681): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1682): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1683): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1684): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1685): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1686): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1687): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1688): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1689): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1690): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1691): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1692): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1693): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1694): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1695): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1696): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1697): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1698): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1699): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1700): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1701): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1702): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1703): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1704): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1705): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1706): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1707): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1708): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1709): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1710): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1711): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1712): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1713): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1714): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1715): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1716): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1717): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1718): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1719): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1720): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1721): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1722): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1723): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1724): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1725): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1726): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1727): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1728): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1729): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1730): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1731): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1732): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1733): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1734): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1735): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1736): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1737): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1738): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1739): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1740): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1741): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1742): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1743): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1744): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1745): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1746): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1747): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1748): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1749): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1750): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1751): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1752): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1753): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1754): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1755): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1756): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1757): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1758): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1759): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1760): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1761): (vcom-1141) Identifier "xnor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1762): (vcom-1141) Identifier "xor2" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1763): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1764): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1765): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1766): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1767): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1768): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1769): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1770): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1771): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1772): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1773): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1774): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1775): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1776): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1777): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1778): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1779): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1780): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1781): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1782): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1783): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1784): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1785): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1786): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1787): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1788): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1789): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1790): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1791): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1792): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1793): (vcom-1141) Identifier "inv01" does not identify a component declaration.
-** Error: /home/mjs5127/DigIC/project_VHDL/MAC_proj.vhdl(1794): VHDL Compiler exiting
+-- Compiling entity RegisterN_32
+-- Compiling architecture Behavioral of RegisterN_32
+-- Compiling entity LFSR
+-- Compiling architecture Behavioral of LFSR
+-- Compiling entity MISR
+-- Compiling architecture Behavioral of MISR
+-- Compiling entity MAC
+-- Compiling architecture structural of MAC
 
-} {11.0 184.0} {}} /home/mjs5127/DigIC/project_VHDL/RCFA.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/RCFA.vhd
+} {} {}} /home/mjs5127/DigIC/project_VHDL/MACtb.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/MACtb.vhd
+QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lab5tb
+-- Compiling architecture behavior of lab5tb
+
+} {} {}} /home/mjs5127/DigIC/project_VHDL/MISR.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/MISR.vhd
+QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MISR
+-- Compiling architecture Behavioral of MISR
+
+} {} {}} /home/mjs5127/DigIC/project_VHDL/LFSR.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/LFSR.vhd
+QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity LFSR
+-- Compiling architecture Behavioral of LFSR
+
+} {} {}} /home/mjs5127/DigIC/project_VHDL/Multiplier.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/Multiplier.vhd
+QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Multiplier
+-- Compiling architecture structural of Multiplier
+-- Loading entity FullAdder
+
+} {} {}} /home/mjs5127/DigIC/project_VHDL/FullAdder.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/FullAdder.vhd
+QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FullAdder
+-- Compiling architecture Behavioral of FullAdder
+
+} {} {}} /home/mjs5127/DigIC/project_VHDL/RCFA.vhd {1 {vcom -work work -2002 -explicit -novopt /home/mjs5127/DigIC/project_VHDL/RCFA.vhd
 QuestaSim-64 vcom 10.2c_6 Compiler 2013.12 Dec 17 2013
 -- Loading package STANDARD
 -- Loading package TEXTIO
