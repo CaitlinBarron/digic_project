@@ -1,0 +1,104 @@
+/tools/mentor/leonardo/2008b/bin/Linux/spectrum -file MAC_script 
+-------------------------------------------------
+LeonardoSpectrum Level 3 - 2008b.3 (Release Production Release, compiled Dec  8 2008 at 13:18:31)
+Copyright 1990-2008 Mentor Graphics.  All rights reserved.
+Portions copyright 1991-2008 Compuware Corporation
+
+Checking Security ...
+Info: setting exclude_gates to PadInC PadOut
+Reading library file `/home/mjs5127/Pyxis_SPT_HEP/ic_reflibs/external_libs/GDKgates/GDKgates_utilities/hdl_libs/gdk.syn`...
+Library version = 1.0 GDK Release : July 18, 2012
+Delays assume: Process=typical Temp= 27.0 C  Voltage=1.80 V  
+Warning: Attempt to exclude unknown gate 'PadInC'
+Gate 'PadInC' excluded from library
+Warning: Attempt to exclude unknown gate 'PadOut'
+Gate 'PadOut' excluded from library
+Info: setting encoding to auto
+-- Reading file /tools/mentor/leonardo/2008b/data/standard.vhd for unit standard
+-- Loading package standard into library std
+-- Reading vhdl file /home/mjs5127/DigIC/project_VHDL/LFSR.vhd into library work
+-- Reading file /tools/mentor/leonardo/2008b/data/std_1164.vhd for unit STD_LOGIC_1164
+-- Loading package std_logic_1164 into library IEEE
+-- Loading entity LFSR into library work
+-- Loading architecture Behavioral of LFSR into library work
+-- Reading vhdl file /home/mjs5127/DigIC/project_VHDL/MISR.vhd into library work
+-- Loading entity MISR into library work
+-- Loading architecture Behavioral of MISR into library work
+-- Reading vhdl file /home/mjs5127/DigIC/project_VHDL/FullAdder.vhd into library work
+-- Loading entity FullAdder into library work
+-- Loading architecture Behavioral of FullAdder into library work
+-- Reading vhdl file /home/mjs5127/DigIC/project_VHDL/RCFA.vhd into library work
+-- Loading entity RCFA into library work
+-- Loading architecture structural of RCFA into library work
+-- Reading vhdl file /home/mjs5127/DigIC/project_VHDL/Register2N.vhd into library work
+-- Loading entity RegisterN into library work
+-- Loading architecture Behavioral of RegisterN into library work
+-- Reading vhdl file /home/mjs5127/DigIC/project_VHDL/Multiplier.vhd into library work
+-- Loading entity Multiplier into library work
+-- Loading architecture structural of Multiplier into library work
+-- Reading vhdl file /home/mjs5127/DigIC/project_VHDL/MAC.vhd into library work
+-- Reading file /tools/mentor/leonardo/2008b/data/numeric_std.vhd for unit NUMERIC_STD
+-- Loading package NUMERIC_STD into library IEEE
+-- Loading entity MAC into library work
+-- Loading architecture structural of MAC into library work
+"/home/mjs5127/DigIC/project_VHDL/MAC.vhd",line 53: Warning, signal Unused_COUT is never used.
+-- Compiling root entity MAC(structural)
+"/home/mjs5127/DigIC/project_VHDL/MAC.vhd",line 50: Warning, initial value for clk_cnt is ignored for synthesis.
+-- Compiling entity Multiplier_32(structural)
+-- Compiling entity FullAdder(Behavioral)
+-- Compiling entity RegisterN_32(Behavioral)
+-- Compiling entity LFSR(Behavioral)
+"/home/mjs5127/DigIC/project_VHDL/LFSR.vhd",line 41: Warning, initial value for zeroth_in is ignored for synthesis.
+-- Compiling entity MISR(Behavioral)
+"/home/mjs5127/DigIC/project_VHDL/MISR.vhd",line 41: Warning, initial value for MISR_REG is ignored for synthesis.
+"/home/mjs5127/DigIC/project_VHDL/MISR.vhd",line 42: Warning, initial value for zeroth_in is ignored for synthesis.
+-- Compiling entity RCFA_32(structural)
+Info: The target technology was not selected, gdk was automatically selected for you.
+"/home/mjs5127/DigIC/project_VHDL/MAC.vhd", line 105:Info, Inferred counter instance 'clk_cnt' of type 'counter_up_cnt_en_sclear_clock_32'
+Info, Instances dissolved by autodissolve in View .work.Multiplier_32.structural
+Info, Many instances (>16) were flattened in this view. Not printing all the instance names....
+Info, Instances dissolved by autodissolve in View .work.RCFA_32.structural
+Info, Many instances (>16) were flattened in this view. Not printing all the instance names....
+-- Optimizing netlist .work.Multiplier_32.structural
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.RegisterN_32.Behavioral
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.LFSR.Behavioral
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.MISR.Behavioral
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Optimizing netlist .work.RCFA_32.structural
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+-- Optimizing netlist .work.MAC.structural
+-- Automatic IO buffer insertion...
+WARNING: cannot do IO mapping. Library has no plain input IO buffer
+-- Matching combinational logic..
+-- Matching non-combinational logic..
+-- Covering..
+-- CPU Time used :   00:00 Mapping
+Re-checking DRC after adjustments
+-- Final Design Rule Check..
+Re-checking DRC after adjustments
+Re-checking DRC after adjustments
+-- Writing file MAC_proj.v
+-- Writing file MAC_proj.vhdl
+-- Writing file MAC_proj.sdf

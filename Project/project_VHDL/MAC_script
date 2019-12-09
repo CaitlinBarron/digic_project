@@ -1,0 +1,7 @@
+set exclude_gates {PadInC PadOut}
+load_library ~/Pyxis_SPT_HEP/ic_reflibs/external_libs/GDKgates/GDKgates_utilities/hdl_libs/gdk.syn
+read {LFSR.vhd MISR.vhd FullAdder.vhd RCFA.vhd Register2N.vhd Multiplier.vhd MAC.vhd}
+optimize
+write -format verilog MAC_proj.v
+write -format vhdl MAC_proj.vhdl
+write -format sdf MAC_proj.sdf

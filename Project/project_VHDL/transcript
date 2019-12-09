@@ -1,0 +1,48 @@
+# //  Questa Sim-64
+# //  Version 10.2c_6 linux_x86_64 Dec 17 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project Lab7_ALU
+# reading /tools/mentor/ams/2013.12.2d/questasim/v10.2c_6/linux_x86_64/../modelsim.ini
+# Loading project term_proj
+# reading /tools/mentor/ams/2013.12.2d/questasim/v10.2c_6/linux_x86_64/../modelsim.ini
+# Loading project digICTermProj
+dataset reload -f
+# wrong number of args for "dataset info".
+# Usage: dataset info {name | file | exists} <dataset_name>
+dataset reload -f
+# wrong number of args for "dataset info".
+# Usage: dataset info {name | file | exists} <dataset_name>
+# Compile of MAC.vhd failed with 1 errors.
+# Compile of MAC.vhd failed with 1 errors.
+# Compile of Register2N.vhd was successful.
+# Compile of RCFA.vhd failed with 1 errors.
+# Compile of MAC_proj.vhdl failed with 1 errors.
+# Compile of MAC_proj.vhdl failed with 2 errors.
+vmap gdk /home/mjs5127/Pyxis_SPT_HEP/gdk_vhdl
+# Modifying /home/mjs5127/DigIC/project_VHDL/digICTermProj.mpf
+# Compile of MAC_proj.vhdl failed with 1 errors.
+# Compile of MAC_proj.vhdl failed with 1 errors.
+# Compile of MAC.vhd failed with 2 errors.
+# Compile of LFSR.vhd was successful.
+# Compile of FullAdder.vhd was successful.
+# Compile of MISR.vhd was successful.
+# Compile of Multiplier.vhd was successful.
+# Compile of RCFA.vhd was successful.
+# Compile of Register2N.vhd was successful.
+# Compile of MAC_proj.vhdl failed with 1 errors.
+# 8 compiles, 2 failed with 3 errors. 
+# Compile of MAC_proj.vhdl failed with 1 errors.
+# Compile of MAC.vhd was successful.
+# Compile of MAC_proj.vhdl failed with 1 errors.
+# Compile of MAC_proj.vhdl failed with 1 errors.
+# Compile of MAC.vhd was successful.
+# Compile of MAC_proj.vhdl failed with 1 errors.
+# Compile of MAC_proj.vhdl failed with 1 errors.
+# Compile of MAC_proj.vhdl was successful.
